@@ -80,6 +80,10 @@ var Visualnovel;
                 L0008: "A hopital room?",
                 L0009: "Why am I-",
                 L0010: ""
+            },
+            protagonist: {
+                P0001: "lovely",
+                P0002: "tasty"
             }
         };
         Visualnovel.ƒS.Speech.hide();
