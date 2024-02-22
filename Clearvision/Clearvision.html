@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Clearvision.css">
+  <script src="Fudge/FudgeCore.js"></script>
+  <script src="FudgeStory/FudgeStory.js"></script>
+  <script src="./Build/Clearvision.js"></script>
+  <title>Are you still with us?</title>
+  <splash src="Assets/Images/Splash.png" />
+</head>
+
+<body>
+  <scene>
+
+    <canvas></canvas>
+
+    <speech>
+      <name>
+        <!-- The name of the character speaking -->
+        The name of the character speaking
+      </name>
+      <content>
+        <!-- The text the character says -->
+        The text the character says
+      </content>
+    </speech>
+
+    <dialog type="text">
+      <!-- The content of a page of text for reading -->
+      The content of a page of text for reading
+    </dialog>
+
+    <dialog type="interface">
+      <!--input id="scoreForSara" type="text" value="Sara" disabled-->
+      <!-- für value der Skala; Füllung -->
+      <!--meter id="saraMeter" name="saraScore" min="0" max="100" disabled></meter-->
+    </dialog>
+
+    <dialog type="inventory">
+      <button type="button">close</button>
+      <ul>
+        <!-- <li>a description could be written in here</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>e</li> -->
+      </ul>
+    </dialog>
+  </scene>
+
+  <dialog type="splash" open>
+    <img id="FudgeStoryLogo" theme="dark" /> <!-- use "light" or "dark" -->
+    <p>
+      Design your splash screen here. Reposition and rescale the logo above, but do not remove.
+    </p>
+  </dialog>
+</body>
+
+</html>
