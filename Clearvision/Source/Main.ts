@@ -13,14 +13,22 @@ namespace Visualnovel {
         duration: 1,
         alpha: "Assets/Images/triangle.jpg",
         edge: 1
+      },
+      gradient: {
+        duration: 3,
+        alpha: "Assets/Images/Transitions/middle.jpg",
+        edge: 1
       }
     };
 
     export let sound = {
       //themes
       pizza: "Assets/Sounds/Pizza.mp3",
+      chill: "Assets/Sounds/perfect-beauty.mp3",
+      dream: "Assets/Sounds/relaxing.mp3",
       //SFX
-      drop: "Assets/Sounds/Drop.mp3"
+      drop: "Assets/Sounds/Drop.mp3",
+      clue: ""
     };
 
     export let locations = {
@@ -36,6 +44,18 @@ namespace Visualnovel {
         name: "test",
         background: "Assets/test.jpg"
       },
+      dream: {
+        name: "dream",
+        background: "Assets/Images/Backgrounds/hazy.jpg"
+      },
+      hRoomNightAlt: {
+        name: "hospital room night but darker",
+        background: "Assets/Images/Backgrounds/hospital-room-night-alt.jpg"
+      },
+      hRoomNight: {
+        name: "",
+        background: "Assets/Images/Backgrounds/hospital-room-night.jpg"
+      }
     }; 
 
     export let characters = {

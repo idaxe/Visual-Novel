@@ -12,10 +12,18 @@ declare namespace Visualnovel {
             alpha: string;
             edge: number;
         };
+        gradient: {
+            duration: number;
+            alpha: string;
+            edge: number;
+        };
     };
     let sound: {
         pizza: string;
+        chill: string;
+        dream: string;
         drop: string;
+        clue: string;
     };
     let locations: {
         beachDay: {
@@ -27,6 +35,18 @@ declare namespace Visualnovel {
             background: string;
         };
         test: {
+            name: string;
+            background: string;
+        };
+        dream: {
+            name: string;
+            background: string;
+        };
+        hRoomNightAlt: {
+            name: string;
+            background: string;
+        };
+        hRoomNight: {
             name: string;
             background: string;
         };
