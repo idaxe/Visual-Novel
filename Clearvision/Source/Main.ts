@@ -48,6 +48,9 @@ namespace Visualnovel {
           happy: "Bildpfad",
           upset: "Bildpfad"
         }
+      },
+      game: {
+        name: "Clearvision"
       }
     };
 

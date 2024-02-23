@@ -42,6 +42,9 @@ declare namespace Visualnovel {
                 upset: string;
             };
         };
+        game: {
+            name: string;
+        };
     };
     let dataForSave: {
         nameProtagonist: string;
