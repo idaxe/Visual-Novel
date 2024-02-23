@@ -9,6 +9,11 @@ var Visualnovel;
             duration: 1,
             alpha: "Assets/Images/symbol.jpg",
             edge: 1
+        },
+        triangle: {
+            duration: 1,
+            alpha: "Assets/Images/triangle.jpg",
+            edge: 1
         }
     };
     Visualnovel.sound = {
@@ -82,7 +87,7 @@ var Visualnovel;
                 You: "It has been ages since my creator actually showed his face around here so I thought I was doomed to corrupt in this repository forever..",
                 Doing: "Ah well, since I'm programmed this way and I cant go against it i might as well fufill my role.",
                 Presence: "What do you want to call the protagonist of this story?",
-                Pname: "So " + protagName + " it is.",
+                //Pname: "So " + characters.protagonist.name + " it is.",
                 Confirmation: "Interesting. Very Interesting",
                 Start: "Very well",
                 Really: "Now then, enjoy yourself......I guess"
@@ -118,6 +123,7 @@ var Visualnovel;
                 G0006: ""
             }
         };
+        await Visualnovel.ƒS.update(Visualnovel.transition.triangle.duration, Visualnovel.transition.triangle.alpha, Visualnovel.transition.triangle.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Hi);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.How);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Are);
@@ -127,7 +133,7 @@ var Visualnovel;
         protagName = await Visualnovel.ƒS.Speech.getInput();
         Visualnovel.dataForSave.nameProtagonist = protagName;
         Visualnovel.characters.protagonist.name = protagName;
-        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Pname);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, "So " + protagName + " it is."); //didnt show the name if used from text
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Confirmation);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Start);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Really);

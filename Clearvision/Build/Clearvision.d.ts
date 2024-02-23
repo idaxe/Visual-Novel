@@ -7,6 +7,11 @@ declare namespace Visualnovel {
             alpha: string;
             edge: number;
         };
+        triangle: {
+            duration: number;
+            alpha: string;
+            edge: number;
+        };
     };
     let sound: {
         pizza: string;

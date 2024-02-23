@@ -8,6 +8,11 @@ namespace Visualnovel {
         duration: 1,
         alpha: "Assets/Images/symbol.jpg",
         edge: 1
+      },
+      triangle: {
+        duration: 1,
+        alpha: "Assets/Images/triangle.jpg",
+        edge: 1
       }
     };
 

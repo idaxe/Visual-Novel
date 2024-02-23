@@ -12,7 +12,7 @@ namespace Visualnovel {
           You: "It has been ages since my creator actually showed his face around here so I thought I was doomed to corrupt in this repository forever..",
           Doing: "Ah well, since I'm programmed this way and I cant go against it i might as well fufill my role.",
           Presence: "What do you want to call the protagonist of this story?",
-          Pname: "So " + protagName + " it is.",
+          //Pname: "So " + characters.protagonist.name + " it is.",
           Confirmation: "Interesting. Very Interesting", //maybe include the protags name in there
           Start: "Very well",
           Really: "Now then, enjoy yourself......I guess"
@@ -49,6 +49,7 @@ namespace Visualnovel {
         }
       }
 
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell(characters.game, text.game.Hi);
       await ƒS.Speech.tell(characters.game, text.game.How);
       await ƒS.Speech.tell(characters.game, text.game.Are);
@@ -58,7 +59,7 @@ namespace Visualnovel {
       protagName = await ƒS.Speech.getInput();
       dataForSave.nameProtagonist = protagName;
       characters.protagonist.name = protagName;
-      await ƒS.Speech.tell(characters.game, text.game.Pname);
+      await ƒS.Speech.tell(characters.game, "So " + protagName + " it is."); //didnt show the name if used from text
       await ƒS.Speech.tell(characters.game, text.game.Confirmation);
       await ƒS.Speech.tell(characters.game, text.game.Start);
       await ƒS.Speech.tell(characters.game, text.game.Really);
