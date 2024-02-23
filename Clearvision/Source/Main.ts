@@ -57,7 +57,9 @@ namespace Visualnovel {
 
     // Savedate for Gameprogress
     export let dataForSave = {
-      nameProtagonist: ""
+      nameProtagonist: "",
+      curiosityCounter: 0,
+      truthseeing: false
     };
 
 

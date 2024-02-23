@@ -48,6 +48,8 @@ declare namespace Visualnovel {
     };
     let dataForSave: {
         nameProtagonist: string;
+        curiosityCounter: number;
+        truthseeing: boolean;
     };
 }
 declare namespace Visualnovel {

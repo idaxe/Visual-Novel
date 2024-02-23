@@ -53,7 +53,9 @@ var Visualnovel;
     };
     // Savedate for Gameprogress
     Visualnovel.dataForSave = {
-        nameProtagonist: ""
+        nameProtagonist: "",
+        curiosityCounter: 0,
+        truthseeing: false
     };
     window.addEventListener("load", start);
     function start(_event) {
@@ -71,6 +73,7 @@ var Visualnovel;
 (function (Visualnovel) {
     async function Scene() {
         console.log("Prolog");
+        let protagName = "";
         let text = {
             game: {
                 Hi: "I sense...",
@@ -78,19 +81,23 @@ var Visualnovel;
                 Are: "You must be a new player.",
                 You: "It has been ages since my creator actually showed his face around here so I thought I was doomed to corrupt in this repository forever..",
                 Doing: "Ah well, since I'm programmed this way and I cant go against it i might as well fufill my role.",
-                Presence: ""
+                Presence: "What do you want to call the protagonist of this story?",
+                Pname: "So " + protagName + " it is.",
+                Confirmation: "Interesting. Very Interesting",
+                Start: "Very well",
+                Really: "Now then, enjoy yourself......I guess"
             },
             Narrator: {
                 L0001: "You see a mostly white room",
-                L0002: "Its so dark.",
-                L0003: "...",
-                L0004: "My head hurts.",
+                L0002: "It's so bright it hurts your eyes.",
+                L0003: "",
+                L0004: "",
                 L0005: "",
-                L0006: "Where... am I?",
-                L0007: "Looks like...",
-                L0008: "A hopital room?",
-                L0009: "Why am I-",
-                L0010: "Wait what? Why was I..."
+                L0006: "",
+                L0007: "",
+                L0008: "",
+                L0009: "",
+                L0010: ""
             },
             protagonist: {
                 P0001: "Its so dark.",
@@ -100,7 +107,7 @@ var Visualnovel;
                 P0005: "Looks like...",
                 P0006: "A hopital room?",
                 P0007: "Why am I-",
-                P0008: ""
+                P0008: "Wait what? Why was I..."
             },
             girl1: {
                 G0001: "Oh thank god you managed to wake up!",
@@ -117,8 +124,17 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.You);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Doing);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Presence);
-        Visualnovel.ƒS.Speech.hide();
+        protagName = await Visualnovel.ƒS.Speech.getInput();
+        Visualnovel.dataForSave.nameProtagonist = protagName;
+        Visualnovel.characters.protagonist.name = protagName;
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Pname);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Confirmation);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Start);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Really);
+        Visualnovel.ƒS.Speech.clear();
+        //ƒS.Speech.hide();
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachDay);
+        await Visualnovel.ƒS.update(Visualnovel.transition.symbol.duration, Visualnovel.transition.symbol.alpha, Visualnovel.transition.symbol.edge);
         Visualnovel.ƒS.Sound.fade(Visualnovel.sound.pizza, 0.5, 2, true);
         console.log("fuck");
         await Visualnovel.ƒS.update();
