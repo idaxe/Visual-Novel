@@ -92,8 +92,8 @@ namespace Visualnovel {
     window.addEventListener("load", start);
     function start(_event: Event): void {
       let scenes: ƒS.Scenes = [
-        { scene: Scene, name: "Scene" , id: "Scene"},
-        { scene: Scene2, name: "Scene2", id: "Scene2"}
+        { scene: Chapter1, name: "Scene" , id: "Scene"},
+        { scene: Chapter2, name: "Scene2", id: "Scene2"}
       ];
 
       let uiElement: HTMLElement = document.querySelector("[type=interface]");
