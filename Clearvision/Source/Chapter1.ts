@@ -1,5 +1,5 @@
 namespace Visualnovel {
-    export async function Scene(): ƒS.SceneReturn {
+    export async function Chapter1(): ƒS.SceneReturn {
       console.log("Prolog");
 
       let protagName: string = "";
@@ -15,7 +15,7 @@ namespace Visualnovel {
           //Pname: "So " + characters.protagonist.name + " it is.",
           Confirmation: "Interesting. Very Interesting", //maybe include the protags name in there
           Start: "Very well",
-          Really: "Now then, enjoy yourself......I guess"
+          Really: "Now then, enjoy the story......I guess"
         },
         Narrator: {
           L0001: "You slowly try to open your eyes.",
@@ -48,11 +48,9 @@ namespace Visualnovel {
           G0003: "Take it easy you've just woken up after all.",
           G0004: "Feeling better now?",
           G0005: "I'm sure you're still very confused so let me give you a quick rundown.",
-          G0006: ""
+          G0006: "You were.... involved in a major traffic accident."
         }
       }
-      await ƒS.Location.show(locations.dream);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell(characters.game, text.game.Hi);
       await ƒS.Speech.tell(characters.game, text.game.How);
       await ƒS.Speech.tell(characters.game, text.game.Are);
@@ -67,6 +65,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.game, text.game.Start);
       await ƒS.Speech.tell(characters.game, text.game.Really);
       ƒS.Speech.clear();
+      await ƒS.Location.show(locations.dream);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
@@ -94,6 +94,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0005);
       await ƒS.Sound.play(sound.chill, 0.3, true);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
 
 
 
@@ -101,13 +102,12 @@ namespace Visualnovel {
 
 
 
-
-      await ƒS.Location.show(locations.hRoomNightAlt);
+      //await ƒS.Location.show(locations.hRoomNightAlt);
       //ƒS.Speech.hide();
-      await ƒS.Location.show(locations.hRoomNight);
-      await ƒS.update(transition.symbol.duration, transition.symbol.alpha, transition.symbol.edge);
+      //await ƒS.Location.show(locations.hRoomNight);
+      //await ƒS.update(transition.symbol.duration, transition.symbol.alpha, transition.symbol.edge);
       //console.log("fuck");
-      await ƒS.update();
+      //await ƒS.update();
       //console.log("this");
       //await ƒS.update(transition.symbol.duration, transition.symbol.alpha, transition.symbol.edge);
     }

@@ -1,5 +1,5 @@
 namespace Visualnovel {
-    export async function Scene2(): ƒS.SceneReturn {
+    export async function Chapter2(): ƒS.SceneReturn {
       console.log("FudgeStory Template Scene starting");
       
     }
