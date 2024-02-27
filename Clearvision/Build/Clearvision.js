@@ -42,8 +42,8 @@ var Visualnovel;
                 P0009: "...ok.",
                 P0010: "Yeah.",
                 P0011: "!!!",
-                P0012: "",
-                P0013: ""
+                P0012: "You mentioned that others were also involved in the same accident?",
+                P0013: "Damn, why did i end up at that place anyways?"
             },
             girl1: {
                 G0001: "Oh thank god you managed to wake up!",
@@ -109,10 +109,12 @@ var Visualnovel;
         choice = await Visualnovel.ƒS.Menu.getInput(inquire, "");
         switch (choice) {
             case inquire.Others:
-                await Visualnovel.ƒS.Speech.tell("", "");
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0012);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, "...");
                 break;
             case inquire.Self:
-                await Visualnovel.ƒS.Speech.tell("", "");
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0013);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, "");
                 break;
         }
         return "Chapter2";
