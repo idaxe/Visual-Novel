@@ -93,3 +93,14 @@
   dialog[type=splash]>img#FudgeStoryLogo {
     width: 100%;
   }
+
+  .decisionHospital[open] {
+    background-color: blue;
+  }
+
+  .menu[open] {
+    background-color: aqua;
+  }
+  .menu button{
+    color: blueviolet;
+  }
