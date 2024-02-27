@@ -79,6 +79,14 @@ namespace Visualnovel {
       }
     };
 
+    let menuButtons = {
+      save: "save game",
+      load: "load save",
+      close: "close menu"
+    };
+
+    let menu: ƒS.Menu;
+    let mActive: boolean = false;
 
     // Savedate for Gameprogress
     export let dataForSave = {
@@ -87,13 +95,58 @@ namespace Visualnovel {
       truthseeing: false
     };
 
+    async function buttonFunctions(_option:string): Promise<void> {
+      switch(_option) {
+        case menuButtons.save:
+          await ƒS.Progress.save();
+          break;
+        case menuButtons.load:
+          await ƒS.Progress.load();
+          break;
+        case menuButtons.close:
+          menu.close();
+          mActive = false;
+          break;
+      }
+    }
 
+    document.addEventListener("keydown", keyPress);
+
+    async function keyPress(_event: KeyboardEvent): Promise<void> {
+      switch(_event.code) {
+        case ƒ.KEYBOARD_CODE.F7:
+          console.log("Quicksave");
+          await ƒS.Progress.save();
+          break;
+        case ƒ.KEYBOARD_CODE.F8:
+          console.log("Quickload");
+          await ƒS.Progress.load();
+          break;
+        case ƒ.KEYBOARD_CODE.Q:
+          if (mActive == false){
+            console.log("Opening Inventory");
+            menu.open();
+            mActive = true;
+          } else {
+            console.log("Closing Inventory");
+            menu.close();
+            mActive = false;
+          }
+          break;
+      }
+    }
 
     window.addEventListener("load", start);
     function start(_event: Event): void {
+      menu = ƒS.Menu.create(menuButtons ,buttonFunctions , "menu");
       let scenes: ƒS.Scenes = [
         { scene: Chapter1, name: "Scene" , id: "Scene"},
-        { scene: Chapter2, name: "Scene2", id: "Scene2"}
+        { scene: Chapter2, name: "Scene2", id: "Scene2"},
+        { scene: Chapter3, name: "Scene3", id: "Scene3"},
+        { scene: Chapter4, name: "Scene4", id: "Scene4"},
+        { scene: Chapter5, name: "Scene5", id: "Scene5"},
+        { scene: Chapter6, name: "Scene6", id: "Scene6"},
+        { scene: Chapter7, name: "Scene7", id: "Scene7"}
       ];
 
       let uiElement: HTMLElement = document.querySelector("[type=interface]");

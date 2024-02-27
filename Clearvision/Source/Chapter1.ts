@@ -40,7 +40,10 @@ namespace Visualnovel {
           P0007: "Why am I-",
           P0008: "Wait what? ...why was I...",
           P0009: "...ok.",
-          P0010: "Yeah."
+          P0010: "Yeah.",
+          P0011: "!!!",
+          P0012: "",
+          P0013: ""
         },
         girl1: {
           G0001: "Oh thank god you managed to wake up!",
@@ -48,7 +51,9 @@ namespace Visualnovel {
           G0003: "Take it easy you've just woken up after all.",
           G0004: "Feeling better now?",
           G0005: "I'm sure you're still very confused so let me give you a quick rundown.",
-          G0006: "You were.... involved in a major traffic accident."
+          G0006: "You were.... involved in a major traffic accident.",
+          G0007: "I don't know the full details but it seems you and a couple of others fell victim to a drunk truck driver."
+    
         }
       }
       await ƒS.Speech.tell(characters.game, text.game.Hi);
@@ -95,6 +100,27 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0005);
       await ƒS.Sound.play(sound.chill, 0.3, true);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0011);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
+
+      let inquire = {
+        Others: "There were others involved as well?",
+        Self: "What was I doing there?"
+      };
+
+      let choice;
+      choice = await ƒS.Menu.getInput(inquire, "");
+
+      switch(choice) {
+        case inquire.Others:
+          await ƒS.Speech.tell("", "");
+          break;
+        case inquire.Self:
+          await ƒS.Speech.tell("", "");
+          break;
+        
+      }
+      return "Chapter2";
 
 
 

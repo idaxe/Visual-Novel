@@ -1,4 +1,25 @@
 declare namespace Visualnovel {
+    function Chapter1(): ƒS.SceneReturn;
+}
+declare namespace Visualnovel {
+    function Chapter2(): ƒS.SceneReturn;
+}
+declare namespace Visualnovel {
+    function Chapter3(): ƒS.SceneReturn;
+}
+declare namespace Visualnovel {
+    function Chapter4(): ƒS.SceneReturn;
+}
+declare namespace Visualnovel {
+    function Chapter5(): ƒS.SceneReturn;
+}
+declare namespace Visualnovel {
+    function Chapter6(): ƒS.SceneReturn;
+}
+declare namespace Visualnovel {
+    function Chapter7(): ƒS.SceneReturn;
+}
+declare namespace Visualnovel {
     export import ƒ = FudgeCore;
     export import ƒS = FudgeStory;
     let transition: {
@@ -76,10 +97,4 @@ declare namespace Visualnovel {
         curiosityCounter: number;
         truthseeing: boolean;
     };
-}
-declare namespace Visualnovel {
-    function Scene(): ƒS.SceneReturn;
-}
-declare namespace Visualnovel {
-    function Scene2(): ƒS.SceneReturn;
 }
