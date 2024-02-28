@@ -74,8 +74,23 @@ namespace Visualnovel {
           upset: "Bildpfad"
         }
       },
+      girl2: {
+        name: "",
+        origin: ƒS.ORIGIN.BOTTOMCENTER,
+        pose: {
+          angry: "Bildpfad",
+          happy: "Bildpfad",
+          upset: "Bildpfad"
+        }
+      },
       game: {
         name: "Clearvision"
+      },
+      doctor: {
+        name: "Doctor"
+      },
+      nurse: {
+        name: "Nurse"
       }
     };
 

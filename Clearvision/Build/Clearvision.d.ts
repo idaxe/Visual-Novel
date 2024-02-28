@@ -88,7 +88,22 @@ declare namespace Visualnovel {
                 upset: string;
             };
         };
+        girl2: {
+            name: string;
+            origin: ƒ.ORIGIN2D;
+            pose: {
+                angry: string;
+                happy: string;
+                upset: string;
+            };
+        };
         game: {
+            name: string;
+        };
+        doctor: {
+            name: string;
+        };
+        nurse: {
             name: string;
         };
     };
