@@ -91,6 +91,9 @@ namespace Visualnovel {
       },
       nurse: {
         name: "Nurse"
+      },
+      friend: {
+        name: "Dead guy"
       }
     };
 

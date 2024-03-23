@@ -106,6 +106,9 @@ declare namespace Visualnovel {
         nurse: {
             name: string;
         };
+        friend: {
+            name: string;
+        };
     };
     let dataForSave: {
         nameProtagonist: string;
