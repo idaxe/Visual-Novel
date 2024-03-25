@@ -16,7 +16,10 @@ namespace Visualnovel {
           N0009: "With a usual notion " + characters.girl2.name + " sticks out her tounge in a annoyed fashion.",
           N0010: characters.girl2.name + " hands you a ticket of some sort.",
           N0011: "After saying these words, " + characters.girl2.name + " storms off.",
-          N0012: "You put away the ticket "
+          N0012: "You put away the ticket ",
+          N0013: "After arriving at your home you tried to phone " + characters.friend.name + ".",
+          N0014: "To your surprise no one answered.",
+          N0015: "After some pondering you decided to go to sleep."
         },
         protagonist: {
           P0000: "...",
@@ -52,7 +55,9 @@ namespace Visualnovel {
           P0030: "You didn't seem the typ to host these type of events before. Unless it was for him that is.",
           P0031: "*Maybe I'm just thinking about all of this too much.*",
           P0032: "*Unusual or not, a surprise is suprise.*",
-          P0033: "And the was definitly a positive one."
+          P0033: "And the was definitly a positive one.",
+          P0034: "Strange, even when he was ill before he always had time to answer.",
+          P0035: "Damn, if only i had a number of some relative."
         },
         girl1: {
           G0001: "Good morning " + characters.protagonist.name,
