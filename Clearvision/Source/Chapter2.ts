@@ -48,13 +48,13 @@ namespace Visualnovel {
           PD003: "I was running to school this morning.",
           PD004: "First off I noticed the nice weather.",
           PD005: "First off I was in a great mood upon waking up.",
-          PD006: "",
-          PD007: "",
-          PD008: "",
-          PD009: "",
-          PD010: "",
-          PD011: "",
-          PD012: ""
+          PD006: "I finally got to meet up with my friends again.",
+          PD007: "I got to reunite with my friendgroup after class today. Well with most of them.",
+          PD008: "The class expressed their joy in seeing me again.",
+          PD009: "Some schoolmates gave me quite unique glares.",
+          PD010: "My appartment was really dusty upon closer inspection.",
+          PD011: "For a day where so much happened, I really did not feel exhausted that much.",
+          PD012: characters.girl1.name + " still worries about me even though I am out of the hospital already."
         },
         girl1: {
           G0001: "Good morning " + characters.protagonist.name,
@@ -171,49 +171,51 @@ namespace Visualnovel {
       let choice = await ƒS.Menu.getInput(thoughts, "Dreamthoughts1");
       switch (choice){
         case thoughts.C1:
-          await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0019);
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD001);
           tempscore = tempscore + 10;
           break;
         case thoughts.N1:
-          await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0019);
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD002);
           break;
         case thoughts.N2:
-          await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0019);
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD003);
           break;
         case thoughts.N3:
-          await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0019);
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD004);
           break;
         case thoughts.N4:
-          await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0019);
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD005);
           break;
       }
       let choice2 = await ƒS.Menu.getInput(thoughts2, "Dreamthoughts2");
       switch (choice2){
         case thoughts2.C1:
-          await ƒS.Speech.tell(characters.protagonist, "");
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD006);
           break;
         case thoughts2.N1:
-          await ƒS.Speech.tell(characters.protagonist, "");
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD007);
+          tempscore = tempscore + 5;
           break;
         case thoughts2.N2:
-          await ƒS.Speech.tell(characters.protagonist, "");
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD008);
           break;
         case thoughts2.N3:
-          await ƒS.Speech.tell(characters.protagonist, "So, we meet again already.");
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD009);
           tempscore = tempscore + 10;
           break;
       }
       let choice3 = await ƒS.Menu.getInput(thoughts3, "Dreamthoughts3");
       switch (choice3){
         case thoughts3.C1:
-          await ƒS.Speech.tell(characters.protagonist, "So, we meet again already.");
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD010);
           break;
         case thoughts3.N1:
-          await ƒS.Speech.tell(characters.protagonist, "So, we meet again already.");
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD011);
           tempscore = tempscore + 10;
           break;
         case thoughts3.N2:
-          await ƒS.Speech.tell(characters.protagonist, "So, we meet again already.");
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD012);
+          tempscore = tempscore + 5;
           break;
       }
       await ƒS.Speech.tell("???", "So thats how it is.");
@@ -226,5 +228,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "One shall not avert their eyes looking for the path.");
       await ƒS.Speech.tell("???", "Now then.");
       await ƒS.Speech.tell("???", "Sleep well.");
+      return "Chapter3";
     }
   }
