@@ -158,13 +158,13 @@ namespace Visualnovel {
     function start(_event: Event): void {
       menu = ƒS.Menu.create(menuButtons ,buttonFunctions , "menu");
       let scenes: ƒS.Scenes = [
-        { scene: Chapter1, name: "Scene" , id: "Scene"},
-        { scene: Chapter2, name: "Scene2", id: "Scene2"},
-        { scene: Chapter3, name: "Scene3", id: "Scene3"},
-        { scene: Chapter4, name: "Scene4", id: "Scene4"},
-        { scene: Chapter5, name: "Scene5", id: "Scene5"},
-        { scene: Chapter6, name: "Scene6", id: "Scene6"},
-        { scene: Chapter7, name: "Scene7", id: "Scene7"}
+        { scene: Chapter1, name: "Chapter1" , id: "Chapter1"},
+        { scene: Chapter2, name: "Chapter2", id: "Chapter2"},
+        { scene: Chapter3, name: "Chapter3", id: "Chapter3"},
+        { scene: Chapter4, name: "Chapter4", id: "Chapter4"},
+        { scene: Chapter5, name: "Chapter5", id: "Chapter5"},
+        { scene: Chapter6, name: "Chapter6", id: "Chapter6"},
+        { scene: Chapter7, name: "Chapter7", id: "Chapter7"}
       ];
 
       let uiElement: HTMLElement = document.querySelector("[type=interface]");
