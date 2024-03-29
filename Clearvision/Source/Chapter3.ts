@@ -16,7 +16,7 @@ namespace Visualnovel {
           N0009: "With a usual notion " + characters.girl2.name + " sticks out her tounge in a annoyed fashion.",
           N0010: characters.girl2.name + " hands you a ticket of some sort.",
           N0011: "After saying these words, " + characters.girl2.name + " storms off.",
-          N0012: "You put away the ticket ",
+          N0012: "You put away the ticket and started going home.",
           N0013: "After arriving at your home you tried to phone " + characters.friend.name + ".",
           N0014: "To your surprise no one answered.",
           N0015: "After some pondering you decided to go to sleep."
@@ -55,9 +55,15 @@ namespace Visualnovel {
           P0030: "You didn't seem the typ to host these type of events before. Unless it was for him that is.",
           P0031: "*Maybe I'm just thinking about all of this too much.*",
           P0032: "*Unusual or not, a surprise is suprise.*",
-          P0033: "And the was definitly a positive one.",
+          P0033: "*And it was definitly a positive one.*",
           P0034: "Strange, even when he was ill before he always had time to answer.",
-          P0035: "Damn, if only i had a number of some relative."
+          P0035: "Damn, if only i had a number of some relative.",
+          PD001: "",
+          PD002: "",
+          PD003: "",
+          PD004: "",
+          PD005: "",
+          PD006: ""
         },
         girl1: {
           G0001: "Good morning " + characters.protagonist.name,
@@ -153,6 +159,25 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2007);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0028);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0029);
+      await ƒS.Speech.tell(characters.girl2, text.girl2.G2008);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0030);
+      await ƒS.Speech.tell(characters.girl2, text.girl2.G2009);
+      await ƒS.Speech.tell(characters.girl2, text.girl2.G2010);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0011);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0031);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0032);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0033);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0012);
+      //fade
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0013);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0014);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0034);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0035);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0015);
       //initiate dream
     }
   }

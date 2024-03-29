@@ -277,13 +277,13 @@ var Visualnovel;
                 PD003: "I was running to school this morning.",
                 PD004: "First off I noticed the nice weather.",
                 PD005: "First off I was in a great mood upon waking up.",
-                PD006: "",
-                PD007: "",
-                PD008: "",
-                PD009: "",
-                PD010: "",
-                PD011: "",
-                PD012: ""
+                PD006: "I finally got to meet up with my friends again.",
+                PD007: "I got to reunite with my friendgroup after class today. Well with most of them.",
+                PD008: "The class expressed their joy in seeing me again.",
+                PD009: "Some schoolmates gave me quite unique glares.",
+                PD010: "My appartment was really dusty upon closer inspection.",
+                PD011: "For a day where so much happened, I really did not feel exhausted that much.",
+                PD012: Visualnovel.characters.girl1.name + " still worries about me even though I am out of the hospital already."
             },
             girl1: {
                 G0001: "Good morning " + Visualnovel.characters.protagonist.name,
@@ -396,49 +396,51 @@ var Visualnovel;
         let choice = await Visualnovel.ƒS.Menu.getInput(thoughts, "Dreamthoughts1");
         switch (choice) {
             case thoughts.C1:
-                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0019);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD001);
                 tempscore = tempscore + 10;
                 break;
             case thoughts.N1:
-                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0019);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD002);
                 break;
             case thoughts.N2:
-                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0019);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD003);
                 break;
             case thoughts.N3:
-                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0019);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD004);
                 break;
             case thoughts.N4:
-                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0019);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD005);
                 break;
         }
         let choice2 = await Visualnovel.ƒS.Menu.getInput(thoughts2, "Dreamthoughts2");
         switch (choice2) {
             case thoughts2.C1:
-                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, "");
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD006);
                 break;
             case thoughts2.N1:
-                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, "");
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD007);
+                tempscore = tempscore + 5;
                 break;
             case thoughts2.N2:
-                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, "");
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD008);
                 break;
             case thoughts2.N3:
-                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, "So, we meet again already.");
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD009);
                 tempscore = tempscore + 10;
                 break;
         }
         let choice3 = await Visualnovel.ƒS.Menu.getInput(thoughts3, "Dreamthoughts3");
         switch (choice3) {
             case thoughts3.C1:
-                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, "So, we meet again already.");
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD010);
                 break;
             case thoughts3.N1:
-                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, "So, we meet again already.");
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD011);
                 tempscore = tempscore + 10;
                 break;
             case thoughts3.N2:
-                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, "So, we meet again already.");
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD012);
+                tempscore = tempscore + 5;
                 break;
         }
         await Visualnovel.ƒS.Speech.tell("???", "So thats how it is.");
@@ -452,6 +454,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell("???", "One shall not avert their eyes looking for the path.");
         await Visualnovel.ƒS.Speech.tell("???", "Now then.");
         await Visualnovel.ƒS.Speech.tell("???", "Sleep well.");
+        return "Chapter3";
     }
     Visualnovel.Chapter2 = Chapter2;
 })(Visualnovel || (Visualnovel = {}));
@@ -473,7 +476,7 @@ var Visualnovel;
                 N0009: "With a usual notion " + Visualnovel.characters.girl2.name + " sticks out her tounge in a annoyed fashion.",
                 N0010: Visualnovel.characters.girl2.name + " hands you a ticket of some sort.",
                 N0011: "After saying these words, " + Visualnovel.characters.girl2.name + " storms off.",
-                N0012: "You put away the ticket ",
+                N0012: "You put away the ticket and started going home.",
                 N0013: "After arriving at your home you tried to phone " + Visualnovel.characters.friend.name + ".",
                 N0014: "To your surprise no one answered.",
                 N0015: "After some pondering you decided to go to sleep."
@@ -512,9 +515,15 @@ var Visualnovel;
                 P0030: "You didn't seem the typ to host these type of events before. Unless it was for him that is.",
                 P0031: "*Maybe I'm just thinking about all of this too much.*",
                 P0032: "*Unusual or not, a surprise is suprise.*",
-                P0033: "And the was definitly a positive one.",
+                P0033: "*And it was definitly a positive one.*",
                 P0034: "Strange, even when he was ill before he always had time to answer.",
-                P0035: "Damn, if only i had a number of some relative."
+                P0035: "Damn, if only i had a number of some relative.",
+                PD001: "",
+                PD002: "",
+                PD003: "",
+                PD004: "",
+                PD005: "",
+                PD006: ""
             },
             girl1: {
                 G0001: "Good morning " + Visualnovel.characters.protagonist.name,
@@ -609,6 +618,25 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2006);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0010);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2007);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0028);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0029);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2008);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0030);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2009);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2010);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0011);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0000);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0031);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0032);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0033);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0012);
+        //fade
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0013);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0014);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0034);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0035);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0015);
         //initiate dream
     }
     Visualnovel.Chapter3 = Chapter3;
@@ -932,12 +960,38 @@ var Visualnovel;
         console.log("Chapter 6 - Crashing down");
         let text = {
             Narrator: {
-                N0001: ""
+                N0000: "...",
+                N0001: "It's morning again.",
+                N0002: "You might be getting some real answers today.",
+                N0003: "After quickly getting ready, you walk to school together.",
+                N0004: "After class.",
             },
-            protagonist: {},
-            girl1: {}
+            protagonist: {
+                P0000: "...",
+                P0001: "It's cloudy today.",
+                P0002: "Ok before all that do you know why " + Visualnovel.characters.girl2.name + " wasn't at school today?",
+                P0003: "I didn't think it'd be that bad but I'll apologize later.",
+                P0004: "Now then for the topic at hand."
+            },
+            girl1: {
+                G0001: "I think she is just not in the best state of mind to look at you.",
+                G0002: "That would be for the best.",
+                G0003: "I did promise you the day before after all."
+            }
         };
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0002);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0001);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0003);
+        //fade
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0004);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0002);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0001);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0003);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0002);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0004);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0003);
     }
     Visualnovel.Chapter6 = Chapter6;
 })(Visualnovel || (Visualnovel = {}));
@@ -1107,13 +1161,13 @@ var Visualnovel;
     function start(_event) {
         menu = Visualnovel.ƒS.Menu.create(menuButtons, buttonFunctions, "menu");
         let scenes = [
-            { scene: Visualnovel.Chapter1, name: "Scene", id: "Scene" },
-            { scene: Visualnovel.Chapter2, name: "Scene2", id: "Scene2" },
-            { scene: Visualnovel.Chapter3, name: "Scene3", id: "Scene3" },
-            { scene: Visualnovel.Chapter4, name: "Scene4", id: "Scene4" },
-            { scene: Visualnovel.Chapter5, name: "Scene5", id: "Scene5" },
-            { scene: Visualnovel.Chapter6, name: "Scene6", id: "Scene6" },
-            { scene: Visualnovel.Chapter7, name: "Scene7", id: "Scene7" }
+            { scene: Visualnovel.Chapter1, name: "Chapter1", id: "Chapter1" },
+            { scene: Visualnovel.Chapter2, name: "Chapter2", id: "Chapter2" },
+            { scene: Visualnovel.Chapter3, name: "Chapter3", id: "Chapter3" },
+            { scene: Visualnovel.Chapter4, name: "Chapter4", id: "Chapter4" },
+            { scene: Visualnovel.Chapter5, name: "Chapter5", id: "Chapter5" },
+            { scene: Visualnovel.Chapter6, name: "Chapter6", id: "Chapter6" },
+            { scene: Visualnovel.Chapter7, name: "Chapter7", id: "Chapter7" }
         ];
         let uiElement = document.querySelector("[type=interface]");
         Visualnovel.dataForSave = Visualnovel.ƒS.Progress.setData(Visualnovel.dataForSave, uiElement);
