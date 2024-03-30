@@ -50,11 +50,32 @@ namespace Visualnovel {
       },
       hRoomNightAlt: {
         name: "hospital room night but darker",
-        background: "Assets/Images/Backgrounds/hospital-room-night-alt.jpg"
+        background: "Assets/Images/Backgrounds/hospital-room-night3alt.jpg"
       },
       hRoomNight: {
-        name: "",
-        background: "Assets/Images/Backgrounds/hospital-room-night.jpg"
+        name: "hospital room night",
+        background: "Assets/Images/Backgrounds/hospital-room-night3.jpg"
+      },
+      homeDay: {
+        name: "Bedroom",
+        background: "Assets/Images/Backgrounds/Room3_new.jpg"
+      },
+      homeNight: {
+        name: "Living room",
+        background: "Assets/Images/Backgrounds/Room_Night1big.jpg"
+      },
+      lab: {
+        name: "Underground lab",
+        background: ""
+      },
+      lab2: {},
+      classroom: {},
+      hallway: {},
+      town: {},
+      festival: {},
+      void: {
+        name: "nothing",
+        background: "Assets/Images/Backgrounds/black.png"
       }
     }; 
 

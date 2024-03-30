@@ -71,6 +71,27 @@ declare namespace Visualnovel {
             name: string;
             background: string;
         };
+        homeDay: {
+            name: string;
+            background: string;
+        };
+        homeNight: {
+            name: string;
+            background: string;
+        };
+        lab: {
+            name: string;
+            background: string;
+        };
+        lab2: {};
+        classroom: {};
+        hallway: {};
+        town: {};
+        festival: {};
+        void: {
+            name: string;
+            background: string;
+        };
     };
     let characters: {
         narrator: {
