@@ -102,6 +102,8 @@ namespace Visualnovel {
         N2: "Worry"
       };
 
+      await ƒS.Location.show(locations.dream);
+      
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0002);

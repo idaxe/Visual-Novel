@@ -6,22 +6,22 @@ namespace Visualnovel {
       let text = {
         game: {
           Hi: "I sense...",
-          How: "a new presence",
+          How: "a new presence...",
           Are: "You must be a new player.",
           You: "It has been ages since my creator actually showed his face around here so I thought I was doomed to corrupt in this repository forever..",
-          Doing: "Ah well, since I'm programmed this way and I cant go against it i might as well fufill my role.",
+          Doing: "Ah well, since I'm programmed this way and I can't go against it. I might as well fufill my role.",
           Presence: "What do you want to call the protagonist of this story?",
           //Pname: "So " + characters.protagonist.name + " it is.",
-          Confirmation: "Interesting. Very Interesting", //maybe include the protags name in there
-          Start: "Very well",
-          Really: "Now then, enjoy the story......I guess"
+          Confirmation: "Interesting. Very Interesting.", //maybe include the protags name in there
+          Start: "Very well.",
+          Really: "Now then, enjoy the story......I guess."
         },
         Narrator: {
           L0001: "You slowly try to open your eyes.",
           L0002: "It's bright enough to hurt your eyes.",
           L0003: "After a while you begin to process the details of the room.",
           L0004: "Only now you notice a female figure is sitting by your bed.",
-          L0005: "After a short while you finally regain conciousness completely",
+          L0005: "After a short while you finally regain consciousness completely.",
           L0006: "You see " + characters.girl1.name + " exit through the door.",
           L0007: "At that moment you notice a figure enter through the door.",
           L0008: "After a thorough medical exam, I was finally allowed to get some sleep.",
@@ -29,7 +29,7 @@ namespace Visualnovel {
         },
         protagonist: {
           P0000: "...",
-          P0001: "Its so dark.",
+          P0001: "It's so dark.",
           P0002: "...",
           P0003: "My head hurts.",
           P0004: "Where... am I?",
@@ -41,40 +41,40 @@ namespace Visualnovel {
           P0010: "Yeah.",
           P0011: "!!!",
           P0012: "You mentioned that others were also involved in the same accident?",
-          P0013: "Damn, why did i end up at that place anyways?",
+          P0013: "Damn, why did I end up at that place anyway?",
           P0014: "Quite close?",
           P0015: "Groceries huh...",
-          P0016: "Damn I can't remember it clearly.",
+          P0016: "Damn, I can't remember it clearly.",
           P0017: "*An airhead as always.*",
           P0018: "Bye bye.",
           P0019: "*Why would I need rest when I was stuck in a bed for a month*"
         },
         girl1: {
-          G0001: "Oh thank god you managed to wake up!",
-          G0002: "You were unconcious for a month. I was starting to get truely concerned.",
-          G0003: "Take it easy you've just woken up after all.",
+          G0001: "Oh thank god, you managed to wake up!",
+          G0002: "You were unconscious for a month. I was starting to get truly concerned.",
+          G0003: "Take it easy, you've just woken up after all.",
           G0004: "Feeling better now?",
-          G0005: "I'm sure you're still very confused so let me give you a quick rundown.",
+          G0005: "I'm sure you're still very confused, so let me give you a quick rundown.",
           G0006: "You were.... involved in a major traffic accident.",
           G0007: "I don't know the full details but it seems you and a couple of others fell victim to a drunk truck driver.",
           G0008: "Yes, in total four people including you got injured.",
-          G0009: "From what you told me beforehand you said you needed to get groceries.",
-          G0010: "Thats the only thing i remember though.",
+          G0009: "From what you told me beforehand, you said you needed to get groceries.",
+          G0010: "That's the only thing I remember though.",
           G0011: "One of them was also quite close to you.",
           G0012: "Ah it's nothing, you don't have to worry about that.",
-          G0013: "Oh",
+          G0013: "Oh.",
           G0014: "Seems I completely forgot to mention to the staff that you've woken up.",
-          G0015: "On that note I should probably leave now.",
+          G0015: "On that note, I should probably leave now.",
           G0016: "Visit times are almost up and I'm sure you still need some rest.",
           G0017: "Take care."
         },
         nurse: {
-          Nu0001: "Excuse me but visiting times are over no-",
-          Nu0002: "THE PATIENT HAS FINALLY REGAINED CONCIOUSNESS!!",
-          Nu0003: "I need to inform the doctor immedeatly!"
+          Nu0001: "Excuse me, but visiting times are over no-",
+          Nu0002: "THE PATIENT HAS FINALLY REGAINED CONSCIOUSNESS!!",
+          Nu0003: "I need to inform the doctor immediatly!"
         },
         doctor: {
-          D0001: "Ah she was right you are finally awake.",
+          D0001: "Ah, she was right. You are finally awake.",
           D0002: "Now dont worry, I just need to make sure your body functions normally.",
           D0003: "Best case scenario you can go home by tomorrow."
         }
@@ -208,8 +208,8 @@ namespace Visualnovel {
           dchoice2 = await ƒS.Menu.getInput(thoughts2, "decisionDream2");
           switch (dchoice2) { 
             case thoughts2.Indulge:
-              await ƒS.Speech.tell("???", "Four were in a crash but only you were here.");
-              await ƒS.Speech.tell("???", "Did the other get better fast or not.");
+              await ƒS.Speech.tell("???", "Four were in a crash, but only you were here.");
+              await ƒS.Speech.tell("???", "Did the others get better fast or not?");
               await ƒS.Speech.tell("???", "Remember, it's the little things.");
               await ƒS.Speech.tell("???", "Farewell for now then.");
               break;
@@ -222,7 +222,7 @@ namespace Visualnovel {
           break;
         case thoughts.Sleep:
           await ƒS.Speech.tell("???", "That so.");
-          await ƒS.Speech.tell("???", "Well you don't get a choice in this anyways.");
+          await ƒS.Speech.tell("???", "Well, you don't get a choice in this anyways.");
           await ƒS.Speech.tell("???", "I will take my leave for today.");
           await ƒS.Speech.tell("???", "I'll see you tomorrow.");
           break;
