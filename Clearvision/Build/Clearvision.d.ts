@@ -114,5 +114,6 @@ declare namespace Visualnovel {
         nameProtagonist: string;
         curiosityCounter: number;
         truthseeing: boolean;
+        curChapter: number;
     };
 }

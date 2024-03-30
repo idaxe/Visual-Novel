@@ -110,7 +110,8 @@ namespace Visualnovel {
     export let dataForSave = {
       nameProtagonist: "",
       curiosityCounter: 0,
-      truthseeing: false
+      truthseeing: false,
+      curChapter: 0
     };
 
     async function buttonFunctions(_option:string): Promise<void> {
