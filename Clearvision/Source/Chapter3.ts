@@ -5,9 +5,9 @@ namespace Visualnovel {
       let text = {
         Narrator: {
           N0000: "...",
-          N0001: "Another day another headache",
-          N0002: "You ponder why the same kind of dream appeared yet again",
-          N0003: "As you complete your morning routine and head out the door a familiar face was awaiting you again.",
+          N0001: "Another day, another headache",
+          N0002: "You ponder why the same kind of dream appeared yet again.",
+          N0003: "As you complete your morning routine and head out the door, a familiar face was awaiting you again.",
           N0004: "Just like the day before she is here yet again.",
           N0005: "You and" + characters.girl1.name + " walked to school without many interruptions.",
           N0006: "During class",

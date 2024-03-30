@@ -9,7 +9,7 @@ var Visualnovel;
                 Hi: "I sense...",
                 How: "a new presence...",
                 Are: "You must be a new player.",
-                You: "It has been ages since my creator actually showed his face around here so I thought I was doomed to corrupt in this repository forever..",
+                You: "It has been ages since my creator actually showed his face around here, so I thought I was doomed to corrupt in this repository forever..",
                 Doing: "Ah well, since I'm programmed this way and I can't go against it. I might as well fufill my role.",
                 Presence: "What do you want to call the protagonist of this story?",
                 //Pname: "So " + characters.protagonist.name + " it is.",
@@ -20,11 +20,11 @@ var Visualnovel;
             Narrator: {
                 L0001: "You slowly try to open your eyes.",
                 L0002: "It's bright enough to hurt your eyes.",
-                L0003: "After a while you begin to process the details of the room.",
+                L0003: "After a while, you begin to process the details of the room.",
                 L0004: "Only now you notice a female figure is sitting by your bed.",
                 L0005: "After a short while you finally regain consciousness completely.",
                 L0006: "You see " + Visualnovel.characters.girl1.name + " exit through the door.",
-                L0007: "At that moment you notice a figure enter through the door.",
+                L0007: "At that moment, you notice a figure enter through the door.",
                 L0008: "After a thorough medical exam, I was finally allowed to get some sleep.",
                 L0009: "Looks like it's " + Visualnovel.characters.girl1.name + ". A close friend from school."
             },
@@ -57,7 +57,7 @@ var Visualnovel;
                 G0004: "Feeling better now?",
                 G0005: "I'm sure you're still very confused, so let me give you a quick rundown.",
                 G0006: "You were.... involved in a major traffic accident.",
-                G0007: "I don't know the full details but it seems you and a couple of others fell victim to a drunk truck driver.",
+                G0007: "I don't know the full details, but it seems you and a couple of others fell victim to a drunk truck driver.",
                 G0008: "Yes, in total four people including you got injured.",
                 G0009: "From what you told me beforehand, you said you needed to get groceries.",
                 G0010: "That's the only thing I remember though.",
@@ -72,12 +72,12 @@ var Visualnovel;
             nurse: {
                 Nu0001: "Excuse me, but visiting times are over no-",
                 Nu0002: "THE PATIENT HAS FINALLY REGAINED CONSCIOUSNESS!!",
-                Nu0003: "I need to inform the doctor immediatly!"
+                Nu0003: "I need to inform the doctor immediately!"
             },
             doctor: {
                 D0001: "Ah, she was right. You are finally awake.",
-                D0002: "Now dont worry, I just need to make sure your body functions normally.",
-                D0003: "Best case scenario you can go home by tomorrow."
+                D0002: "Now don't worry, I just need to make sure your body functions normally.",
+                D0003: "Best case scenario, you can go home by tomorrow."
             }
         };
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Hi);
@@ -197,7 +197,7 @@ var Visualnovel;
             case thoughts.Think:
                 await Visualnovel.ƒS.Speech.tell("???", "Hmmmm.");
                 await Visualnovel.ƒS.Speech.tell("???", "I see.");
-                await Visualnovel.ƒS.Speech.tell("???", "Many things have been happening to you my friend.");
+                await Visualnovel.ƒS.Speech.tell("???", "Many things have been happening to you, my friend.");
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist.name, "I'm not your friend.");
                 await Visualnovel.ƒS.Speech.tell("???", "Out cold for a month and that with 3 more people too.");
                 await Visualnovel.ƒS.Speech.tell("???", "Aren't you curious?");
@@ -233,45 +233,45 @@ var Visualnovel;
 (function (Visualnovel) {
     async function Chapter2() {
         console.log("Chapter 2 - Daily life");
-        await Visualnovel.ƒS.Speech.tell("Pringles", "Chips");
+        //await ƒS.Speech.tell("Pringles", "Chips");
         let text = {
             Narrator: {
-                N0001: "After a bizzare dream you notice the weather",
-                N0002: "After eating breakfast you decide to go to school.",
+                N0001: "After a bizzare dream, you notice the weather.",
+                N0002: "After eating breakfast, you decide to go to school.",
                 N0003: "Only to be greeted by your friend the second you leave the house.",
-                N0004: Visualnovel.characters.girl1.name + " looks around slightly flustered",
-                N0005: "After quite a bit of running you and " + Visualnovel.characters.girl1.name + " arrive at the school exhausted.",
+                N0004: Visualnovel.characters.girl1.name + " looks around slightly flustered.",
+                N0005: "After quite a bit of running, " + Visualnovel.characters.girl1.name + " and you arrive at the school exhausted.",
                 N0006: "Classes were as boring as ever.",
-                N0007: "Since you just got out of the hospital you decide to take it easy and go home for the day.",
-                N0008: "Just when you were about to exit the school you run into some familiar faces.",
+                N0007: "Since you just got out of the hospital, you decide to take it easy and go home for the day.",
+                N0008: "Just when you were about to exit the school, you run into some familiar faces.",
                 N0009: "The other girl standing with " + Visualnovel.characters.girl1.name + " was also part of our friend group.",
-                N0010: "From what i remember she was rather close to our other male member.",
+                N0010: "From what I remember, she was rather close to our other male member.",
                 N0011: "The three of us enjoyed a lively conversation.",
                 N0012: "...",
-                N0013: "You two walked home together",
-                N0014: "After arriving home you wave " + Visualnovel.characters.girl1.name + " goodbye as she walks off.",
-                N0015: "Since you returned from the hospital not long ago you decide to buy groceries and clean for the day.",
-                N0016: "A couple hours have passed but the place looks like someone lives in it again.",
-                N0017: "With that done you decide to go to sleep." //start dream dialogue
+                N0013: "You two walked home together.",
+                N0014: "After arriving home, you wave " + Visualnovel.characters.girl1.name + " goodbye as she walks off.",
+                N0015: "Since you returned from the hospital not long ago, you decide to buy groceries and clean for the day.",
+                N0016: "A couple hours have passed, but the place looks like someone lives in it again.",
+                N0017: "With that done, you decide to go to sleep." //start dream dialogue
             },
             protagonist: {
-                P0001: "Its a nice day outside.",
+                P0001: "It's a nice day outside.",
                 P0002: "Birds are singing, flowers are blooming",
-                P0003: "Perfect weather to back to school... ugh.",
-                P0004: "Ehm, good morning to you too" + Visualnovel.characters.girl1.name,
-                P0005: "No i'm fine. Its just that my house is not on your way to school now is it?",
+                P0003: "Perfect weather to go back to school... ugh.",
+                P0004: "Ehm, good morning to you too, " + Visualnovel.characters.girl1.name + ".",
+                P0005: "No, i'm fine. It's just that my house is not on your way to school now is it?",
                 P0006: "I wouldn't say i'm over it but I feel perfectly fine.",
                 P0007: "Oi, I didn't mean-",
                 P0008: "Ugh whatever, you're on.",
                 P0009: "I could live without it but... eh.",
-                P0010: "Yes it's nice to see you two too.",
-                P0011: "While I got you two here let me ask.",
+                P0010: "Yes, it's nice to see you two too.",
+                P0011: "While I got you two here, let me ask.",
                 P0012: "Did either of you see " + Visualnovel.characters.friend.name + " around?",
-                P0013: "I haven't seen him all day so I thought you two might know something.",
-                P0014: "Now then, i should get going.",
+                P0013: "I haven't seen him all day, so I thought you two might know something.",
+                P0014: "Now then, I should get going.",
                 P0015: "*She is still worried huh.*",
-                P0016: "Ok sure thing.",
-                P0017: "Although i have to say I'm feeling way less exhausted than usual.",
+                P0016: "Ok, sure thing.",
+                P0017: "Although I have to say, I'm feeling way less exhausted than usual.",
                 P0018: "Alright, see you tomorrow.",
                 P0019: "!!",
                 PD001: "First off my friend came to walk with me to school today.",
@@ -288,19 +288,19 @@ var Visualnovel;
                 PD012: Visualnovel.characters.girl1.name + " still worries about me even though I am out of the hospital already."
             },
             girl1: {
-                G0001: "Good morning " + Visualnovel.characters.protagonist.name,
+                G0001: "Good morning, " + Visualnovel.characters.protagonist.name + ".",
                 G0002: "Is something the matter? You seem confused.",
                 G0003: "Ehehehe...",
-                G0004: "Geee, i came here worried that your body might not be at its fullest but looks like i was worried for nothing.",
-                G0005: "In that case, lets race to the school.",
+                G0004: "Geee, i came here worried that your body might not be at its fullest, but looks like I was worried for nothing.",
+                G0005: "In that case, let's race to the school.",
                 G0006: "Last one there is a rotten egg.",
                 G0007: "Hey, looks like the rotten egg is deciding to go home early.",
                 G0008: "...",
-                G0009: "About that he-",
+                G0009: "About that, he-",
                 G0010: "Wasn't that your role?",
-                G0011: "You two always hung out together whenever we saw you before so it's natural to think that.",
+                G0011: "You two always hung out together whenever we saw you before, so it's natural to think that.",
                 G0012: "Alright, let me accompany you.",
-                G0013: "Heh, now your imagening things.",
+                G0013: "Heh, now you're imagining things.",
                 G0014: "Have a good rest."
             },
             girl2: {
@@ -308,8 +308,8 @@ var Visualnovel;
                 G2002: "...",
                 G2003: "H-He's just went home earlier than usual.",
                 G2004: "What an idiot, it's not like he could've given us a heads up.",
-                G2005: "Then again that meathead never thought ahead anyways.",
-                G2006: "H-Huh, what are you talking about!",
+                G2005: "Then again, that meathead never thought ahead anyways.",
+                G2006: "H-Huh, what are you talking about?!",
                 G2007: "Shut up, we didn't do that all the time."
             }
         };
@@ -405,7 +405,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0019);
         await Visualnovel.ƒS.Speech.tell("???", "Now now, no need for hostility.");
         await Visualnovel.ƒS.Speech.tell("???", "I'm a fabrication which is born from your mind.");
-        await Visualnovel.ƒS.Speech.tell("???", "You can't hurt me anyways so it's pointless.");
+        await Visualnovel.ƒS.Speech.tell("???", "You can't hurt me anyway, so it's pointless.");
         await Visualnovel.ƒS.Speech.tell("???", "But now to business.");
         await Visualnovel.ƒS.Speech.tell("???", "Tell me, how would you describe the day.");
         let choice = await Visualnovel.ƒS.Menu.getInput(thoughts, "Dreamthoughts1");
@@ -482,9 +482,9 @@ var Visualnovel;
         let text = {
             Narrator: {
                 N0000: "...",
-                N0001: "Another day another headache",
-                N0002: "You ponder why the same kind of dream appeared yet again",
-                N0003: "As you complete your morning routine and head out the door a familiar face was awaiting you again.",
+                N0001: "Another day, another headache",
+                N0002: "You ponder why the same kind of dream appeared yet again.",
+                N0003: "As you complete your morning routine and head out the door, a familiar face was awaiting you again.",
                 N0004: "Just like the day before she is here yet again.",
                 N0005: "You and" + Visualnovel.characters.girl1.name + " walked to school without many interruptions.",
                 N0006: "During class",
@@ -1097,8 +1097,8 @@ var Visualnovel;
         },
         lab2: {},
         classroom: {
-            name: "",
-            background: ""
+            name: "classroom",
+            background: "Assets/Images/Backgrounds/Classroombig.jpg"
         },
         hallway: {},
         town: {},
@@ -1125,7 +1125,7 @@ var Visualnovel;
             }
         },
         girl2: {
-            name: "",
+            name: "Girl2 placeholder",
             origin: Visualnovel.ƒS.ORIGIN.BOTTOMCENTER,
             pose: {
                 angry: "Bildpfad",

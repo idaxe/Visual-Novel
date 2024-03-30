@@ -8,7 +8,7 @@ namespace Visualnovel {
           Hi: "I sense...",
           How: "a new presence...",
           Are: "You must be a new player.",
-          You: "It has been ages since my creator actually showed his face around here so I thought I was doomed to corrupt in this repository forever..",
+          You: "It has been ages since my creator actually showed his face around here, so I thought I was doomed to corrupt in this repository forever..",
           Doing: "Ah well, since I'm programmed this way and I can't go against it. I might as well fufill my role.",
           Presence: "What do you want to call the protagonist of this story?",
           //Pname: "So " + characters.protagonist.name + " it is.",
@@ -19,11 +19,11 @@ namespace Visualnovel {
         Narrator: {
           L0001: "You slowly try to open your eyes.",
           L0002: "It's bright enough to hurt your eyes.",
-          L0003: "After a while you begin to process the details of the room.",
+          L0003: "After a while, you begin to process the details of the room.",
           L0004: "Only now you notice a female figure is sitting by your bed.",
           L0005: "After a short while you finally regain consciousness completely.",
           L0006: "You see " + characters.girl1.name + " exit through the door.",
-          L0007: "At that moment you notice a figure enter through the door.",
+          L0007: "At that moment, you notice a figure enter through the door.",
           L0008: "After a thorough medical exam, I was finally allowed to get some sleep.",
           L0009: "Looks like it's " + characters.girl1.name + ". A close friend from school."
         },
@@ -56,7 +56,7 @@ namespace Visualnovel {
           G0004: "Feeling better now?",
           G0005: "I'm sure you're still very confused, so let me give you a quick rundown.",
           G0006: "You were.... involved in a major traffic accident.",
-          G0007: "I don't know the full details but it seems you and a couple of others fell victim to a drunk truck driver.",
+          G0007: "I don't know the full details, but it seems you and a couple of others fell victim to a drunk truck driver.",
           G0008: "Yes, in total four people including you got injured.",
           G0009: "From what you told me beforehand, you said you needed to get groceries.",
           G0010: "That's the only thing I remember though.",
@@ -71,12 +71,12 @@ namespace Visualnovel {
         nurse: {
           Nu0001: "Excuse me, but visiting times are over no-",
           Nu0002: "THE PATIENT HAS FINALLY REGAINED CONSCIOUSNESS!!",
-          Nu0003: "I need to inform the doctor immediatly!"
+          Nu0003: "I need to inform the doctor immediately!"
         },
         doctor: {
           D0001: "Ah, she was right. You are finally awake.",
-          D0002: "Now dont worry, I just need to make sure your body functions normally.",
-          D0003: "Best case scenario you can go home by tomorrow."
+          D0002: "Now don't worry, I just need to make sure your body functions normally.",
+          D0003: "Best case scenario, you can go home by tomorrow."
         }
       }
       await ƒS.Speech.tell(characters.game, text.game.Hi);
@@ -201,7 +201,7 @@ namespace Visualnovel {
         case thoughts.Think:
           await ƒS.Speech.tell("???", "Hmmmm.");
           await ƒS.Speech.tell("???", "I see.");
-          await ƒS.Speech.tell("???", "Many things have been happening to you my friend.");
+          await ƒS.Speech.tell("???", "Many things have been happening to you, my friend.");
           await ƒS.Speech.tell(characters.protagonist.name, "I'm not your friend.");
           await ƒS.Speech.tell("???", "Out cold for a month and that with 3 more people too.");
           await ƒS.Speech.tell("???", "Aren't you curious?");
