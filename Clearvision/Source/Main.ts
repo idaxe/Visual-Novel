@@ -70,8 +70,8 @@ namespace Visualnovel {
       },
       lab2: {},
       classroom: {
-        name: "",
-        background: ""
+        name: "classroom",
+        background: "Assets/Images/Backgrounds/Classroombig.jpg"
       },
       hallway: {},
       town: {},
@@ -99,7 +99,7 @@ namespace Visualnovel {
         }
       },
       girl2: {
-        name: "",
+        name: "Girl2 placeholder",
         origin: ƒS.ORIGIN.BOTTOMCENTER,
         pose: {
           angry: "Bildpfad",
