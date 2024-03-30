@@ -15,7 +15,7 @@ namespace Visualnovel {
         edge: 1
       },
       gradient: {
-        duration: 3,
+        duration: 2,
         alpha: "Assets/Images/Transitions/middle.jpg",
         edge: 1
       }
@@ -69,7 +69,10 @@ namespace Visualnovel {
         background: ""
       },
       lab2: {},
-      classroom: {},
+      classroom: {
+        name: "",
+        background: ""
+      },
       hallway: {},
       town: {},
       festival: {},

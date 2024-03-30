@@ -227,6 +227,8 @@ namespace Visualnovel {
           await ƒS.Speech.tell("???", "I'll see you tomorrow.");
           break;
       }
+      await ƒS.Location.show(locations.void);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       return "Chapter2";
     }
   }

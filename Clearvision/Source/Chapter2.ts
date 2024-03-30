@@ -102,8 +102,9 @@ namespace Visualnovel {
         N2: "Worry"
       };
 
-      await ƒS.Location.show(locations.dream);
-      
+      //await ƒS.Location.show(locations.dream);
+      await ƒS.Location.show(locations.homeDay);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0002);
@@ -122,8 +123,12 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0008);
+      //fade in school maybe
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
       await ƒS.Speech.tell(characters.narrator, "...");
+      //fade in
+      await ƒS.Location.show(locations.classroom);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
@@ -155,6 +160,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0013);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0018);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0014);
+      await ƒS.Location.show(locations.homeNight);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0014);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0015);
 
@@ -162,7 +169,11 @@ namespace Visualnovel {
 
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0016);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0017);
-            //initiate dream
+      //initiate dream
+      await ƒS.Location.show(locations.void);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.Location.show(locations.dream);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell("???", "So, we meet again already.");
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0019);
       await ƒS.Speech.tell("???", "Now now, no need for hostility.");
@@ -230,6 +241,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "One shall not avert their eyes looking for the path.");
       await ƒS.Speech.tell("???", "Now then.");
       await ƒS.Speech.tell("???", "Sleep well.");
+      await ƒS.Location.show(locations.void);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       return "Chapter3";
     }
   }

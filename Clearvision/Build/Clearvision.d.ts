@@ -84,7 +84,10 @@ declare namespace Visualnovel {
             background: string;
         };
         lab2: {};
-        classroom: {};
+        classroom: {
+            name: string;
+            background: string;
+        };
         hallway: {};
         town: {};
         festival: {};
