@@ -135,7 +135,8 @@ namespace Visualnovel {
       nameProtagonist: "",
       curiosityCounter: 0,
       truthseeing: false,
-      curChapter: 0
+      curChapter: 0,
+      Ending: 0
     };
 
     async function buttonFunctions(_option:string): Promise<void> {
