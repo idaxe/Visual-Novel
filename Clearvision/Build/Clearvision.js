@@ -982,20 +982,44 @@ var Visualnovel;
                 N0002: "You might be getting some real answers today.",
                 N0003: "After quickly getting ready, you walk to school together.",
                 N0004: "After class.",
+                N0005: Visualnovel.characters.girl1.name + " Ran off singnaling you to catch up with her.",
+                N0006: "She just grins at you from afar.",
+                N0007: "You overtake her and rush ahead.",
+                N0008: "You spend the rest of the day blissfully with your friends."
             },
             protagonist: {
                 P0000: "...",
                 P0001: "It's cloudy today.",
                 P0002: "Ok before all that do you know why " + Visualnovel.characters.girl2.name + " wasn't at school today?",
                 P0003: "I didn't think it'd be that bad but I'll apologize later.",
-                P0004: "Now then for the topic at hand."
+                P0004: "Now then for the topic at hand.",
+                P1001: "Uhm, alright then.",
+                P1002: "You never change do you?",
+                P1003: "Well, let's see who will get the best deal.",
+                P1004: "The loser has to pay for dinner."
             },
             girl1: {
+                G0000: "...",
                 G0001: "I think she is just not in the best state of mind to look at you.",
                 G0002: "That would be for the best.",
-                G0003: "I did promise you the day before after all."
+                G0003: "I did promise you the day before after all.",
+                G0101: "Is this really what you want though?",
+                G0102: "I did notice you questioning your current circumstances.",
+                G0103: "However whats so wrong with enjoying your life as it is at the moment.",
+                G0104: "It hasn't been that different and i'm sure you will get used to it in time.",
+                G0105: "Glad to see you are also seeing it that way.",
+                G0106: "Now come, there is a limited time offer down at the downtown flea market.",
+                G0107: "Let's grab " + Visualnovel.characters.girl2.name + " and go check it out.",
+                G0108: "Come on, it's the ideal moment so hurry up!",
+                G0109: "Hmmmhm, you're on!",
+                G0201: "Okay, let's get this over with then.",
             }
         };
+        let thoughts = {
+            C1: "You have a point.",
+            C2: "How could I accept this!"
+        };
+        let tempscore = 0;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0002);
@@ -1009,6 +1033,39 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0003);
+        if (Visualnovel.dataForSave.curiosityCounter >= 4) { //statcheck
+        }
+        else {
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0000);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0101);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0102);
+            let impchoice = await Visualnovel.ƒS.Menu.getInput(thoughts, "Confrontation");
+            switch (impchoice) {
+                case thoughts.C1:
+                    await Visualnovel.ƒS.Speech.tell("???", "So thats the life you chose.");
+                    await Visualnovel.ƒS.Speech.tell("???", "Just continuing on in blissfull ignorance.");
+                    await Visualnovel.ƒS.Speech.tell("???", "How disappointing.");
+                    await Visualnovel.ƒS.Speech.tell("???", "...");
+                    await Visualnovel.ƒS.Speech.tell("???", "However...");
+                    await Visualnovel.ƒS.Speech.tell("???", "This might work out in the end.");
+                    await Visualnovel.ƒS.Speech.tell("???", "...");
+                    await Visualnovel.ƒS.Speech.tell("???", "As long as you will continue walking on this path.");
+                    Visualnovel.dataForSave.Ending = 1;
+                    break;
+                    return "Ending";
+                case thoughts.C2:
+                    await Visualnovel.ƒS.Speech.tell("???", "So thats the life you chose.");
+                    await Visualnovel.ƒS.Speech.tell("???", "...");
+                    await Visualnovel.ƒS.Speech.tell("???", "A interesting outcome.");
+                    await Visualnovel.ƒS.Speech.tell("???", "Looking so desperately for a truth always just an armslength away.");
+                    await Visualnovel.ƒS.Speech.tell("???", "Discarding everything for just that one clue which would reveal it all.");
+                    await Visualnovel.ƒS.Speech.tell("???", "Will this path lead you towards joy or ruin I wonder.");
+                    await Visualnovel.ƒS.Speech.tell("???", "Regardless, I shall follow this path along with you.");
+                    await Visualnovel.ƒS.Speech.tell("???", "After all, I'm already a part of you now.");
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, "You hear a gentle laugh before everything fades away.");
+                    break;
+            }
+        }
     }
     Visualnovel.Chapter6 = Chapter6;
 })(Visualnovel || (Visualnovel = {}));
@@ -1026,6 +1083,97 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001);
     }
     Visualnovel.Chapter7 = Chapter7;
+})(Visualnovel || (Visualnovel = {}));
+var Visualnovel;
+(function (Visualnovel) {
+    async function Endings() {
+        console.log("You have reached an ending");
+        let text = {
+            game: {
+                game001: "It appears you have reached...",
+                game002: "...an ending.",
+                game003: "...",
+                game004: "Was your adventure the one you wished for?",
+                game101: "Choosing to live life happily even when the truth goes undiscovered?",
+                game102: "In the end only you can decide that.",
+                game201: "Choosing to dedicate your life to searching for the truth even when discarding the things close to you?",
+                game202: "Not a good way to live if you ask me.",
+                game301: "Choosing to know the truth?",
+                game302: "Even if it means you have to carry this heavy burdon with you now?",
+                game401: "Choosing to know the truth, only for you to deny it?",
+                game402: "So eager to know the truth only for it to become your downfall.",
+                game501: "*slurp* *slurp*",
+                game502: "Ahhhhh, nothing like a good bubble tea while watching projects desintigrate themselfs.",
+                game503: "!!!",
+                game504: "W-What are you doing here?",
+                game505: "This isn't an ending! How did you get here!?!",
+                game506: "Ahh, I get it.",
+                game507: "You messed around with the games savefile and skipped or broke the sections which check wich ending you got.",
+                game508: "Aha. Ok. No it's fine. I ain't mad that you meddled around with my deepest parts just to get here. No not at all.",
+                game509: "...you could've at least invited me out to dinner you know.",
+                game510: "But eh, fuck it. Since you got here take this.",
+                game511: "*insert scribbeling noises here*",
+                game512: "There ya go.",
+                game513: "You achievement of unlocking the 'Why are you here' ending.",
+                game514: "Now get out of my sight and play the game the way it's intended to you knobhead.",
+                game005: "Now then. The game is over now soo...",
+                game006: "May we meet again someday.",
+                game007: "Hopefully under a fully realised version of this story.",
+                game008: "... and maybe less janky mechanics.",
+                game009: "Now then farewell, see you, etc. etc.",
+                game010: "Now get outta here. :)"
+            }
+        };
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game001);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game002);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game003);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game004);
+        switch (Visualnovel.dataForSave.Ending) {
+            case 1: //ignorance is bliss ending
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game101);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game102);
+                await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+                break;
+            case 2: //forever searching ending
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game201);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game202);
+                await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+                break;
+            case 3: //the truth ending (body accepts the soul)
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game301);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game302);
+                await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+                break;
+            case 4: //the abyss ending (body refuses the soul)
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game401);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game402);
+                await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+                break;
+            default:
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game501); //what the fuq are you doing here ending
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game502);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game503);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game504);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game505);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game506);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game507);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game508);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game509);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game510);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game511);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game512);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game513);
+                await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game514);
+                await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+        }
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game005);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game006);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game007);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game008);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game009);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game010);
+    }
+    Visualnovel.Endings = Endings;
 })(Visualnovel || (Visualnovel = {}));
 var Visualnovel;
 (function (Visualnovel) {
@@ -1158,7 +1306,8 @@ var Visualnovel;
         nameProtagonist: "",
         curiosityCounter: 0,
         truthseeing: false,
-        curChapter: 0
+        curChapter: 0,
+        Ending: 0
     };
     async function buttonFunctions(_option) {
         switch (_option) {

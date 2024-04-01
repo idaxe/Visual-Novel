@@ -20,6 +20,9 @@ declare namespace Visualnovel {
     function Chapter7(): ƒS.SceneReturn;
 }
 declare namespace Visualnovel {
+    function Endings(): ƒS.SceneReturn;
+}
+declare namespace Visualnovel {
     export import ƒ = FudgeCore;
     export import ƒS = FudgeStory;
     let transition: {
@@ -139,5 +142,6 @@ declare namespace Visualnovel {
         curiosityCounter: number;
         truthseeing: boolean;
         curChapter: number;
+        Ending: number;
     };
 }
