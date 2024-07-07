@@ -1788,18 +1788,18 @@ var Visualnovel;
             name: "Minne",
             origin: Visualnovel.ƒS.ORIGIN.BOTTOMCENTER,
             pose: {
-                angry: "Bildpfad",
-                happy: "Bildpfad",
-                upset: "Bildpfad"
+                angry: "Assets/Images/Characters/aisaka_angry.png",
+                happy: "Assets/Images/Characters/aisaka_happy.png",
+                upset: "Assets/Images/Characters/aisaka_upset.png"
             }
         },
         girl2: {
             name: "Girl2 placeholder",
             origin: Visualnovel.ƒS.ORIGIN.BOTTOMCENTER,
             pose: {
-                angry: "Bildpfad",
-                happy: "Bildpfad",
-                upset: "Bildpfad"
+                angry: "Assets/Images/Characters/kohana_angry.png",
+                happy: "Assets/Images/Characters/kohana_happy.png",
+                upset: "Assets/Images/Characters/kohana_upset.png"
             }
         },
         game: {
@@ -1832,7 +1832,7 @@ var Visualnovel;
         switch (_animation) {
             case Visualnovel.animations.outLeft:
                 return {
-                    start: {},
+                    start: { translation: Visualnovel.customPositions.slightleft },
                     end: {},
                     duration: 1,
                     playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE

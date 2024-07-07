@@ -122,18 +122,18 @@ namespace Visualnovel {
         name: "Minne", //rememberance auf Schwedisch lol
         origin: ƒS.ORIGIN.BOTTOMCENTER,
         pose: {
-          angry: "Bildpfad",
-          happy: "Bildpfad",
-          upset: "Bildpfad"
+          angry: "Assets/Images/Characters/aisaka_angry.png",
+          happy: "Assets/Images/Characters/aisaka_happy.png",
+          upset: "Assets/Images/Characters/aisaka_upset.png"
         }
       },
       girl2: {
         name: "Girl2 placeholder",
         origin: ƒS.ORIGIN.BOTTOMCENTER,
         pose: {
-          angry: "Bildpfad",
-          happy: "Bildpfad",
-          upset: "Bildpfad"
+          angry: "Assets/Images/Characters/kohana_angry.png",
+          happy: "Assets/Images/Characters/kohana_happy.png",
+          upset: "Assets/Images/Characters/kohana_upset.png"
         }
       },
       game: {
@@ -169,7 +169,7 @@ namespace Visualnovel {
       switch (_animation) {
         case animations.outLeft:
           return {
-            start: {},
+            start: {translation: customPositions.slightleft},
             end: {},
             duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
