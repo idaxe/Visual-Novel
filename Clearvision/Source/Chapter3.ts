@@ -1,7 +1,10 @@
 namespace Visualnovel {
     export async function Chapter3(): ƒS.SceneReturn {
       console.log("Chapter 3 - Oddities");
-      
+      if (dataForSave.curChapter != 3) {
+        return "Chapter4";
+      }
+
       let text = {
         Narrator: {
           N0000: "...",
@@ -23,8 +26,8 @@ namespace Visualnovel {
         },
         protagonist: {
           P0000: "...",
-          P0001: "*Why is it repeating itself*",
-          P0002: "*Aren't dreams rare in itself?*",
+          P0001: "*Why is it repeating itself?*",
+          P0002: "*Aren't dreams pretty rare in the first place?*",
           P0003: "*On top of that its a continuous one as well.*",
           P0004: "Here again huh?",
           P0005: "Still, i don't think you need to show up EVERY morning now do you?",
@@ -57,13 +60,16 @@ namespace Visualnovel {
           P0032: "*Unusual or not, a surprise is suprise.*",
           P0033: "*And it was definitly a positive one.*",
           P0034: "Strange, even when he was ill before he always had time to answer.",
-          P0035: "Damn, if only i had a number of some relative.",
-          PD001: "",
-          PD002: "",
-          PD003: "",
-          PD004: "",
-          PD005: "",
-          PD006: ""
+          P0035: "Damn, if only I had a number of some relative.",
+          PD001: "I've only noticed today but I've been getting headaches every time I wake up now.",
+          PD002: characters.girl1.name + " showed up at my house again. I think it's a bit much but I've always apprechiated the care she had for me.",
+          PD003: "Aside from my Headaches every morning i get the feeling that there came some strange dreams right before them. I feel like there is a coincedence",
+          PD004: "Seems like my friends want to distract me from all the hospital shenanigans with a trip to the amusement park, which is coincedently in town again.",
+          PD005: "As always our teachers have some unique preferences they want to imprint upon us.",
+          PD005A: "Come to think of it, I noticed some strange gazes during the class though.",
+          PD006: "I was too distracted to notice but all that hospital time made my hair longer than I want to. I should get rid of it soon.",
+          PD007: "I couldn't get in touch with " + characters.friend.name + ". I wonder what's going on on his end.",
+          PD008: "I can't wait to do fun stuff with my friends again. I missed it a lot."
         },
         girl1: {
           G0001: "Good morning " + characters.protagonist.name,
@@ -79,7 +85,7 @@ namespace Visualnovel {
           G2003: "Anyways, " + characters.girl1.name + " said she still has some things to take care of so she left early.",
           G2004: "...considering your bodily reactions I should be the one doing that...",
           G2005: "Nothing you moron! *bleegh*",
-          G2006: "I almost don't wanna do this anmore but here",
+          G2006: "I almost don't wanna do this anmore but here.",
           G2006_2: "It's a ticket for the local amusement park which is in town right now.",
           G2006_3: "Sure has been a while since us fo-... uhm our group has been out together so I siezed the oppertunity.",
           G2007: "As a way to propperly celebrate you getting out of the hospital you know.",
@@ -88,7 +94,25 @@ namespace Visualnovel {
           G2010: "I talked this over with " + characters.girl1.name + ", so don't think anything special because of it. OK!"
         }
       }
+      let listen = false;
+      let tempscore = 0;
+      let thoughts = {
+        C1: "Headaches",
+        N1: "Overprotectiveness",
+        N2: "Dreams"
+      };
+      let thoughts2 = {
+        C1: "Ticket",
+        N1: "Odd lesson",
+        N2: "Haircut"
+      };
+      let thoughts3 = {
+        C1: "Old friend",
+        N1: "Anticipation"
+      };
 
+      await ƒS.Location.show(locations.homeDay);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
@@ -96,22 +120,27 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0002);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0003);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
+      await ƒS.Location.show(); //street bgm
+      await ƒS.Character.show();
+      await ƒS.update(transition.gradient.duration, transition.gradient.alpha, transition.gradient.edge);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
-      await ƒS.Speech.tell(characters.girl2, text.girl1.G0002);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0005);
-      await ƒS.Speech.tell(characters.girl2, text.girl1.G0003);
-      await ƒS.Speech.tell(characters.girl2, text.girl1.G0004);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0003);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0004);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0006);
-      await ƒS.Speech.tell(characters.girl2, text.girl1.G0005);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0005);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0007);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
-      await ƒS.Speech.tell(characters.girl2, text.girl1.G0006);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
       //transition
+      await ƒS.Location.show(locations.classroom);
+      await ƒS.update(transition.gradient.duration, transition.gradient.alpha, transition.gradient.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
-      await ƒS.Speech.tell("Male Teacher", "...and thats why when izanagi gazep upon his wife in yomi he...");  //its shorter to just make this one custom text for this one line he says
+      await ƒS.Speech.tell("Male Teacher", "...and thats why when izanagi gazed upon his wife in yomi he...");  //its shorter to just make this one custom text for this one line he says
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0009);
@@ -132,6 +161,7 @@ namespace Visualnovel {
           await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0017);
           await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
           await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0018);
+          listen = true;
           //add some clue points here
           break;
         case classThoughts.Ignore:
@@ -139,9 +169,13 @@ namespace Visualnovel {
           break;
       }
       //fade
+      await ƒS.Location.show(locations.hallway);
+      await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0019);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0020);
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, characters.girl2.origin);
+      //await ƒS.Animation.();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0021);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0022);
@@ -157,14 +191,19 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2005);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2006);
+      await ƒS.Animation();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
+      //maybe ticket into a inventory slot which skips chapter 4 if discarded
+      await ƒS.Animation();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0028);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0029);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0030);
+      await ƒS.Character.show(); //angy face
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2009);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2010);
+      await ƒS.Character.show() //char gone
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0011);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0031);
@@ -172,6 +211,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0033);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0012);
       //fade
+      await ƒS.Location.show(locations.homeNight);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0013);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0014);
@@ -179,5 +220,72 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0035);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0015);
       //initiate dream
+      await ƒS.Location.show(locations.void);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.Location.show(locations.dream);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000); 
+      await ƒS.Speech.tell("???", "Suprise suprise!"); 
+      await ƒS.Speech.tell("???", "Your favorite hauting voice is back.");
+      await ƒS.Speech.tell("???", "Just like the last times im gonna need some insights.");
+      await ƒS.Speech.tell("???", "Let me into your life.");
+      let choice2 = await ƒS.Menu.getInput(thoughts, "Dreamthoughts1");
+      switch (choice2){
+        case thoughts.C1:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD001);
+          tempscore = tempscore + 5;
+          break;
+        case thoughts.N1:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD002);
+          break;
+        case thoughts.N2:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD003);
+          tempscore = tempscore + 5;
+          break;
+      }
+      let choice3 = await ƒS.Menu.getInput(thoughts2, "Dreamthoughts2");
+      switch (choice3){
+        case thoughts2.C1:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD004);
+          break;
+        case thoughts2.N1:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD005);
+          if (listen == true){
+            await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD005A);
+            tempscore = tempscore + 10;
+          }
+          break;
+        case thoughts2.N2:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD006);
+          break;
+      }
+      let choice4 = await ƒS.Menu.getInput(thoughts3, "Dreamthoughts3");
+      switch (choice4){
+        case thoughts3.C1:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD007);
+          tempscore = tempscore + 5;
+          break;
+        case thoughts3.N1:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD008);
+          break;
+      }
+
+      await ƒS.Speech.tell("???", "I see...");
+      if (tempscore > 7){
+        await ƒS.Speech.tell("???", "I am most impressed.");
+        await ƒS.Speech.tell("???", "Your finding shall lead you to the origin.");
+        //increase global truth score
+      } else {
+        await ƒS.Speech.tell("???", "You seem to be making progress.");
+        await ƒS.Speech.tell("???", "But a word of advice. You should pay a bit more attention on the things happening around you.");
+      }
+      await ƒS.Speech.tell("???", "That may give too much away though.");
+      await ƒS.Speech.tell("???", "Do with these informations as you please.");
+      await ƒS.Speech.tell("???", "Hope you can remember these interactions better outside of your subconciousness soon.");
+      await ƒS.Location.show(locations.void);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      dataForSave.curChapter = 4;
+      dataForSave.curiosityCounter = dataForSave.curiosityCounter + tempscore;
+      return "Chapter4";
     }
   }

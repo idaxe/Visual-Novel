@@ -91,10 +91,39 @@ declare namespace Visualnovel {
             name: string;
             background: string;
         };
-        hallway: {};
-        town: {};
-        festival: {};
+        hallway: {
+            name: string;
+            background: string;
+        };
+        town: {
+            name: string;
+            background: string;
+        };
+        festival: {
+            name: string;
+            background: string;
+        };
         void: {
+            name: string;
+            background: string;
+        };
+        ending1: {
+            name: string;
+            background: string;
+        };
+        ending2: {
+            name: string;
+            background: string;
+        };
+        ending3: {
+            name: string;
+            background: string;
+        };
+        ending4: {
+            name: string;
+            background: string;
+        };
+        ending5: {
             name: string;
             background: string;
         };
@@ -137,6 +166,20 @@ declare namespace Visualnovel {
             name: string;
         };
     };
+    let customPositions: {
+        slightleft: ƒ.Vector2;
+    };
+    let animations: {
+        outLeft: string;
+        outRight: string;
+        inLeft: string;
+        inRight: string;
+        comeCloser: string;
+        stepBack: string;
+        scare: string;
+        scareBack: string;
+    };
+    function animate(_animation: string): ƒS.AnimationDefinition;
     let dataForSave: {
         nameProtagonist: string;
         curiosityCounter: number;

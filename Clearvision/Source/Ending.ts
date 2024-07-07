@@ -44,26 +44,36 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.game, text.game.game004);
       switch (dataForSave.Ending) {
         case 1:         //ignorance is bliss ending
+            await ƒS.Location.show(locations.ending1);
+            await ƒS.update();
             await ƒS.Speech.tell(characters.game, text.game.game101);
             await ƒS.Speech.tell(characters.game, text.game.game102);
             await ƒS.Location.show(locations.beachNight);           //update this
             break;
         case 2:         //forever searching ending
+            await ƒS.Location.show(locations.ending2);
+            await ƒS.update();
             await ƒS.Speech.tell(characters.game, text.game.game201);
             await ƒS.Speech.tell(characters.game, text.game.game202);
             await ƒS.Location.show(locations.beachNight);           //update this
             break;
         case 3:         //the truth ending (body accepts the soul)
+            await ƒS.Location.show(locations.ending3);
+            await ƒS.update();
             await ƒS.Speech.tell(characters.game, text.game.game301);
             await ƒS.Speech.tell(characters.game, text.game.game302);
             await ƒS.Location.show(locations.beachNight);           //update this
             break;
         case 4:         //the abyss ending (body refuses the soul)
+            await ƒS.Location.show(locations.ending4);
+            await ƒS.update();
             await ƒS.Speech.tell(characters.game, text.game.game401);
             await ƒS.Speech.tell(characters.game, text.game.game402);
             await ƒS.Location.show(locations.beachNight);           //update this
             break;
         default:   
+            await ƒS.Location.show(locations.ending5);
+            await ƒS.update();
             await ƒS.Speech.tell(characters.game, text.game.game501);     //what the fuq are you doing here ending
             await ƒS.Speech.tell(characters.game, text.game.game502);
             await ƒS.Speech.tell(characters.game, text.game.game503);
@@ -86,5 +96,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.game, text.game.game008);
       await ƒS.Speech.tell(characters.game, text.game.game009);
       await ƒS.Speech.tell(characters.game, text.game.game010);
+      await ƒS.Location.show(locations.ending4);
+      await ƒS.update();
     }
   }

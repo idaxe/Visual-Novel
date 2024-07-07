@@ -1,6 +1,9 @@
 namespace Visualnovel {
     export async function Chapter4(): ƒS.SceneReturn {
       console.log("Chapter 4 - A enlightening trip");
+      if (dataForSave.curChapter != 4) {
+        return "Chapter5";
+      }
       
       let text = {
         Narrator: {
@@ -48,10 +51,17 @@ namespace Visualnovel {
           P0019: "Ok I was right on the money when it comes to the repeating dreams.",
           P0020: "These habbit changes though...",
           P0021: "It says these mostly happen this sudden only in cases with brain tumors or severe head trauma.",
-          P0022: "From what I remember the doctor saying though both of these were not mentioned.",
+          P0022: "From what I remember the doctor saying though both of these were not mentioned in my case.",
           P0023: "Something definitly happened though.",
           P0024: "Looks like there is some questioning in order tomorrow.",
-          P0025: "For now I'll go to sleep though."
+          P0025: "For now I'll go to sleep though.",
+          PD001: "The dreams have been pretty consistent. I still can't remember the contents of them after I wake up somehow.",
+          PD002: "It's like I was never gone. I feel stronger but when I look inside the mirror I just see my usual stickfigure self.",
+          PD003: "I had a real good time with my friends at the park today. I just wished we could've had the whole group.",
+          PD004: "All these recent events seem to keep me in my thoughts even in these times where I should just forget about it.",
+          PD005: "I tried to order something I absolutely despise. Like it was a force of habbit.",
+          PD006: "I found out quite a bit about the machinations of dreams today.",
+          PD007: "The events around me sure make everything more mysterious but I think I'm beginning to see a pattern."
         },
         girl1: {
           G0001: "Top of the morning to ya lad.",
@@ -76,6 +86,23 @@ namespace Visualnovel {
           G2009: "What was that?"
         }
       }
+      //let listen = false;
+      let tempscore = 0;
+      let thoughts = {
+        C1: "Consistency",
+        N1: "Coma aftereffects"
+      };
+      let thoughts2 = {
+        C1: "Fun",
+        N1: "Spacing out",
+        N2: "Habbits"
+      };
+      let thoughts3 = {
+        C1: "Research",
+        N1: "Own Events"
+      };
+      await ƒS.Location.show(locations.homeDay);
+      await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0002);
@@ -87,25 +114,39 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0003);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
+      //fade black & back
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0005);
+      await ƒS.Character.show();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
+      await ƒS.Location.show(locations.town);
+      await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
+      await ƒS.Location.show(locations.classroom);
+      await ƒS.update();
       //fade
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
-      //fade
+      //fade to amusemetn park
+      //await ƒS.Location.show()
+      await ƒS.Character.show();
+      await ƒS.Character.show();
+      await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0007);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2002);
+      await ƒS.Character.show();
+      await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0011);
+      //double blackfade
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0003);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0008);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2003);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0004);
+      await ƒS.Animation();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0012);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0009);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
@@ -119,19 +160,25 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0014);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0014);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0005);
+      await ƒS.Animation();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0015);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0008);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0009);
+      await ƒS.Animation();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0015);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2007);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0016);
+      await ƒS.Character.show();
+      await ƒS.update();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2009);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0017);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0016);
       //fade
+      await ƒS.Location.show(locations.homeNight);
+      await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0017);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0018);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0019);
@@ -146,5 +193,70 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0024);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0025);
       //start dream
+      await ƒS.Location.show(locations.void);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.Location.show(locations.dream);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000); 
+      await ƒS.Speech.tell("???", "Hmm, I can tell even without you telling me things that today was a good day for you."); 
+      await ƒS.Speech.tell("???", "Even without contact to everything you experienced some feelings even managed to reach me.");
+      await ƒS.Speech.tell("???", "Or maybe I'm just more and more becoming a part of you. He he he~");
+      await ƒS.Speech.tell("???", "Well regardless, you know what I wanna hear.");
+      let choice = await ƒS.Menu.getInput(thoughts, "Dreamthoughts1");
+      switch (choice){
+        case thoughts.C1:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD001);
+          tempscore = tempscore + 5;
+          break;
+        case thoughts.N1:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD002);
+          tempscore = tempscore + 5;
+          break;
+      }
+      let choice2 = await ƒS.Menu.getInput(thoughts2, "Dreamthoughts2");
+      switch (choice2){
+        case thoughts2.C1:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD003);
+          break;
+        case thoughts2.N1:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD004);
+          tempscore = tempscore + 5;
+          break;
+        case thoughts2.N2:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD005);
+          tempscore = tempscore + 5;
+          break;
+      }
+      let choice3 = await ƒS.Menu.getInput(thoughts3, "Dreamthoughts3");
+      switch (choice3){
+        case thoughts3.C1:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD006);
+          tempscore = tempscore + 5;
+          break;
+        case thoughts3.N1:
+          await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD007);
+          tempscore = tempscore + 5;
+          break;
+      }
+
+      await ƒS.Speech.tell("???", "Looks like you had quite the good time today.");
+      if (tempscore > 12){
+        await ƒS.Speech.tell("???", "Well well well.");
+        await ƒS.Speech.tell("???", "Even though you have the options of ignorance you stray from it and move further towards the knowledge hidden in the dark.");
+        //increase global truth score
+      } else {
+        await ƒS.Speech.tell("???", "Very well then.");
+        await ƒS.Speech.tell("???", "I'll let you off with just this today.");
+      }
+      await ƒS.Speech.tell("???", "One way or another you should be aware of your actions.");
+      await ƒS.Speech.tell("???", "What you think and do is not just a concern for yourself anymore.");
+      await ƒS.Speech.tell("???", "Will you accidently cause a actions with a recoil strong enough that it might destroy what you have left?");
+      await ƒS.Speech.tell("???", "Maybe your subconciousness is already getting affected through me?");
+      await ƒS.Speech.tell("???", "Hehe~. Let's see how time plays out.");
+      await ƒS.Location.show(locations.void);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      dataForSave.curChapter = 5;
+      dataForSave.curiosityCounter = dataForSave.curiosityCounter + tempscore;
+      return "Chapter5";
     }
   }

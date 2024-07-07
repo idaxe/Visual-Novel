@@ -1,12 +1,16 @@
 namespace Visualnovel {
     export async function Chapter1(): ƒS.SceneReturn {
       console.log("Chapter 1 - The Accident");
+      if (dataForSave.curChapter != 1) {
+        return "Chapter2";
+      }
+
       let protagName: string = "";
 
       let text = {
         game: {
           Hi: "I sense...",
-          How: "a new presence...",
+          How: "A new presence...",
           Are: "You must be a new player.",
           You: "It has been ages since my creator actually showed his face around here, so I thought I was doomed to corrupt in this repository forever..",
           Doing: "Ah well, since I'm programmed this way and I can't go against it. I might as well fufill my role.",
@@ -47,7 +51,7 @@ namespace Visualnovel {
           P0016: "Damn, I can't remember it clearly.",
           P0017: "*An airhead as always.*",
           P0018: "Bye bye.",
-          P0019: "*Why would I need rest when I was stuck in a bed for a month*"
+          P0019: "*Why would I need rest when I was stuck in a bed for a month?*"
         },
         girl1: {
           G0001: "Oh thank god, you managed to wake up!",
@@ -65,7 +69,7 @@ namespace Visualnovel {
           G0013: "Oh.",
           G0014: "Seems I completely forgot to mention to the staff that you've woken up.",
           G0015: "On that note, I should probably leave now.",
-          G0016: "Visit times are almost up and I'm sure you still need some rest.",
+          G0016: "Visit times seem to be up and I'm sure you still need some rest.",
           G0017: "Take care."
         },
         nurse: {
@@ -113,6 +117,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", text.girl1.G0002);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.L0004);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.L0009);
+
+      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0008);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0003);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0009);
@@ -229,6 +235,7 @@ namespace Visualnovel {
       }
       await ƒS.Location.show(locations.void);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      dataForSave.curChapter = 2;
       return "Chapter2";
     }
   }

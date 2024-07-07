@@ -73,13 +73,42 @@ namespace Visualnovel {
         name: "classroom",
         background: "Assets/Images/Backgrounds/Classroombig.jpg"
       },
-      hallway: {},
-      town: {},
-      festival: {},
+      hallway: {
+        name: "",
+        background: ""
+      },
+      town: {
+        name: "",
+        background: ""
+      },
+      festival: {
+        name: "",
+        background: ""
+      },
       void: {
         name: "nothing",
         background: "Assets/Images/Backgrounds/black.png"
-      }
+      },
+      ending1: {
+        name: "ending1",
+        background: "Assets/Images/Backgrounds/Ending1.png"
+      },
+      ending2: {
+        name: "ending2",
+        background: "Assets/Images/Backgrounds/Ending2.png"
+      },
+      ending3: {
+        name: "ending3",
+        background: "Assets/Images/Backgrounds/Ending3.png"
+      },
+      ending4: {
+        name: "ending4",
+        background: "Assets/Images/Backgrounds/Ending4.png"
+      },
+      ending5: {
+        name: "ending5",
+        background: "Assets/Images/Backgrounds/Ending0-2.png"
+      },
     }; 
 
     export let characters = {
@@ -121,6 +150,75 @@ namespace Visualnovel {
       }
     };
 
+    export let customPositions = {
+      slightleft: new FudgeStory.Position(-150, -540)
+    };
+
+    export let animations = {
+      outLeft: "outLeft",
+      outRight: "outRight",
+      inLeft: "inLeft",
+      inRight: "inRight",
+      comeCloser: "comeCloser",
+      stepBack: "stepBack",
+      scare: "scare",
+      scareBack: "scareBack"
+    }
+
+    export function animate(_animation: string): ƒS.AnimationDefinition {
+      switch (_animation) {
+        case animations.outLeft:
+          return {
+            start: {},
+            end: {},
+            duration: 1,
+            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
+          };
+        case animations.outRight:
+          return {
+            start: {},
+            end: {},
+            duration: 1,
+            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
+          };
+        case animations.inLeft:
+          return {
+            start: {},
+            end: {},
+            duration: 1,
+            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
+          };
+        case animations.inRight:
+          return {
+            start: {},
+            end: {},
+            duration: 1,
+            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
+          };
+        case animations.comeCloser:
+          return {
+            start: {},
+            end: {},
+            duration: 1,
+            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
+          };
+        case animations.stepBack:
+          return {
+            start: {},
+            end: {},
+            duration: 1,
+            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
+          };
+        case animations.scare:
+          return {
+            start: {},
+            end: {},
+            duration: 1,
+            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
+          };
+      }
+    }
+
     let menuButtons = {
       save: "save game",
       load: "load save",
@@ -135,7 +233,7 @@ namespace Visualnovel {
       nameProtagonist: "",
       curiosityCounter: 0,
       truthseeing: false,
-      curChapter: 0,
+      curChapter: 1,
       Ending: 0
     };
 
@@ -190,7 +288,8 @@ namespace Visualnovel {
         { scene: Chapter4, name: "Chapter4", id: "Chapter4"},
         { scene: Chapter5, name: "Chapter5", id: "Chapter5"},
         { scene: Chapter6, name: "Chapter6", id: "Chapter6"},
-        { scene: Chapter7, name: "Chapter7", id: "Chapter7"}
+        { scene: Chapter7, name: "Chapter7", id: "Chapter7"},
+        { scene: Endings, name: "Ending", id: "Ending"}
       ];
 
       let uiElement: HTMLElement = document.querySelector("[type=interface]");

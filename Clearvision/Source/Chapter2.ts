@@ -2,6 +2,9 @@ namespace Visualnovel {
     export async function Chapter2(): ƒS.SceneReturn {
       console.log("Chapter 2 - Daily life");
       //await ƒS.Speech.tell("Pringles", "Chips");
+      if (dataForSave.curChapter != 2) {
+        return "Chapter3";
+      }
 
       let text = {
         Narrator: {
@@ -25,11 +28,11 @@ namespace Visualnovel {
         },
         protagonist: {
           P0001: "It's a nice day outside.",
-          P0002: "Birds are singing, flowers are blooming",
+          P0002: "Birds are singing, flowers are blooming.",
           P0003: "Perfect weather to go back to school... ugh.",
           P0004: "Ehm, good morning to you too, " + characters.girl1.name + ".",
           P0005: "No, i'm fine. It's just that my house is not on your way to school now is it?",
-          P0006: "I wouldn't say i'm over it but I feel perfectly fine.",
+          P0006: "I wouldn't say I'm over it but I feel perfectly fine.",
           P0007: "Oi, I didn't mean-",
           P0008: "Ugh whatever, you're on.",
           P0009: "I could live without it but... eh.",  //missing
@@ -111,6 +114,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0003);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0002);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
+      //maybe an environmental update here?
+      await ƒS.Character.show();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
@@ -132,7 +137,10 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
+      //school hallway maybe?
+      await ƒS.Character.show();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
+      await ƒS.Character.show();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
@@ -140,6 +148,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0011);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0012);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0013);
+      //Characters pose change
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0008);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2002);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0009);
@@ -163,6 +172,7 @@ namespace Visualnovel {
       await ƒS.Location.show(locations.homeNight);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0014);
+      //fade to black and then back
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0015);
 
 
@@ -243,6 +253,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "Sleep well.");
       await ƒS.Location.show(locations.void);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      dataForSave.curChapter = 3;
+      dataForSave.curiosityCounter = dataForSave.curiosityCounter + tempscore;
       return "Chapter3";
     }
   }
