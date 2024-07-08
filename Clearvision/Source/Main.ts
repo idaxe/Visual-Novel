@@ -151,7 +151,8 @@ namespace Visualnovel {
     };
 
     export let customPositions = {
-      slightleft: new FudgeStory.Position(-150, -540)
+      slightleft: new FudgeStory.Position(-150, -540),
+      farleft: new FudgeStory.Position(-1000, -540)
     };
 
     export let animations = {
@@ -170,7 +171,7 @@ namespace Visualnovel {
         case animations.outLeft:
           return {
             start: {translation: customPositions.slightleft},
-            end: {},
+            end: {translation: customPositions.farleft},
             duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };

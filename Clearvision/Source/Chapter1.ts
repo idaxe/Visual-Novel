@@ -178,6 +178,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0016);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0017);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0018);
+      await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("outLeft"));
       await ƒS.Speech.tell(characters.narrator, text.Narrator.L0006);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0019);
@@ -186,6 +187,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.doctor, text.doctor.D0002);
       await ƒS.Speech.tell(characters.doctor, text.doctor.D0003);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.L0008);
+      await ƒS.Character.hide(characters.girl1);
       //ƒS.Sound.fade();
       ƒS.Speech.hide();
       //start dream sequence

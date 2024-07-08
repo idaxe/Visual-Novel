@@ -173,6 +173,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0016);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0017);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0018);
+        await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.animate("outLeft"));
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.L0006);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0000);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0019);
@@ -181,6 +182,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.doctor, text.doctor.D0002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.doctor, text.doctor.D0003);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.L0008);
+        await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
         //ƒS.Sound.fade();
         Visualnovel.ƒS.Speech.hide();
         //start dream sequence
@@ -1816,7 +1818,8 @@ var Visualnovel;
         }
     };
     Visualnovel.customPositions = {
-        slightleft: new FudgeStory.Position(-150, -540)
+        slightleft: new FudgeStory.Position(-150, -540),
+        farleft: new FudgeStory.Position(-1000, -540)
     };
     Visualnovel.animations = {
         outLeft: "outLeft",
@@ -1833,7 +1836,7 @@ var Visualnovel;
             case Visualnovel.animations.outLeft:
                 return {
                     start: { translation: Visualnovel.customPositions.slightleft },
-                    end: {},
+                    end: { translation: Visualnovel.customPositions.farleft },
                     duration: 1,
                     playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
                 };
