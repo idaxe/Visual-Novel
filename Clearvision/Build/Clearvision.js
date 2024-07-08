@@ -185,6 +185,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
         //ƒS.Sound.fade();
         Visualnovel.ƒS.Speech.hide();
+        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.angry, Visualnovel.customPositions.slightleft);
         //start dream sequence
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.test);
         await Visualnovel.ƒS.update(Visualnovel.transition.triangle.duration, Visualnovel.transition.triangle.alpha, Visualnovel.transition.triangle.edge);
@@ -352,7 +353,9 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0003);
         //maybe an environmental update here?
-        await Visualnovel.ƒS.Character.show();
+        await Visualnovel.ƒS.Location.show(Visualnovel.locations.town);
+        await Visualnovel.ƒS.update(Visualnovel.transition.triangle.duration, Visualnovel.transition.triangle.alpha, Visualnovel.transition.triangle.edge);
+        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.customPositions.farleft);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0001);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0002);
@@ -1743,12 +1746,12 @@ var Visualnovel;
             background: "Assets/Images/Backgrounds/Classroombig.jpg"
         },
         hallway: {
-            name: "",
+            name: "School hallway",
             background: ""
         },
         town: {
-            name: "",
-            background: ""
+            name: "Town day",
+            background: "Assets/Images/Backgrounds/town1.jpg"
         },
         festival: {
             name: "",
@@ -1819,7 +1822,10 @@ var Visualnovel;
     };
     Visualnovel.customPositions = {
         slightleft: new FudgeStory.Position(-150, -540),
-        farleft: new FudgeStory.Position(-1000, -540)
+        farleft: new FudgeStory.Position(-1000, -540),
+        slightright: new FudgeStory.Position(250, -540),
+        farright: new FudgeStory.Position(1000, -540),
+        backgroundleft: new FudgeStory.Position(-100, -200)
     };
     Visualnovel.animations = {
         outLeft: "outLeft",

@@ -115,7 +115,9 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0002);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
       //maybe an environmental update here?
-      await ƒS.Character.show();
+      await ƒS.Location.show(locations.town);
+      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farleft);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);

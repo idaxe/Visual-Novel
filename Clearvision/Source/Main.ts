@@ -74,12 +74,12 @@ namespace Visualnovel {
         background: "Assets/Images/Backgrounds/Classroombig.jpg"
       },
       hallway: {
-        name: "",
+        name: "School hallway",
         background: ""
       },
       town: {
-        name: "",
-        background: ""
+        name: "Town day",
+        background: "Assets/Images/Backgrounds/town1.jpg"
       },
       festival: {
         name: "",
@@ -152,7 +152,10 @@ namespace Visualnovel {
 
     export let customPositions = {
       slightleft: new FudgeStory.Position(-150, -540),
-      farleft: new FudgeStory.Position(-1000, -540)
+      farleft: new FudgeStory.Position(-1000, -540),
+      slightright: new FudgeStory.Position(250, -540),
+      farright: new FudgeStory.Position(1000, -540),
+      backgroundleft: new FudgeStory.Position(-100, -200)
     };
 
     export let animations = {

@@ -169,6 +169,9 @@ declare namespace Visualnovel {
     let customPositions: {
         slightleft: ƒ.Vector2;
         farleft: ƒ.Vector2;
+        slightright: ƒ.Vector2;
+        farright: ƒ.Vector2;
+        backgroundleft: ƒ.Vector2;
     };
     let animations: {
         outLeft: string;

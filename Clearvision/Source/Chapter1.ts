@@ -190,6 +190,7 @@ namespace Visualnovel {
       await ƒS.Character.hide(characters.girl1);
       //ƒS.Sound.fade();
       ƒS.Speech.hide();
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.angry, customPositions.slightleft);
       //start dream sequence
       await ƒS.Location.show(locations.test);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
