@@ -1550,7 +1550,7 @@ var Visualnovel;
                 P2004: "Or were they...",
                 P2005: "So that means...",
                 P2006: "!!!",
-                P2007: "*A sharp paint is rushung through my head!*",
+                P2007: "*A sharp paint is rushing through my head!*",
                 P2008: "N-nO... t-tHiS IsN-n't rEaL...",
                 P2009: "ThIs-S iS nOtHinG MoRe ThAn a b-BaD dReAM!!",
                 P2010: "*Everything becomes blurry.*",
@@ -1601,7 +1601,7 @@ var Visualnovel;
             friend: {
                 F0001: "That's right.",
                 F0002: "They were mine.",
-                F0003: "Or rather a Spectre of what you though what was me.",
+                F0003: "Or rather a spectre of what you though what was me.",
                 F0004: "I'm the residue of his consience.",
                 F0005: "And now I've gotten you exactly where I want to have you.",
                 F0006: "You see, I simply did not do this just to help you.",
@@ -1654,12 +1654,74 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0003);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0001);
         //safetychoice to ending 1 or 2 depending on score
+        let schoice = await Visualnovel.ƒS.Menu.getInput(safetychoice, "safetyChoice");
+        if (schoice == safetychoice.Divert) {
+            if (Visualnovel.dataForSave.curiosityCounter > 35) {
+                return "Ending";
+            }
+            return "Ending";
+        }
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1001);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1002);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1003);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1004);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1005);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1006);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1007);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1008);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1009);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1010);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1011);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1012);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1013);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1014);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1015);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1016);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1017);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1018);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1019);
         //if tempscore is maxed ending 4 if not ending 3
         if (Visualnovel.dataForSave.curiosityCounter == 50) {
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2001);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2002);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2003);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2004);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0001);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0002);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0003);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0004);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0005);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0006);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0007);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0008);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0009);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0010);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0011);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0012);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0013);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2005);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2006);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0014);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.friend, text.friend.F0015);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2007);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2008);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2009);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2010);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2011);
             Visualnovel.dataForSave.Ending = 0;
             return "Ending";
         }
         else {
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3001);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3002);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3003);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3004);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3005);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3006);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3007);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3008);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3009);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N3001);
             Visualnovel.dataForSave.Ending = 0;
             return "Ending";
         }
