@@ -118,6 +118,7 @@ namespace Visualnovel {
       await ƒS.Location.show(locations.town);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farleft);
+      await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("inLeft"));
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
@@ -134,15 +135,16 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
       await ƒS.Speech.tell(characters.narrator, "...");
       //fade in
+      await ƒS.Character.hide(characters.girl1);
       await ƒS.Location.show(locations.classroom);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
       //school hallway maybe?
-      await ƒS.Character.show();
+      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
-      await ƒS.Character.show();
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightright);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
