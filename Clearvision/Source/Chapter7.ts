@@ -12,8 +12,9 @@ namespace Visualnovel {
           N0005: "You two head to " + characters.girl2.name + "s place.",
           N0006: "After you were able to make up and had some fun, you and " + characters.girl1.name + " decide to head to the hospital.",
           N0007: "The fog hasn't subsided yet.",
-          N0008: "After meeting up with the doctor and explaining the situation, he leads me and " + characters.girl1.name + " towards an elevator, which was revealed in a operating room after the doctor typed a password into an out of place keypad at the corner of the wall.", 
-          N0009: "As soon as the elevator door swing open I was greeted by a sight I never thought I would ever see.",
+          N0008: "You two make your way inside.",
+          N0009: "After meeting up with the doctor and explaining the situation, he leads me and " + characters.girl1.name + " towards an elevator, which was revealed in a operating room after the doctor typed a password into an out of place keypad at the corner of the wall.", 
+          N0010: "As soon as the elevator door swing open I was greeted by a sight I never thought I would ever see.",
           N1001: "A long hallway streches into the distance filled with cold lights, high tech machinery and a smell of ozone.",
           N1002: "After a while we stop before a room.",
           N1003: "Upon entring the room I notice the huge amount of bioligy eqipment and that this room resembles more a control room than anything else.",
@@ -70,7 +71,7 @@ namespace Visualnovel {
           P3003: "However I am sure of one thing.",
           P3004: "We are one now.",
           P3005: "In a way I'm now responsible for living two lives now.",
-          P3006: "This will be hard in many ways, but I think that's what me compatible with him.",
+          P3006: "This will be hard in many ways, but I think that's what made me compatible with him.",
           P3007: "Even so I believe this is the right choice.",
           P3008: "I'd apprechiate than...",
           P3009: "Does this mean she was only so nice cause I have his body now?"
@@ -160,10 +161,28 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0002);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
+      await ƒS.Location.show();
+      await ƒS.update();
       //fade
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0003);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0003);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0005);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0004);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0005);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0006);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0007);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0008);
+
       //safetychoice to ending 1 or 2 depending on score
       let schoice = await ƒS.Menu.getInput(safetychoice, "safetyChoice");
       if (schoice == safetychoice.Divert) {
@@ -172,25 +191,74 @@ namespace Visualnovel {
         }
           return "Ending";
       }
-      
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0008);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0009);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0009);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
+      await ƒS.Location.show(); //fade black
+      await ƒS.update();
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G0010);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0011);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
+      await ƒS.Location.show(); //the lab
+      await ƒS.update();
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N1001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1002);
+      //await ƒS.Speech.tell(characters.girl1, text.girl1.G1001);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0001);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0002);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1003);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0003);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0004);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0005);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1004);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N1002);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0006);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N1003);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0007);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0008);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0009);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1005);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0010);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1006);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0011);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0012);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1009);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0013);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1010);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1011);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1012);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0014);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0015);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1013);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1014);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0016);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N1004);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0017);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0018);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1015);
+      await ƒS.Speech.tell(characters.doctor, text.doctor.D0019);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G1001);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G1002);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G1003);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G1004);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1016);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G1005);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G1006);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G1007);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G1008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1017);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G1009);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1018);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G1010);
+      await ƒS.Speech.tell(characters.girl1, text.girl1.G1011);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N1005);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N1006);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1019);
       //if tempscore is maxed ending 4 if not ending 3
       if (dataForSave.curiosityCounter == 50){
@@ -205,6 +273,7 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.friend, text.friend.F0005);
         await ƒS.Speech.tell(characters.friend, text.friend.F0006);
         await ƒS.Speech.tell(characters.friend, text.friend.F0007);
+        
         await ƒS.Speech.tell(characters.friend, text.friend.F0008);
         await ƒS.Speech.tell(characters.friend, text.friend.F0009);
         await ƒS.Speech.tell(characters.friend, text.friend.F0010);
@@ -213,25 +282,39 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.friend, text.friend.F0013);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2005);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2006);
+        //sad face
+        await ƒS.Character.show();
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G2001);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G2002);
         await ƒS.Speech.tell(characters.friend, text.friend.F0014);
         await ƒS.Speech.tell(characters.friend, text.friend.F0015);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2007);
+
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2008);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2009);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2010);
+        await ƒS.Speech.tell(characters.doctor, text.doctor.D2001);
+        await ƒS.Speech.tell(characters.doctor, text.doctor.D2002);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G2003);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2011);
         dataForSave.Ending = 0;
         return "Ending";
       } else {
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3001);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G3001);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G3002);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3002);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3003);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3004);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3005);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G3003);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G3004);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3006);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3007);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G3005);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3008);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3009);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G3006);
         await ƒS.Speech.tell(characters.narrator, text.Narrator.N3001);
         dataForSave.Ending = 0;
         return "Ending";
