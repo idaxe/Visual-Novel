@@ -79,7 +79,7 @@ namespace Visualnovel {
       },
       town: {
         name: "Town day",
-        background: "Assets/Images/Backgrounds/town1.jpg"
+        background: "Assets/Images/Backgrounds/town.jpg"
       },
       festival: {
         name: "",
@@ -155,7 +155,8 @@ namespace Visualnovel {
       farleft: new FudgeStory.Position(-1000, -540),
       slightright: new FudgeStory.Position(250, -540),
       farright: new FudgeStory.Position(1000, -540),
-      backgroundleft: new FudgeStory.Position(-100, -200)
+      backgroundleft: new FudgeStory.Position(-100, -200),
+      slscare: new FudgeStory.Position(-150, -500)
     };
 
     export let animations = {
@@ -180,22 +181,22 @@ namespace Visualnovel {
           };
         case animations.outRight:
           return {
-            start: {},
-            end: {},
+            start: {translation: customPositions.slightright},
+            end: {translation: customPositions.farright},
             duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
         case animations.inLeft:
           return {
-            start: {},
-            end: {},
+            start: {translation: customPositions.farleft},
+            end: {translation: customPositions.slightleft},
             duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
         case animations.inRight:
           return {
-            start: {},
-            end: {},
+            start: {translation: customPositions.farright},
+            end: {translation: customPositions.slightright},
             duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
@@ -215,9 +216,16 @@ namespace Visualnovel {
           };
         case animations.scare:
           return {
-            start: {},
-            end: {},
-            duration: 1,
+            start: {translation: customPositions.slightleft},
+            end: {translation: customPositions.slscare},
+            duration: 0.3,
+            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
+          };
+        case animations.scareBack:
+          return {
+            start: {translation: customPositions.slscare},
+            end: {translation: customPositions.slightleft},
+            duration: 0.3,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
       }
