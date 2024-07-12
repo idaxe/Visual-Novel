@@ -66,24 +66,28 @@ namespace Visualnovel {
       },
       lab: {
         name: "Underground lab",
-        background: ""
+        background: "Assets/Images/Backgrounds/Lab.jpg"
       },
-      lab2: {},
+      //lab2: {},
+      school: {
+        name: "school",
+        background: "Assets/Images/Backgrounds/school.jpg"
+      },
       classroom: {
         name: "classroom",
         background: "Assets/Images/Backgrounds/Classroombig.jpg"
       },
       hallway: {
         name: "School hallway",
-        background: ""
+        background: "Assets/Images/Backgrounds/school_hallway.jpg"
       },
       town: {
         name: "Town day",
         background: "Assets/Images/Backgrounds/town.jpg"
       },
       festival: {
-        name: "",
-        background: ""
+        name: "festival",
+        background: "Assets/Images/Backgrounds/festival.jpg"
       },
       void: {
         name: "nothing",
@@ -164,6 +168,8 @@ namespace Visualnovel {
       outRight: "outRight",
       inLeft: "inLeft",
       inRight: "inRight",
+      goInLeft: "goInLeft",
+      goInRight: "goInRight",
       comeCloser: "comeCloser",
       stepBack: "stepBack",
       scare: "scare",
@@ -200,6 +206,10 @@ namespace Visualnovel {
             duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
+        case animations.goInLeft:
+          
+        case animations.goInRight:
+        
         case animations.comeCloser:
           return {
             start: {},

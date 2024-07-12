@@ -174,7 +174,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0019);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0020);
-      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, characters.girl2.origin);
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightleft);
       //await ƒS.Animation.();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0021);

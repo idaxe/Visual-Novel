@@ -86,7 +86,10 @@ declare namespace Visualnovel {
             name: string;
             background: string;
         };
-        lab2: {};
+        school: {
+            name: string;
+            background: string;
+        };
         classroom: {
             name: string;
             background: string;
@@ -179,6 +182,8 @@ declare namespace Visualnovel {
         outRight: string;
         inLeft: string;
         inRight: string;
+        goInLeft: string;
+        goInRight: string;
         comeCloser: string;
         stepBack: string;
         scare: string;

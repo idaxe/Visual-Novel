@@ -130,8 +130,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
       //fade to amusemetn park
       //await ƒS.Location.show()
-      await ƒS.Character.show();
-      await ƒS.Character.show();
+      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightright);
       await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
