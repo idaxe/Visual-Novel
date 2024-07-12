@@ -116,7 +116,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
       //fade black & back
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0005);
-      await ƒS.Character.show();
+      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farright);
+      await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("inRight"));
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
@@ -129,16 +130,17 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
       //fade to amusemetn park
-      //await ƒS.Location.show()
-      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
-      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightright);
+      await ƒS.Location.show(locations.festival);
+      await ƒS.update();
+      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightright);
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightleft);
       await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0007);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2002);
-      await ƒS.Character.show();
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.upset, customPositions.slightleft);
       await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0011);
       //double blackfade
@@ -146,7 +148,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0008);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2003);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0004);
-      await ƒS.Animation();
+      await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("outRight"));
+      //await ƒS.Animation();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0012);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0009);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
@@ -160,22 +163,27 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0014);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0014);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0005);
-      await ƒS.Animation();
+      await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("inRight"));
+      //await ƒS.Animation();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0015);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0008);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0009);
-      await ƒS.Animation();
+      await ƒS.Character.animate(characters.girl2, characters.girl2.pose.angry, animate("scare"));
+      await ƒS.Character.animate(characters.girl2, characters.girl2.pose.angry, animate("scareBack"));
+      //await ƒS.Animation();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0015);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2007);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0016);
-      await ƒS.Character.show();
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightleft);
       await ƒS.update();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2009);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0017);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0016);
+      await ƒS.Character.hide(characters.girl1);
+      await ƒS.Character.hide(characters.girl2);
       //fade
       await ƒS.Location.show(locations.homeNight);
       await ƒS.update();

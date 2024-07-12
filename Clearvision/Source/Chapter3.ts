@@ -85,7 +85,7 @@ namespace Visualnovel {
           G2003: "Anyways, " + characters.girl1.name + " said she still has some things to take care of so she left early.",
           G2004: "...considering your bodily reactions I should be the one doing that...",
           G2005: "Nothing you moron! *bleegh*",
-          G2006: "I almost don't wanna do this anmore but here.",
+          G2006: "I almost don't wanna do this anymore but here.",
           G2006_2: "It's a ticket for the local amusement park which is in town right now.",
           G2006_3: "Sure has been a while since us fo-... uhm our group has been out together so I siezed the oppertunity.",
           G2007: "As a way to propperly celebrate you getting out of the hospital you know.",
@@ -120,8 +120,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0002);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0003);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
-      await ƒS.Location.show(); //street bgm
-      await ƒS.Character.show();
+      await ƒS.Location.show(locations.town); //street bgm
+      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
       await ƒS.update(transition.gradient.duration, transition.gradient.alpha, transition.gradient.edge);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
@@ -191,19 +191,19 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2005);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2006);
-      await ƒS.Animation();
+      //await ƒS.Animation(); //maybe a short foreward step animation
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       //maybe ticket into a inventory slot which skips chapter 4 if discarded
-      await ƒS.Animation();
+      //await ƒS.Animation();//maybe a short back step animation
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0028);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0029);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0030);
-      await ƒS.Character.show(); //angy face
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.angry, customPositions.slightleft); //angy face
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2009);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2010);
-      await ƒS.Character.show() //char gone
+      await ƒS.Character.animate(characters.girl2, characters.girl2.pose.angry, animate("outLeft")); //char gone
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0011);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0031);

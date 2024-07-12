@@ -155,13 +155,15 @@ namespace Visualnovel {
         Divert: "On second thought."
       };
 
+      await ƒS.Location.show(locations.homeDay);
+      await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0002);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0002);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
-      await ƒS.Location.show();
+      await ƒS.Location.show(locations.hallway);
       await ƒS.update();
       //fade
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
@@ -195,13 +197,13 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0009);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0009);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
-      await ƒS.Location.show(); //fade black
+      await ƒS.Location.show(locations.void); //fade black
       await ƒS.update();
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0010);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0011);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
-      await ƒS.Location.show(); //the lab
+      await ƒS.Location.show(locations.lab); //the lab
       await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N1001);
@@ -283,7 +285,7 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2005);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2006);
         //sad face
-        await ƒS.Character.show();
+        await ƒS.Character.show(characters.girl1, characters.girl1.pose.upset, customPositions.slightleft);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G2001);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G2002);
         await ƒS.Speech.tell(characters.friend, text.friend.F0014);
