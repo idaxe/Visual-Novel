@@ -210,6 +210,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0032);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0033);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0012);
+      await ƒS.Character.hide(characters.girl1);
+      await ƒS.Character.hide(characters.girl2);
       //fade
       await ƒS.Location.show(locations.homeNight);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
