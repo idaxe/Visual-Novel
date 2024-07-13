@@ -857,7 +857,7 @@ var Visualnovel;
                 P0017: "Nothing!",
                 P0018: "Right. Now time to research.",
                 P0019: "Ok I was right on the money when it comes to the repeating dreams.",
-                P0020: "These habbit changes though...",
+                P0020: "These habit changes though...",
                 P0021: "It says these mostly happen this sudden only in cases with brain tumors or severe head trauma.",
                 P0022: "From what I remember the doctor saying though both of these were not mentioned in my case.",
                 P0023: "Something definitly happened though.",
@@ -867,7 +867,7 @@ var Visualnovel;
                 PD002: "It's like I was never gone. I feel stronger but when I look inside the mirror I just see my usual stickfigure self.",
                 PD003: "I had a real good time with my friends at the park today. I just wished we could've had the whole group.",
                 PD004: "All these recent events seem to keep me in my thoughts even in these times where I should just forget about it.",
-                PD005: "I tried to order something I absolutely despise. Like it was a force of habbit.",
+                PD005: "I tried to order something I absolutely despise. Like it was a force of habit.",
                 PD006: "I found out quite a bit about the machinations of dreams today.",
                 PD007: "The events around me sure make everything more mysterious but I think I'm beginning to see a pattern."
             },
@@ -903,7 +903,7 @@ var Visualnovel;
         let thoughts2 = {
             C1: "Fun",
             N1: "Spacing out",
-            N2: "Habbits"
+            N2: "Habits"
         };
         let thoughts3 = {
             C1: "Research",
@@ -1066,8 +1066,8 @@ var Visualnovel;
         }
         await Visualnovel.ƒS.Speech.tell("???", "One way or another you should be aware of your actions.");
         await Visualnovel.ƒS.Speech.tell("???", "What you think and do is not just a concern for yourself anymore.");
-        await Visualnovel.ƒS.Speech.tell("???", "Will you accidently cause a actions with a recoil strong enough that it might destroy what you have left?");
-        await Visualnovel.ƒS.Speech.tell("???", "Maybe your subconciousness is already getting affected through me?");
+        await Visualnovel.ƒS.Speech.tell("???", "Will you accidentally cause actions with recoil strong enough that it might destroy what you have left?");
+        await Visualnovel.ƒS.Speech.tell("???", "Maybe your subconsciousness is already getting affected through me?");
         await Visualnovel.ƒS.Speech.tell("???", "Hehe~. Let's see how time plays out.");
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
         await Visualnovel.ƒS.update(Visualnovel.transition.triangle.duration, Visualnovel.transition.triangle.alpha, Visualnovel.transition.triangle.edge);
@@ -1085,11 +1085,11 @@ var Visualnovel;
         let text = {
             Narrator: {
                 N0000: "...",
-                N0001: "You gotten so used to the headaches that they appear to be have gotten lighter.",
+                N0001: "You've gotten so used to the headaches that they appear to be have gotten lighter.",
                 N0002: "With a light uneasy feeling in the air you went to school.",
                 N0003: "After class.",
                 N0004: "After you fetched both the girls you decide to question them.",
-                N0005: "Both of then just stare at me in silence.",
+                N0005: "Both of them just stare at me in silence.",
                 N0006: "*slap*",
                 N0007: "After that " + Visualnovel.characters.girl2.name + " ran away with tears forming in her eyes.",
                 N0008: "After that *scene* you decide to just walk home."
@@ -1111,7 +1111,7 @@ var Visualnovel;
                 P0013: "We were always a bit more distant. Especially after you and " + Visualnovel.characters.friend.name + " started going out.",
                 P0014: "It feels like you're using his absence to get close to me or something around that.",
                 P0015: "Which brings me to my next point.",
-                P0016: "I know he isn't here due to some abscense/illness, whatever it's not important.",
+                P0016: "I know he isn't here due to some absence/illness, whatever it's not important.",
                 P0017: "Important is that when I tried to call his home no one picked up.",
                 P0018: "Since I know him like my back pocket I just know something is up.",
                 P0019: "And my gut is telling me you two know something.",
@@ -1133,7 +1133,7 @@ var Visualnovel;
                 P0035: "Not for now.",
                 PD001: "It was very cloudy today.",
                 PD002: "Seems like all these thoughts and theories got me in a down mood.",
-                PD003: "I got into an arguement with my friends at school.",
+                PD003: "I got into an argument with my friends at school.",
                 PD004: "I might finally get some answers tomorrow.",
                 PD005: "I feel like these two girls know something I don't.",
                 PD006: "I still don't get why " + Visualnovel.characters.girl2.name + " especially seems so attached to me all of a sudden.",
@@ -1167,10 +1167,10 @@ var Visualnovel;
         let tempscore = 0;
         let thoughts = {
             C1: "Weather",
-            N1: "Uneasyness"
+            N1: "Uneasiness"
         };
         let thoughts2 = {
-            C1: "Arguement",
+            C1: "Argument",
             N1: "Answers",
             N2: "Secrecy"
         };
@@ -1178,6 +1178,8 @@ var Visualnovel;
             C1: "Confusion",
             N1: "Regret"
         };
+        await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeDay);
+        await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0000);
@@ -1332,7 +1334,7 @@ var Visualnovel;
                 tempscore = tempscore + 5;
                 break;
         }
-        await Visualnovel.ƒS.Speech.tell("???", "Once again I apprechiate your input.");
+        await Visualnovel.ƒS.Speech.tell("???", "Once again I appreciate your input.");
         if (tempscore > 12) {
             await Visualnovel.ƒS.Speech.tell("???", "Well well well.");
             await Visualnovel.ƒS.Speech.tell("???", "Even though you have the options of ignorance you stray from it and move further towards the knowledge hidden in the dark.");
@@ -1345,7 +1347,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell("???", "It's getting close now.");
         await Visualnovel.ƒS.Speech.tell("???", "Soon you will be ready for a real eye opener.");
         await Visualnovel.ƒS.Speech.tell("???", "Can your- or rather our fragile mind take it?");
-        await Visualnovel.ƒS.Speech.tell("???", "The future shall reveal.");
+        await Visualnovel.ƒS.Speech.tell("???", "The future is the means by which all is reveal.");
         //await ƒS.Speech.tell("???", "");
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
         await Visualnovel.ƒS.update(Visualnovel.transition.triangle.duration, Visualnovel.transition.triangle.alpha, Visualnovel.transition.triangle.edge);
@@ -1389,6 +1391,7 @@ var Visualnovel;
             protagonist: {
                 P0000: "...",
                 P0001: "It's cloudy today.",
+                P0001a: "Gonna make myself some meatballs later",
                 P0002: "Ok before all that do you know why " + Visualnovel.characters.girl2.name + " wasn't at school today?",
                 P0003: "I didn't think it'd be that bad but I'll apologize later.",
                 P0004: "Now then for the topic at hand.",
@@ -1457,6 +1460,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0001);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0001a);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0003);
         //fade
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.hallway);
@@ -1533,11 +1537,11 @@ var Visualnovel;
                 N0006: "After you were able to make up and had some fun, you and " + Visualnovel.characters.girl1.name + " decide to head to the hospital.",
                 N0007: "The fog hasn't subsided yet.",
                 N0008: "You two make your way inside.",
-                N0009: "After meeting up with the doctor and explaining the situation, he leads me and " + Visualnovel.characters.girl1.name + " towards an elevator, which was revealed in a operating room after the doctor typed a password into an out of place keypad at the corner of the wall.",
+                N0009: "After meeting up with the doctor and explaining the situation, he leads me and " + Visualnovel.characters.girl1.name + " towards an elevator, which was revealed in an operating room after the doctor typed a password into an out of place keypad at the corner of the wall.",
                 N0010: "As soon as the elevator door swing open I was greeted by a sight I never thought I would ever see.",
                 N1001: "A long hallway streches into the distance filled with cold lights, high tech machinery and a smell of ozone.",
                 N1002: "After a while we stop before a room.",
-                N1003: "Upon entring the room I notice the huge amount of bioligy eqipment and that this room resembles more a control room than anything else.",
+                N1003: "Upon entring the room I notice the huge amount of biology equipment and that this room resembles more a control room than anything else.",
                 N1004: "I explained the situation with my dreams.",
                 N1005: "The doctor goes to the computer to pull up what looks to be like a file of a patient.",
                 N1006: "I notice a familiar name on that file.",
@@ -1554,7 +1558,7 @@ var Visualnovel;
                 P0007: "Well, let's be off then.",
                 P0008: "I've made my choice.",
                 P0009: "I want to know what happened.",
-                P0010: "Hey " + Visualnovel.characters.girl1.name + " how are you so uninterrested by this?",
+                P0010: "Hey " + Visualnovel.characters.girl1.name + " how are you so uninterested by this?",
                 P0011: "Ok gacha.",
                 P1001: "What in the god damn.",
                 P1002: "Why does a place like this exist below a hospital?",
@@ -1573,11 +1577,11 @@ var Visualnovel;
                 P1015: "Come to think of it, who am I now physically speaking?",
                 P1016: "This is quite something to take in...",
                 P1017: "*My head begins to hurt*",
-                P1018: "Compatabillity?",
+                P1018: "Compatibility?",
                 P1019: Visualnovel.characters.friend.name + "'s file?!?",
                 P2001: "Wha-What is this?",
                 P2002: "But then all those dreams and my curiosity.",
-                P2003: "Were they truely mine?",
+                P2003: "Were they truly mine?",
                 P2004: "Or were they...",
                 P2005: "So that means...",
                 P2006: "!!!",
@@ -1585,7 +1589,7 @@ var Visualnovel;
                 P2008: "N-nO... t-tHiS IsN-n't rEaL...",
                 P2009: "ThIs-S iS nOtHinG MoRe ThAn a b-BaD dReAM!!",
                 P2010: "*Everything becomes blurry.*",
-                P2011: "*I can only hear the faint voices of " + Visualnovel.characters.girl1.name + " and a doctor before I lose conciousness...*",
+                P2011: "*I can only hear the faint voices of " + Visualnovel.characters.girl1.name + " and a doctor before I lose consciousness...*",
                 P3001: "T-This is so much to take in at once...",
                 P3002: "*Ughh* I don't know quite yet.",
                 P3003: "However I am sure of one thing.",
@@ -1601,7 +1605,7 @@ var Visualnovel;
                 G0001: "Wait till they bring up this class' stuff in the next test.",
                 G0002: "Yeah, i'm aware.",
                 G0003: "However, we must wait till evening because during the day they would be too busy.",
-                G0004: "Yeah. Until then, let's go and visit" + Visualnovel.characters.girl2.name + ".",
+                G0004: "Yeah. Until then, let's go and visit " + Visualnovel.characters.girl2.name + ".",
                 G0005: "There are still thing you have to set right you know~",
                 G0006: "I think I already know your answer but i will ask you one last time.",
                 G0007: "Are you sure you want to know everything?",
@@ -1614,9 +1618,9 @@ var Visualnovel;
                 G1004: "And one of those victims became your body.",
                 G1005: "There's more.",
                 G1006: "The other victims besides you all had fewer injuries than you, all except one.",
-                G1007: "He recieved an injury to his head which was so severe ... that his brain clinically died.",
+                G1007: "He received an injury to his head which was so severe ... that his brain clinically died.",
                 G1008: "With his body recieving minor injuries and you on the brink of death, it was decided to implant you into his body.",
-                G1009: "The compatabillity was good.",
+                G1009: "The compatibility was good.",
                 G1010: "It was that or death...",
                 G1011: "Doctor, could you now pull up the file?",
                 G2001: "H-Hey what going on?",
@@ -1633,11 +1637,11 @@ var Visualnovel;
                 F0001: "That's right.",
                 F0002: "They were mine.",
                 F0003: "Or rather a spectre of what you though what was me.",
-                F0004: "I'm the residue of his consience.",
+                F0004: "I'm the residue of his conscience.",
                 F0005: "And now I've gotten you exactly where I want to have you.",
                 F0006: "You see, I simply did not do this just to help you.",
                 F0007: "We may are now one in body but in soul we are apart.",
-                F0008: "Because of your subconciousness, my attitude became more positive and my thought more blurred.",
+                F0008: "Because of your subconsciousness, my attitude became more positive and my thought more blurred.",
                 F0009: "But because you got so involved into uncovering the mystery you set me free.",
                 F0010: "I'm dead now and I want my soul to rest.",
                 F0011: "But that can't happen with this little piece of me which exists within you.",
@@ -1647,7 +1651,7 @@ var Visualnovel;
                 F0015: "Sleep now my friend."
             },
             doctor: {
-                D0001: "It is a experimental government research hospital.",
+                D0001: "It is an experimental government research hospital.",
                 D0002: "Due to the rapid advancements in technology the government tasked us to experiment with diverse complex operations regarding the human brain.",
                 D0003: "Technically not, however due to your friends persistence and some scientific curiosity I've decided to take responsibillity for this.",
                 D0004: "As long as the higher ups don't snoop around and you don't talk about this, this is pretty harmless.",
@@ -1658,13 +1662,13 @@ var Visualnovel;
                 D0009: "It was so bad that you had to spen the rest of your life hooked into machines while paralysed from the neck down.",
                 D0010: "We had to act fast since with the amount of damage to your organs you would've died within 4 days.",
                 D0011: "As you recall we specialise in the human brain.",
-                D0012: "In order to keep you alive we had to transplant your brain and your conciousness into another body.",
+                D0012: "In order to keep you alive we had to transplant your brain and your consciousness into another body.",
                 D0013: "That's because we overwrote some data in your brain so that it will always show you your own body upon seeing the new body.",
                 D0014: "It sure is.",
                 D0015: "We still are not aware of the side effects it causes so we were hoping you would enlighten us.",
                 D0016: "Your dreams?",
                 D0017: "I see.",
-                D0018: "This might be a result of the leftover conciousness from the donor body.",
+                D0018: "This might be a result of the leftover consciousness from the donor body.",
                 D0019: "This might be better explained by your friend over here.",
                 D2001: "Oh this isn't good, he is experiencing a dissonance of his brain with his body!",
                 D2002: "If we don't move quickly his live will be in danger!"

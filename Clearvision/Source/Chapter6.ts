@@ -31,6 +31,7 @@ namespace Visualnovel {
         protagonist: {
           P0000: "...",
           P0001: "It's cloudy today.",
+          P0001a: "Gonna make myself some meatballs later",
           P0002: "Ok before all that do you know why " + characters.girl2.name + " wasn't at school today?",
           P0003: "I didn't think it'd be that bad but I'll apologize later.",
           P0004: "Now then for the topic at hand.",
@@ -99,6 +100,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0002);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
+      await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001a);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
       //fade
       await ƒS.Location.show(locations.hallway);

@@ -50,7 +50,7 @@ namespace Visualnovel {
           P0017: "Nothing!",
           P0018: "Right. Now time to research.",
           P0019: "Ok I was right on the money when it comes to the repeating dreams.",
-          P0020: "These habbit changes though...",
+          P0020: "These habit changes though...",
           P0021: "It says these mostly happen this sudden only in cases with brain tumors or severe head trauma.",
           P0022: "From what I remember the doctor saying though both of these were not mentioned in my case.",
           P0023: "Something definitly happened though.",
@@ -60,7 +60,7 @@ namespace Visualnovel {
           PD002: "It's like I was never gone. I feel stronger but when I look inside the mirror I just see my usual stickfigure self.",
           PD003: "I had a real good time with my friends at the park today. I just wished we could've had the whole group.",
           PD004: "All these recent events seem to keep me in my thoughts even in these times where I should just forget about it.",
-          PD005: "I tried to order something I absolutely despise. Like it was a force of habbit.",
+          PD005: "I tried to order something I absolutely despise. Like it was a force of habit.",
           PD006: "I found out quite a bit about the machinations of dreams today.",
           PD007: "The events around me sure make everything more mysterious but I think I'm beginning to see a pattern."
         },
@@ -96,7 +96,7 @@ namespace Visualnovel {
       let thoughts2 = {
         C1: "Fun",
         N1: "Spacing out",
-        N2: "Habbits"
+        N2: "Habits"
       };
       let thoughts3 = {
         C1: "Research",
@@ -259,8 +259,8 @@ namespace Visualnovel {
       }
       await ƒS.Speech.tell("???", "One way or another you should be aware of your actions.");
       await ƒS.Speech.tell("???", "What you think and do is not just a concern for yourself anymore.");
-      await ƒS.Speech.tell("???", "Will you accidently cause a actions with a recoil strong enough that it might destroy what you have left?");
-      await ƒS.Speech.tell("???", "Maybe your subconciousness is already getting affected through me?");
+      await ƒS.Speech.tell("???", "Will you accidentally cause actions with recoil strong enough that it might destroy what you have left?");
+      await ƒS.Speech.tell("???", "Maybe your subconsciousness is already getting affected through me?");
       await ƒS.Speech.tell("???", "Hehe~. Let's see how time plays out.");
       await ƒS.Location.show(locations.void);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);

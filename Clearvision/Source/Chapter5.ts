@@ -5,11 +5,11 @@ namespace Visualnovel {
       let text = {
         Narrator: {
           N0000: "...",
-          N0001: "You gotten so used to the headaches that they appear to be have gotten lighter.",
+          N0001: "You've gotten so used to the headaches that they appear to be have gotten lighter.",
           N0002: "With a light uneasy feeling in the air you went to school.",
           N0003: "After class.",
           N0004: "After you fetched both the girls you decide to question them.",
-          N0005: "Both of then just stare at me in silence.",
+          N0005: "Both of them just stare at me in silence.",
           N0006: "*slap*",
           N0007: "After that " + characters.girl2.name + " ran away with tears forming in her eyes.",
           N0008: "After that *scene* you decide to just walk home."
@@ -31,7 +31,7 @@ namespace Visualnovel {
           P0013: "We were always a bit more distant. Especially after you and " + characters.friend.name + " started going out.",
           P0014: "It feels like you're using his absence to get close to me or something around that.",
           P0015: "Which brings me to my next point.",
-          P0016: "I know he isn't here due to some abscense/illness, whatever it's not important.",
+          P0016: "I know he isn't here due to some absence/illness, whatever it's not important.",
           P0017: "Important is that when I tried to call his home no one picked up.",
           P0018: "Since I know him like my back pocket I just know something is up.",
           P0019: "And my gut is telling me you two know something.",
@@ -53,7 +53,7 @@ namespace Visualnovel {
           P0035: "Not for now.",
           PD001: "It was very cloudy today.",
           PD002: "Seems like all these thoughts and theories got me in a down mood.",
-          PD003: "I got into an arguement with my friends at school.",
+          PD003: "I got into an argument with my friends at school.",
           PD004: "I might finally get some answers tomorrow.",
           PD005: "I feel like these two girls know something I don't.",
           PD006: "I still don't get why " + characters.girl2.name + " especially seems so attached to me all of a sudden.",
@@ -87,10 +87,10 @@ namespace Visualnovel {
       let tempscore = 0;
       let thoughts = {
         C1: "Weather",
-        N1: "Uneasyness"
+        N1: "Uneasiness"
       };
       let thoughts2 = {
-        C1: "Arguement",
+        C1: "Argument",
         N1: "Answers",
         N2: "Secrecy"
       };
@@ -98,7 +98,8 @@ namespace Visualnovel {
         C1: "Confusion",
         N1: "Regret"
       };
-
+      await ƒS.Location.show(locations.homeDay);
+      await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
@@ -253,7 +254,7 @@ namespace Visualnovel {
           tempscore = tempscore + 5;
           break;
       }
-      await ƒS.Speech.tell("???", "Once again I apprechiate your input.");
+      await ƒS.Speech.tell("???", "Once again I appreciate your input.");
       if (tempscore > 12){
         await ƒS.Speech.tell("???", "Well well well.");
         await ƒS.Speech.tell("???", "Even though you have the options of ignorance you stray from it and move further towards the knowledge hidden in the dark.");
@@ -265,7 +266,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "It's getting close now.");
       await ƒS.Speech.tell("???", "Soon you will be ready for a real eye opener.");
       await ƒS.Speech.tell("???", "Can your- or rather our fragile mind take it?");
-      await ƒS.Speech.tell("???", "The future shall reveal.");
+      await ƒS.Speech.tell("???", "The future is the means by which all is reveal.");
       //await ƒS.Speech.tell("???", "");
       await ƒS.Location.show(locations.void);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
