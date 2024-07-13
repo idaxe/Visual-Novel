@@ -16,7 +16,7 @@ namespace Visualnovel {
           N0006: "Since you can't stop her anyways you embraced "+ characters.girl1.name +" coming to your place now.",
           N0007: "You talked about various topics on the way to school.",
           N0008: "Nothing interesting happened in class today.",
-          N0009: "You decide to immideatly meet up with your friends and to to the amusement park.",
+          N0009: "You decide to immediately meet up with your friends and to the amusement park.",
           N0010: "After going on some rides your group decides to take a break.",
           N0011: "Seeing a empty table near to some food stands, your group decided to take a lunch break.",
           N0012: "After " + characters.girl1.name + " left you turn your attention to " + characters.girl2.name + ".",

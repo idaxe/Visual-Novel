@@ -12,7 +12,7 @@ namespace Visualnovel {
           N0002: "You ponder why the same kind of dream appeared yet again.",
           N0003: "As you complete your morning routine and head out the door, a familiar face was awaiting you again.",
           N0004: "Just like the day before she is here yet again.",
-          N0005: "You and" + characters.girl1.name + " walked to school without many interruptions.",
+          N0005: "You and " + characters.girl1.name + " walked to school without many interruptions.",
           N0006: "During class",
           N0007: "After class",
           N0008: "After some walking around you spot " + characters.girl2.name + ".",
@@ -55,7 +55,7 @@ namespace Visualnovel {
           P0027: "What was that?",
           P0028: "Oh wow. Thank you very much.",
           P0029: "I gotta ask though, was this your idea?",
-          P0030: "You didn't seem the typ to host these type of events before. Unless it was for him that is.",
+          P0030: "You didn't seem the type to host these type of events before. Unless it was for him that is.",
           P0031: "*Maybe I'm just thinking about all of this too much.*",
           P0032: "*Unusual or not, a surprise is suprise.*",
           P0033: "*And it was definitly a positive one.*",
@@ -88,7 +88,7 @@ namespace Visualnovel {
           G2006: "I almost don't wanna do this anymore but here.",
           G2006_2: "It's a ticket for the local amusement park which is in town right now.",
           G2006_3: "Sure has been a while since us fo-... uhm our group has been out together so I siezed the oppertunity.",
-          G2007: "As a way to propperly celebrate you getting out of the hospital you know.",
+          G2007: "As a way to properly celebrate you getting out of the hospital you know.",
           G2008: "Why would you ask that?",
           G2009: "Oh shut it you! It's not like I do this exclusively for you you know.",
           G2010: "I talked this over with " + characters.girl1.name + ", so don't think anything special because of it. OK!"
@@ -140,7 +140,7 @@ namespace Visualnovel {
       await ƒS.Location.show(locations.classroom);
       await ƒS.update(transition.gradient.duration, transition.gradient.alpha, transition.gradient.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
-      await ƒS.Speech.tell("Male Teacher", "...and thats why when izanagi gazed upon his wife in yomi he...");  //its shorter to just make this one custom text for this one line he says
+      await ƒS.Speech.tell("Male Teacher", "...and thats why when Izanagi gazed upon his wife in yomi he...");  //its shorter to just make this one custom text for this one line he says
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0009);

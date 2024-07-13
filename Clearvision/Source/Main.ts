@@ -87,7 +87,7 @@ namespace Visualnovel {
       },
       festival: {
         name: "festival",
-        background: "Assets/Images/Backgrounds/festival.jpg"
+        background: "Assets/Images/Backgrounds/fare.jpg"
       },
       void: {
         name: "nothing",
@@ -132,7 +132,7 @@ namespace Visualnovel {
         }
       },
       girl2: {
-        name: "Girl2 placeholder",
+        name: "Amai", //sweet auf japanisch
         origin: ƒS.ORIGIN.BOTTOMCENTER,
         pose: {
           angry: "Assets/Images/Characters/kohana_angry.png",
@@ -150,7 +150,7 @@ namespace Visualnovel {
         name: "Nurse"
       },
       friend: {
-        name: "Dead guy"
+        name: "Marty" //ähnlich zu dead auf polnisch
       }
     };
 
