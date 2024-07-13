@@ -1197,8 +1197,8 @@ var Visualnovel;
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.hallway);
         await Visualnovel.ƒS.update();
         // fade hallways
-        //await ƒS.Character.show();
-        await Visualnovel.ƒS.Character.show();
+        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.customPositions.slightleft);
+        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.happy, Visualnovel.customPositions.slightright);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2001);
@@ -1210,14 +1210,14 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0010);
         //await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0011);
-        await Visualnovel.ƒS.Character.show(); //sad
+        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.angry, Visualnovel.customPositions.slightright); //sad
         await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0012);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0013);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0014);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2003);
-        await Visualnovel.ƒS.Character.show(); //maybe g1 sadface & g2 upset
+        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.upset, Visualnovel.customPositions.slightleft); //maybe g1 sadface & g2 upset
         await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0015);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0016);
@@ -1236,7 +1236,8 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2005);
         //g2 animates away
-        await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.angry, Visualnovel.animate("outLeft"));
+        await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.angry, Visualnovel.animate("outRight"));
+        await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl2);
         await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0007);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0000);
@@ -1265,12 +1266,13 @@ var Visualnovel;
         }
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0014);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0015);
-        await Visualnovel.ƒS.Animation.show();
+        await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.animate("outLeft"));
+        await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
         await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0029);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0008);
         //fade
-        await Visualnovel.ƒS.Location.show();
+        await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeNight);
         await Visualnovel.ƒS.update();
         //muffled rain sfx
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0030);

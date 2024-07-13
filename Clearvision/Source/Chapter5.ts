@@ -123,8 +123,8 @@ namespace Visualnovel {
       await ƒS.Location.show(locations.hallway);
       await ƒS.update();
       // fade hallways
-      //await ƒS.Character.show();
-      await ƒS.Character.show();
+      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightright);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0004);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);
@@ -136,14 +136,14 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
       //await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0011);
-      await ƒS.Character.show(); //sad
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.angry, customPositions.slightright); //sad
       await ƒS.update();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2002);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0012);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0013);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0014);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2003);
-      await ƒS.Character.show(); //maybe g1 sadface & g2 upset
+      await ƒS.Character.show(characters.girl1, characters.girl1.pose.upset, customPositions.slightleft); //maybe g1 sadface & g2 upset
       await ƒS.update();
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0015);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0016);
@@ -162,7 +162,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2004);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2005);
       //g2 animates away
-      await ƒS.Character.animate(characters.girl2, characters.girl2.pose.angry, animate("outLeft"));
+      await ƒS.Character.animate(characters.girl2, characters.girl2.pose.angry, animate("outRight"));
+      await ƒS.Character.hide(characters.girl2);
       await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
@@ -190,12 +191,13 @@ namespace Visualnovel {
       }
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0014);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0015);
-      await ƒS.Animation.show();
+      await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("outLeft"));
+      await ƒS.Character.hide(characters.girl1);
       await ƒS.update();
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0029);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
       //fade
-      await ƒS.Location.show();
+      await ƒS.Location.show(locations.homeNight);
       await ƒS.update();
       //muffled rain sfx
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0030);
