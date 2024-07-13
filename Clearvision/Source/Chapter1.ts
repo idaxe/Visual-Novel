@@ -38,7 +38,7 @@ namespace Visualnovel {
           P0003: "My head hurts.",
           P0004: "Where... am I?",
           P0005: "Is this...",
-          P0006: "A hopital room?",
+          P0006: "A hospital room?",
           P0007: "Why am I-",
           P0008: "Wait what? ...why was I...",
           P0009: "...ok.",
@@ -190,7 +190,7 @@ namespace Visualnovel {
       await ƒS.Character.hide(characters.girl1);
       //ƒS.Sound.fade();
       ƒS.Speech.hide();
-      await ƒS.Character.show(characters.girl2, characters.girl2.pose.angry, customPositions.slightleft);
+      //await ƒS.Character.show(characters.girl2, characters.girl2.pose.angry, customPositions.slightleft);
       //start dream sequence
       await ƒS.Location.show(locations.test);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);

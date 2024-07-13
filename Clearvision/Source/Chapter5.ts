@@ -123,7 +123,7 @@ namespace Visualnovel {
       await ƒS.Location.show(locations.hallway);
       await ƒS.update();
       // fade hallways
-      await ƒS.Character.show();
+      //await ƒS.Character.show();
       await ƒS.Character.show();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0004);

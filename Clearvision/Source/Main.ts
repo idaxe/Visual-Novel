@@ -206,9 +206,20 @@ namespace Visualnovel {
             duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
-        case animations.goInLeft:
-          
-        case animations.goInRight:
+        case animations.goInLeft: //placerholder
+          return {
+            start: {translation: customPositions.farleft},
+            end: {translation: customPositions.slightleft},
+            duration: 1,
+            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
+          };
+        case animations.goInRight: //placeholder
+          return {
+            start: {translation: customPositions.farright},
+            end: {translation: customPositions.slightright},
+            duration: 1,
+            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
+          };
         
         case animations.comeCloser:
           return {

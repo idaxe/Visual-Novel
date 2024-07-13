@@ -38,7 +38,7 @@ var Visualnovel;
                 P0003: "My head hurts.",
                 P0004: "Where... am I?",
                 P0005: "Is this...",
-                P0006: "A hopital room?",
+                P0006: "A hospital room?",
                 P0007: "Why am I-",
                 P0008: "Wait what? ...why was I...",
                 P0009: "...ok.",
@@ -185,7 +185,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
         //ƒS.Sound.fade();
         Visualnovel.ƒS.Speech.hide();
-        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.angry, Visualnovel.customPositions.slightleft);
+        //await ƒS.Character.show(characters.girl2, characters.girl2.pose.angry, customPositions.slightleft);
         //start dream sequence
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.test);
         await Visualnovel.ƒS.update(Visualnovel.transition.triangle.duration, Visualnovel.transition.triangle.alpha, Visualnovel.transition.triangle.edge);
@@ -303,7 +303,7 @@ var Visualnovel;
                 G0001: "Good morning, " + Visualnovel.characters.protagonist.name + ".",
                 G0002: "Is something the matter? You seem confused.",
                 G0003: "Ehehehe...",
-                G0004: "Geee, i came here worried that your body might not be at its fullest, but looks like I was worried for nothing.",
+                G0004: "Geee, I came here worried that your body might not be at its fullest, but looks like I was worried for nothing.",
                 G0005: "In that case, let's race to the school.",
                 G0006: "Last one there is a rotten egg.",
                 G0007: "Hey, looks like the rotten egg is deciding to go home early.",
@@ -1195,7 +1195,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.hallway);
         await Visualnovel.ƒS.update();
         // fade hallways
-        await Visualnovel.ƒS.Character.show();
+        //await ƒS.Character.show();
         await Visualnovel.ƒS.Character.show();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0004);
@@ -2135,8 +2135,20 @@ var Visualnovel;
                     duration: 1,
                     playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
                 };
-            case Visualnovel.animations.goInLeft:
-            case Visualnovel.animations.goInRight:
+            case Visualnovel.animations.goInLeft: //placerholder
+                return {
+                    start: { translation: Visualnovel.customPositions.farleft },
+                    end: { translation: Visualnovel.customPositions.slightleft },
+                    duration: 1,
+                    playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
+                };
+            case Visualnovel.animations.goInRight: //placeholder
+                return {
+                    start: { translation: Visualnovel.customPositions.farright },
+                    end: { translation: Visualnovel.customPositions.slightright },
+                    duration: 1,
+                    playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
+                };
             case Visualnovel.animations.comeCloser:
                 return {
                     start: {},

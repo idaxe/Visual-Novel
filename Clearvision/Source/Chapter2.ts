@@ -64,7 +64,7 @@ namespace Visualnovel {
           G0001: "Good morning, " + characters.protagonist.name + ".",
           G0002: "Is something the matter? You seem confused.",
           G0003: "Ehehehe...",
-          G0004: "Geee, i came here worried that your body might not be at its fullest, but looks like I was worried for nothing.",
+          G0004: "Geee, I came here worried that your body might not be at its fullest, but looks like I was worried for nothing.",
           G0005: "In that case, let's race to the school.",
           G0006: "Last one there is a rotten egg.",
           G0007: "Hey, looks like the rotten egg is deciding to go home early.",
