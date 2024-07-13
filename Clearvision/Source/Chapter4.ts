@@ -42,7 +42,7 @@ namespace Visualnovel {
           P0009: "You know I was a little sceptical about this at first but I feel suprisingly refreshed.",
           P0010: "Plus it was fun. Thank you for organizing it " + characters.girl2.name + ".",
           P0011: "*Come to think of it, why was I about to say I want cotton candy?*",
-          P0012: "*I hated that stuff ever since that birthday fiasko 8 years ago.*",
+          P0012: "*I hated that stuff ever since that birthday fiasco 8 years ago.*",
           P0013: "*However it was always the favorite sweet of him.*",
           P0014: "*Just what is going on.*",
           P0015: "Was I really giving off that impression?",
