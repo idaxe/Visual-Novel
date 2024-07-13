@@ -241,6 +241,7 @@ var Visualnovel;
 (function (Visualnovel) {
     async function Chapter2() {
         console.log("Chapter 2 - Daily life");
+        Visualnovel.characters.protagonist.name = Visualnovel.dataForSave.nameProtagonist;
         //await ƒS.Speech.tell("Pringles", "Chips");
         if (Visualnovel.dataForSave.curChapter != 2) {
             return "Chapter3";
@@ -514,6 +515,7 @@ var Visualnovel;
 (function (Visualnovel) {
     async function Chapter3() {
         console.log("Chapter 3 - Oddities");
+        Visualnovel.characters.protagonist.name = Visualnovel.dataForSave.nameProtagonist;
         if (Visualnovel.dataForSave.curChapter != 3) {
             return "Chapter4";
         }
@@ -807,6 +809,7 @@ var Visualnovel;
 (function (Visualnovel) {
     async function Chapter4() {
         console.log("Chapter 4 - A enlightening trip");
+        Visualnovel.characters.protagonist.name = Visualnovel.dataForSave.nameProtagonist;
         if (Visualnovel.dataForSave.curChapter != 4) {
             return "Chapter5";
         }
@@ -1078,6 +1081,7 @@ var Visualnovel;
 (function (Visualnovel) {
     async function Chapter5() {
         console.log("Chapter 5 - Searching");
+        Visualnovel.characters.protagonist.name = Visualnovel.dataForSave.nameProtagonist;
         let text = {
             Narrator: {
                 N0000: "...",
@@ -1355,6 +1359,7 @@ var Visualnovel;
 (function (Visualnovel) {
     async function Chapter6() {
         console.log("Chapter 6 - Crashing down");
+        Visualnovel.characters.protagonist.name = Visualnovel.dataForSave.nameProtagonist;
         let text = {
             Narrator: {
                 N0000: "...",
@@ -1464,6 +1469,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0003);
         if (Visualnovel.dataForSave.curiosityCounter >= 40 && Visualnovel.dataForSave.truthseeing == true) { //statcheck
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0201);
             return "Chapter7";
         }
         else {
@@ -1515,6 +1521,7 @@ var Visualnovel;
 (function (Visualnovel) {
     async function Chapter7() {
         console.log("Chapter 7 - Moving foreward");
+        Visualnovel.characters.protagonist.name = Visualnovel.dataForSave.nameProtagonist;
         let text = {
             Narrator: {
                 N0000: "...",

@@ -1,6 +1,7 @@
 namespace Visualnovel {
     export async function Chapter2(): ƒS.SceneReturn {
       console.log("Chapter 2 - Daily life");
+      characters.protagonist.name = dataForSave.nameProtagonist;
       //await ƒS.Speech.tell("Pringles", "Chips");
       if (dataForSave.curChapter != 2) {
         return "Chapter3";

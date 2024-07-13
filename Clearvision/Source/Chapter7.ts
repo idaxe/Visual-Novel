@@ -1,7 +1,7 @@
 namespace Visualnovel {
     export async function Chapter7(): ƒS.SceneReturn {
       console.log("Chapter 7 - Moving foreward");
-      
+      characters.protagonist.name = dataForSave.nameProtagonist;
       let text = {
         Narrator: {
           N0000: "...",

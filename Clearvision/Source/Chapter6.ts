@@ -1,7 +1,7 @@
 namespace Visualnovel {
     export async function Chapter6(): ƒS.SceneReturn {
       console.log("Chapter 6 - Crashing down");
-      
+      characters.protagonist.name = dataForSave.nameProtagonist;
       let text = {
         Narrator: {
           N0000: "...",
@@ -111,7 +111,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0003);
       if(dataForSave.curiosityCounter >= 40 && dataForSave.truthseeing == true){    //statcheck
-        
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0201);
         return "Chapter7";
       } else {
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0000);

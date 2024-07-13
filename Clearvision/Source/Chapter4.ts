@@ -1,6 +1,7 @@
 namespace Visualnovel {
     export async function Chapter4(): ƒS.SceneReturn {
       console.log("Chapter 4 - A enlightening trip");
+      characters.protagonist.name = dataForSave.nameProtagonist;
       if (dataForSave.curChapter != 4) {
         return "Chapter5";
       }
