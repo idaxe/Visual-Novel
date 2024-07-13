@@ -152,8 +152,8 @@ namespace Visualnovel {
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightright);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
-      await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("goInLeft"));
-      await ƒS.Character.animate(characters.girl2, characters.girl2.pose.happy, animate("goInRight"));
+      //await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("goInLeft"));
+      //await ƒS.Character.animate(characters.girl2, characters.girl2.pose.happy, animate("goInRight"));
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0011);
