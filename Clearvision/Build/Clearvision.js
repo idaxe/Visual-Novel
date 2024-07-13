@@ -1808,7 +1808,7 @@ var Visualnovel;
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.doctor, text.doctor.D2002);
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G2003);
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2011);
-            Visualnovel.dataForSave.Ending = 0;
+            Visualnovel.dataForSave.Ending = 4;
             return "Ending";
         }
         else {
@@ -1828,7 +1828,7 @@ var Visualnovel;
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3009);
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G3006);
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N3001);
-            Visualnovel.dataForSave.Ending = 0;
+            Visualnovel.dataForSave.Ending = 3;
             return "Ending";
         }
     }

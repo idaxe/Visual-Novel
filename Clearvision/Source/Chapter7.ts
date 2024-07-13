@@ -299,7 +299,7 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.doctor, text.doctor.D2002);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G2003);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2011);
-        dataForSave.Ending = 0;
+        dataForSave.Ending = 4;
         return "Ending";
       } else {
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3001);
@@ -318,7 +318,7 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3009);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G3006);
         await ƒS.Speech.tell(characters.narrator, text.Narrator.N3001);
-        dataForSave.Ending = 0;
+        dataForSave.Ending = 3;
         return "Ending";
       }
     }
