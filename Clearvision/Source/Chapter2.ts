@@ -121,6 +121,7 @@ namespace Visualnovel {
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farleft);
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("inLeft"));
+      await ƒS.update();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
@@ -149,8 +150,10 @@ namespace Visualnovel {
       await ƒS.Location.show(locations.hallway);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
+      await ƒS.update();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightright);
+      await ƒS.update();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
       //await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("goInLeft"));
@@ -163,6 +166,7 @@ namespace Visualnovel {
       //Characters pose change
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.upset, customPositions.slightleft);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.upset, customPositions.slightright);
+      await ƒS.update();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0008);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2002);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0009);
@@ -185,6 +189,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0014);
       await ƒS.Character.hide(characters.girl1);
       await ƒS.Character.hide(characters.girl2);
+      await ƒS.update();
       await ƒS.Location.show(locations.homeNight);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0014);

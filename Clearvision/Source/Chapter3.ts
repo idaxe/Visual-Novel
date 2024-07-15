@@ -177,6 +177,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0020);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightleft);
       //await ƒS.Animation.();
+      await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0021);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0022);
@@ -202,9 +203,11 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0030);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.angry, customPositions.slightleft); //angy face
+      await ƒS.update();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2009);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2010);
       await ƒS.Character.animate(characters.girl2, characters.girl2.pose.angry, animate("outLeft")); //char gone
+      await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0011);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0031);

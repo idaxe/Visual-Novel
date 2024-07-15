@@ -17,7 +17,7 @@ namespace Visualnovel {
             game401: "Choosing to know the truth, only for you to deny it?",
             game402: "So eager to know the truth only for it to become your downfall.",
             game501: "*slurp* *slurp*",
-            game502: "Ahhhhh, nothing like a good bubble tea while watching projects desintigrate themselfs.",
+            game502: "Ahhhhh, nothing like a good bubble tea while watching projects desintigrate themselvs.",
             game503: "!!!",
             game504: "W-What are you doing here?",
             game505: "This isn't an ending! How did you get here!?!",
@@ -89,6 +89,7 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.game, text.game.game513);
             await ƒS.Speech.tell(characters.game, text.game.game514);
             await ƒS.Location.show(locations.beachNight);           //update this
+            await ƒS.update();
       }
       await ƒS.Speech.tell(characters.game, text.game.game005);
       await ƒS.Speech.tell(characters.game, text.game.game006);

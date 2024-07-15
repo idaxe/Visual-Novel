@@ -286,6 +286,7 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2006);
         //sad face
         await ƒS.Character.show(characters.girl1, characters.girl1.pose.upset, customPositions.slightleft);
+        await ƒS.update();
         await ƒS.Speech.tell(characters.girl1, text.girl1.G2001);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G2002);
         await ƒS.Speech.tell(characters.friend, text.friend.F0014);
@@ -300,6 +301,7 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.girl1, text.girl1.G2003);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2011);
         dataForSave.Ending = 4;
+        await ƒS.Character.hide(characters.girl1);
         return "Ending";
       } else {
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3001);
@@ -319,6 +321,7 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.girl1, text.girl1.G3006);
         await ƒS.Speech.tell(characters.narrator, text.Narrator.N3001);
         dataForSave.Ending = 3;
+        await ƒS.Character.hide(characters.girl1);
         return "Ending";
       }
     }

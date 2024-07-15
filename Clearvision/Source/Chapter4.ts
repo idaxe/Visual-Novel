@@ -118,7 +118,9 @@ namespace Visualnovel {
       //fade black & back
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0005);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farright);
+      await ƒS.update();
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("inRight"));
+      await ƒS.update();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
@@ -150,6 +152,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2003);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0004);
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("outRight"));
+      await ƒS.update();
       //await ƒS.Animation();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0012);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0009);
@@ -165,6 +168,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0014);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0005);
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("inRight"));
+      await ƒS.update();
       //await ƒS.Animation();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
@@ -172,7 +176,9 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0008);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0009);
       await ƒS.Character.animate(characters.girl2, characters.girl2.pose.angry, animate("scare"));
+      await ƒS.update();
       await ƒS.Character.animate(characters.girl2, characters.girl2.pose.angry, animate("scareBack"));
+      await ƒS.update();
       //await ƒS.Animation();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0015);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2007);
@@ -185,6 +191,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0016);
       await ƒS.Character.hide(characters.girl1);
       await ƒS.Character.hide(characters.girl2);
+      await ƒS.update();
       //fade
       await ƒS.Location.show(locations.homeNight);
       await ƒS.update();

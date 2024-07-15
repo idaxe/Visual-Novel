@@ -108,13 +108,15 @@ namespace Visualnovel {
       //await ƒS.Speech.tell(characters.girl1, text.girl1);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft); //happy
-
+      await ƒS.update();
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0003);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.upset, customPositions.slightleft); //sad
+      await ƒS.update();
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0003);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.angry, customPositions.slightleft); //upset
+      await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0002);
       await ƒS.Location.show(locations.classroom);
       await ƒS.update();
@@ -125,7 +127,9 @@ namespace Visualnovel {
       await ƒS.update();
       // fade hallways
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
+      await ƒS.update();
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightright);
+      await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0004);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);
@@ -164,6 +168,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2005);
       //g2 animates away
       await ƒS.Character.animate(characters.girl2, characters.girl2.pose.angry, animate("outRight"));
+      await ƒS.update();
       await ƒS.Character.hide(characters.girl2);
       await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
@@ -193,6 +198,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0014);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0015);
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("outLeft"));
+      await ƒS.update();
       await ƒS.Character.hide(characters.girl1);
       await ƒS.update();
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0029);
