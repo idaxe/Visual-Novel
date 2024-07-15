@@ -239,14 +239,14 @@ namespace Visualnovel {
           return {
             start: {translation: customPositions.slightleft},
             end: {translation: customPositions.slscare},
-            duration: 0.3,
+            duration: 0.1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
         case animations.scareBack:
           return {
             start: {translation: customPositions.slscare},
             end: {translation: customPositions.slightleft},
-            duration: 0.3,
+            duration: 0.1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
       }

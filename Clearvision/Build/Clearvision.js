@@ -999,9 +999,11 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0015);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0008);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0009);
-        await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.angry, Visualnovel.animate("scare"));
+        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.happy, Visualnovel.customPositions.slightleft);
+        await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl2);
+        await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.happy, Visualnovel.animate("scare"));
         await Visualnovel.ƒS.update();
-        await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.angry, Visualnovel.animate("scareBack"));
+        await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.happy, Visualnovel.animate("scareBack"));
         await Visualnovel.ƒS.update();
         //await ƒS.Animation();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0015);
@@ -2227,14 +2229,14 @@ var Visualnovel;
                 return {
                     start: { translation: Visualnovel.customPositions.slightleft },
                     end: { translation: Visualnovel.customPositions.slscare },
-                    duration: 0.3,
+                    duration: 0.1,
                     playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
                 };
             case Visualnovel.animations.scareBack:
                 return {
                     start: { translation: Visualnovel.customPositions.slscare },
                     end: { translation: Visualnovel.customPositions.slightleft },
-                    duration: 0.3,
+                    duration: 0.1,
                     playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
                 };
         }

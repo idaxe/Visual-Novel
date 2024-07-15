@@ -177,9 +177,11 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0015);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0008);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0009);
-      await ƒS.Character.animate(characters.girl2, characters.girl2.pose.angry, animate("scare"));
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightleft);
+      await ƒS.Character.hide(characters.girl2);
+      await ƒS.Character.animate(characters.girl2, characters.girl2.pose.happy, animate("scare"));
       await ƒS.update();
-      await ƒS.Character.animate(characters.girl2, characters.girl2.pose.angry, animate("scareBack"));
+      await ƒS.Character.animate(characters.girl2, characters.girl2.pose.happy, animate("scareBack"));
       await ƒS.update();
       //await ƒS.Animation();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0015);
