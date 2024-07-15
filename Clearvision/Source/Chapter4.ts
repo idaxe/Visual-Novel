@@ -128,6 +128,7 @@ namespace Visualnovel {
       await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Location.show(locations.classroom);
+      await ƒS.Character.hide(characters.girl1);
       await ƒS.update();
       //fade
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
@@ -144,6 +145,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0007);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2002);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.upset, customPositions.slightleft);
+      await ƒS.Character.hide(characters.girl2);
       await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0011);
       //double blackfade
@@ -185,6 +187,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0016);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightleft);
+      await ƒS.Character.hide(characters.girl2);
       await ƒS.update();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2009);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0017);

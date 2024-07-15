@@ -139,6 +139,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
       //transition
       await ƒS.Location.show(locations.classroom);
+      await ƒS.Character.hide(characters.girl1);
       await ƒS.update(transition.gradient.duration, transition.gradient.alpha, transition.gradient.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
       await ƒS.Speech.tell("Male Teacher", "...and thats why when Izanagi gazed upon his wife in yomi he...");  //its shorter to just make this one custom text for this one line he says
@@ -203,6 +204,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0030);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.angry, customPositions.slightleft); //angy face
+      await ƒS.Character.hide(characters.girl2);
       await ƒS.update();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2009);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2010);

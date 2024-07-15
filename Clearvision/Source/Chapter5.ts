@@ -112,13 +112,16 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0003);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.upset, customPositions.slightleft); //sad
+      await ƒS.Character.hide(characters.girl1);
       await ƒS.update();
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0003);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.angry, customPositions.slightleft); //upset
+      await ƒS.Character.hide(characters.girl1);
       await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0002);
       await ƒS.Location.show(locations.classroom);
+      await ƒS.Character.hide(characters.girl1);
       await ƒS.update();
       //fade school
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
@@ -142,6 +145,7 @@ namespace Visualnovel {
       //await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0011);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.angry, customPositions.slightright); //sad
+      await ƒS.Character.hide(characters.girl2);
       await ƒS.update();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2002);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0012);
@@ -149,6 +153,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0014);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2003);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.upset, customPositions.slightleft); //maybe g1 sadface & g2 upset
+      await ƒS.Character.hide(characters.girl1);
       await ƒS.update();
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0015);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0016);

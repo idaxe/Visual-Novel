@@ -112,14 +112,21 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0003);
+
       if(dataForSave.curiosityCounter >= 40 && dataForSave.truthseeing == true){    //statcheck
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0201);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0202);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0203);
+        await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
+
         return "Chapter7";
       } else {
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0000);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0101);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0102);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0103);
         let impchoice = await ƒS.Menu.getInput(thoughts, "Confrontation");
+
         switch (impchoice) {          //choose your good or bad ending, stats wont matter here... maybe truthseeing does
           case thoughts.C1:
             await ƒS.Location.show(locations.void);
