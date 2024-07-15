@@ -164,10 +164,11 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0012);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0013);
       //Characters pose change
-      await ƒS.Character.hide(characters.girl1);
+      
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.upset, customPositions.slightleft);
-      await ƒS.update();
       await ƒS.Character.hide(characters.girl1);
+      await ƒS.update();
+      await ƒS.Character.hide(characters.girl2);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.upset, customPositions.slightright);
       await ƒS.update();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0008);
