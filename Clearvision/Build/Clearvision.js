@@ -1413,8 +1413,9 @@ var Visualnovel;
                 N0007: "You overtake her and rush ahead.",
                 N0008: "You spend the rest of the day blissfully with your friends.",
                 N0009: "She pulls out her phone and starts calling someone.",
+                N0010: "After a while she finally hangs up.",
                 N1001: "And so the next days went ahead in happiness",
-                N1002: "Earie feeling of those dreams still lingered in your mind.",
+                N1002: "The earie feeling of those dreams still lingered in your mind.",
                 N1003: "But over time those too faded away.",
                 N1004: "You and your friends together walk towards a happy future.",
                 N3001: "And so you wandered off that day.",
@@ -1434,17 +1435,19 @@ var Visualnovel;
                 P0002: "Ok before all that do you know why " + Visualnovel.characters.girl2.name + " wasn't at school today?",
                 P0003: "I didn't think it'd be that bad but I'll apologize later.",
                 P0004: "Now then for the topic at hand.",
+                P1000: "I think I see what you mean now.",
                 P1001: "Uhm, alright then.",
                 P1002: "You never change do you?",
                 P1003: "Well, let's see who will get the best deal.",
                 P1004: "The loser has to pay for dinner.",
-                P2001: "",
+                P2001: "Here as I'll ever be.",
                 P2002: "What do you mean by that?",
                 P2003: "I kinda had a feeling but overall a change that huge would be impossible not to notice.",
                 P2004: "But here I am, having found out practically nothing.",
                 P2005: "Alright, so let's go.",
                 P2006: "...fine.",
                 P2007: "Always!",
+                P3000: "I'm sorry but I can't let this go.",
                 P3001: "B-but you said you would-",
                 P3002: "Alright fine.",
                 P3003: "If you wont help me I will find this out on my own!",
@@ -1474,7 +1477,7 @@ var Visualnovel;
                 G0208: "That you've gone through a huge change without realising it.",
                 G0209: "The call I made just now was with the hospital you are staying at.",
                 G0210: "Once we've gone there again every question should be answered.",
-                G0211: "appointments don't work THAT fast you know.",
+                G0211: "Appointments don't work THAT fast you know.",
                 G0212: "Wait for tomorrow, ok?",
                 G0213: "Just remember, deep down your always you. Ok?",
                 G0214: "Well thats relieving to hear.",
@@ -1485,14 +1488,14 @@ var Visualnovel;
                 G0303: "Everything seemed so fine these last couple of days.",
                 G0304: "I'm not letting this get ruined.",
                 G0305: "No I've changed my mind.",
-                G0306: "I'm not letting the "
+                G0306: "Hey let's just-"
             }
         };
         let thoughts = {
             C1: "You have a point.",
             C2: "How could I accept this!"
         };
-        let tempscore = 0;
+        //let tempscore = 0;
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeDay);
         await Visualnovel.ƒS.update(Visualnovel.transition.triangle.duration, Visualnovel.transition.triangle.alpha, Visualnovel.transition.triangle.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
@@ -1516,6 +1519,42 @@ var Visualnovel;
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0202);
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0203);
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0009);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0010);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0204);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2001);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0205);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0206);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2002);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0207);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0208);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2003);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2004);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0209);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0210);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2005);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0211);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0212);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2006);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0213);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2007);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0214);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0215);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0216);
+            //animate char away
+            await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.animate("outLeft"));
+            await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
+            //initiate dream
+            await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
+            await Visualnovel.ƒS.update(Visualnovel.transition.triangle.duration, Visualnovel.transition.triangle.alpha, Visualnovel.transition.triangle.edge);
+            await Visualnovel.ƒS.Location.show(Visualnovel.locations.dream);
+            await Visualnovel.ƒS.update(Visualnovel.transition.triangle.duration, Visualnovel.transition.triangle.alpha, Visualnovel.transition.triangle.edge);
+            await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
+            await Visualnovel.ƒS.Speech.tell("???", "One more day.");
+            await Visualnovel.ƒS.Speech.tell("???", "Just one more day.");
+            await Visualnovel.ƒS.Speech.tell("???", "Then this will all find it's end.");
+            await Visualnovel.ƒS.Speech.tell("???", "I'll let you go question free this time.");
+            await Visualnovel.ƒS.Speech.tell("???", "Enjoy your rest for today.");
             return "Chapter7";
         }
         else {
@@ -1526,7 +1565,24 @@ var Visualnovel;
             let impchoice = await Visualnovel.ƒS.Menu.getInput(thoughts, "Confrontation");
             switch (impchoice) { //choose your good or bad ending, stats wont matter here... maybe truthseeing does
                 case thoughts.C1:
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1000);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0104);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0105);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0106);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1001);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0107);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0108);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1002);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1003);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1004);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0109);
                     await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
+                    await Visualnovel.ƒS.update();
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N1001);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N1002);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N1003);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N1004);
+                    await Visualnovel.ƒS.Location.show(Visualnovel.locations.dream);
                     await Visualnovel.ƒS.update();
                     //fade
                     await Visualnovel.ƒS.Speech.tell("???", "So thats the life you chose.");
@@ -1542,6 +1598,35 @@ var Visualnovel;
                     //break;
                     return "Ending";
                 case thoughts.C2:
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3000);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0000);
+                    //angry char here
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0301);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0302);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0303);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0304);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3001);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0305);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0000);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3002);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3003);
+                    //sad char here
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0306);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P3004);
+                    await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
+                    await Visualnovel.ƒS.update();
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N3001);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N3002);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N3003);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N3004);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N3005);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N3006);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N3007);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N3008);
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N3009);
+                    await Visualnovel.ƒS.Location.show(Visualnovel.locations.dream);
+                    await Visualnovel.ƒS.update();
+                    //fade
                     await Visualnovel.ƒS.Speech.tell("???", "So thats the life you chose.");
                     await Visualnovel.ƒS.Speech.tell("???", "...");
                     await Visualnovel.ƒS.Speech.tell("???", "A interesting outcome.");

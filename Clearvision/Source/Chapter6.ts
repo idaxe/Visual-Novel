@@ -14,8 +14,9 @@ namespace Visualnovel {
           N0007: "You overtake her and rush ahead.",
           N0008: "You spend the rest of the day blissfully with your friends.",
           N0009: "She pulls out her phone and starts calling someone.",
+          N0010: "After a while she finally hangs up.",
           N1001: "And so the next days went ahead in happiness",
-          N1002: "Earie feeling of those dreams still lingered in your mind.",
+          N1002: "The earie feeling of those dreams still lingered in your mind.",
           N1003: "But over time those too faded away.",
           N1004: "You and your friends together walk towards a happy future.",
           N3001: "And so you wandered off that day.",
@@ -35,17 +36,19 @@ namespace Visualnovel {
           P0002: "Ok before all that do you know why " + characters.girl2.name + " wasn't at school today?",
           P0003: "I didn't think it'd be that bad but I'll apologize later.",
           P0004: "Now then for the topic at hand.",
+          P1000: "I think I see what you mean now.",
           P1001: "Uhm, alright then.",
           P1002: "You never change do you?",
           P1003: "Well, let's see who will get the best deal.",
           P1004: "The loser has to pay for dinner.",
-          P2001: "",
+          P2001: "Here as I'll ever be.",
           P2002: "What do you mean by that?",
           P2003: "I kinda had a feeling but overall a change that huge would be impossible not to notice.",
           P2004: "But here I am, having found out practically nothing.",
           P2005: "Alright, so let's go.",
           P2006: "...fine.",
           P2007: "Always!",
+          P3000: "I'm sorry but I can't let this go.",
           P3001: "B-but you said you would-",
           P3002: "Alright fine.",
           P3003: "If you wont help me I will find this out on my own!",
@@ -75,7 +78,7 @@ namespace Visualnovel {
           G0208: "That you've gone through a huge change without realising it.",
           G0209: "The call I made just now was with the hospital you are staying at.",
           G0210: "Once we've gone there again every question should be answered.",
-          G0211: "appointments don't work THAT fast you know.",
+          G0211: "Appointments don't work THAT fast you know.",
           G0212: "Wait for tomorrow, ok?",
           G0213: "Just remember, deep down your always you. Ok?",
           G0214: "Well thats relieving to hear.",
@@ -86,14 +89,14 @@ namespace Visualnovel {
           G0303: "Everything seemed so fine these last couple of days.",
           G0304: "I'm not letting this get ruined.",
           G0305: "No I've changed my mind.",
-          G0306: "I'm not letting the "
+          G0306: "Hey let's just-"
         }
       }
       let thoughts = {
         C1: "You have a point.",
         C2: "How could I accept this!"
       };
-      let tempscore = 0;
+      //let tempscore = 0;
       await ƒS.Location.show(locations.homeDay);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
@@ -118,7 +121,42 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0202);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0203);
         await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
-
+        await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
+        await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0204);
+        await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2001);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0205);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0206);
+        await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2002);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0207);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0208);
+        await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2003);
+        await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2004);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0209);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0210);
+        await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2005);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0211);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0212);
+        await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2006);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0213);
+        await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2007);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0214);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0215);
+        await ƒS.Speech.tell(characters.girl1, text.girl1.G0216);
+        //animate char away
+        await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("outLeft"));
+        await ƒS.Character.hide(characters.girl1);
+        //initiate dream
+        await ƒS.Location.show(locations.void);
+        await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+        await ƒS.Location.show(locations.dream);
+        await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+        await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000); 
+        await ƒS.Speech.tell("???", "One more day."); 
+        await ƒS.Speech.tell("???", "Just one more day.");
+        await ƒS.Speech.tell("???", "Then this will all find it's end.");
+        await ƒS.Speech.tell("???", "I'll let you go question free this time.");
+        await ƒS.Speech.tell("???", "Enjoy your rest for today.");
         return "Chapter7";
       } else {
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0000);
@@ -129,7 +167,24 @@ namespace Visualnovel {
 
         switch (impchoice) {          //choose your good or bad ending, stats wont matter here... maybe truthseeing does
           case thoughts.C1:
+            await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1000);
+            await ƒS.Speech.tell(characters.girl1, text.girl1.G0104);
+            await ƒS.Speech.tell(characters.girl1, text.girl1.G0105);
+            await ƒS.Speech.tell(characters.girl1, text.girl1.G0106);
+            await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1001);
+            await ƒS.Speech.tell(characters.girl1, text.girl1.G0107);
+            await ƒS.Speech.tell(characters.girl1, text.girl1.G0108);
+            await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1002);
+            await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1003);
+            await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1004);
+            await ƒS.Speech.tell(characters.girl1, text.girl1.G0109);
             await ƒS.Location.show(locations.void);
+            await ƒS.update();
+            await ƒS.Speech.tell(characters.narrator, text.Narrator.N1001);
+            await ƒS.Speech.tell(characters.narrator, text.Narrator.N1002);
+            await ƒS.Speech.tell(characters.narrator, text.Narrator.N1003);
+            await ƒS.Speech.tell(characters.narrator, text.Narrator.N1004);
+            await ƒS.Location.show(locations.dream);
             await ƒS.update();
             //fade
             await ƒS.Speech.tell("???", "So thats the life you chose.");
@@ -145,6 +200,35 @@ namespace Visualnovel {
             //break;
             return "Ending";
           case thoughts.C2:
+            await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3000);
+            await ƒS.Speech.tell(characters.girl1, text.girl1.G0000);
+            //angry char here
+            await ƒS.Speech.tell(characters.girl1, text.girl1.G0301);
+            await ƒS.Speech.tell(characters.girl1, text.girl1.G0302);
+            await ƒS.Speech.tell(characters.girl1, text.girl1.G0303);
+            await ƒS.Speech.tell(characters.girl1, text.girl1.G0304);
+            await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3001);
+            await ƒS.Speech.tell(characters.girl1, text.girl1.G0305);
+            await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
+            await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3002);
+            await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3003);
+            //sad char here
+            await ƒS.Speech.tell(characters.girl1, text.girl1.G0306);
+            await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3004);
+            await ƒS.Location.show(locations.void);
+            await ƒS.update();
+            await ƒS.Speech.tell(characters.narrator, text.Narrator.N3001);
+            await ƒS.Speech.tell(characters.narrator, text.Narrator.N3002);
+            await ƒS.Speech.tell(characters.narrator, text.Narrator.N3003);
+            await ƒS.Speech.tell(characters.narrator, text.Narrator.N3004);
+            await ƒS.Speech.tell(characters.narrator, text.Narrator.N3005);
+            await ƒS.Speech.tell(characters.narrator, text.Narrator.N3006);
+            await ƒS.Speech.tell(characters.narrator, text.Narrator.N3007);
+            await ƒS.Speech.tell(characters.narrator, text.Narrator.N3008);
+            await ƒS.Speech.tell(characters.narrator, text.Narrator.N3009);
+            await ƒS.Location.show(locations.dream);
+            await ƒS.update();
+            //fade
             await ƒS.Speech.tell("???", "So thats the life you chose.");
             await ƒS.Speech.tell("???", "...");
             await ƒS.Speech.tell("???", "A interesting outcome.");
