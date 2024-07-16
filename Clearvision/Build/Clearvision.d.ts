@@ -41,6 +41,16 @@ declare namespace Visualnovel {
             alpha: string;
             edge: number;
         };
+        dreamEnter: {
+            duration: number;
+            alpha: string;
+            edge: number;
+        };
+        dreamExit: {
+            duration: number;
+            alpha: string;
+            edge: number;
+        };
     };
     let sound: {
         pizza: string;

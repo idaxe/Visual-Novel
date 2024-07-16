@@ -18,6 +18,16 @@ namespace Visualnovel {
         duration: 2,
         alpha: "Assets/Images/Transitions/middle.jpg",
         edge: 1
+      },
+      dreamEnter: {
+        duration: 1,
+        alpha: "Assets/Images/Transitions/point.jpg",
+        edge: 1
+      },
+      dreamExit: {
+        duration: 1,
+        alpha: "Assets/Images/Transitions/point_inverse.jpg",
+        edge: 1
       }
     };
 
