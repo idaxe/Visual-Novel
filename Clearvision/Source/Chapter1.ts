@@ -189,12 +189,16 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.doctor, text.doctor.D0003);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.L0008);
       await ƒS.Character.hide(characters.girl1);
+      await ƒS.Sound.fade
       //ƒS.Sound.fade();
       ƒS.Speech.hide();
       //await ƒS.Character.show(characters.girl2, characters.girl2.pose.angry, customPositions.slightleft);
       //start dream sequence
+      
+      
       await ƒS.Location.show(locations.test);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.Sound.play(sound.dream, 0.3, true);
       await ƒS.Location.show(locations.dream);
       await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
       await ƒS.Speech.tell(characters.protagonist, "...");

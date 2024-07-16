@@ -184,12 +184,14 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.doctor, text.doctor.D0003);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.L0008);
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
+        await Visualnovel.ƒS.Sound.fade;
         //ƒS.Sound.fade();
         Visualnovel.ƒS.Speech.hide();
         //await ƒS.Character.show(characters.girl2, characters.girl2.pose.angry, customPositions.slightleft);
         //start dream sequence
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.test);
         await Visualnovel.ƒS.update(Visualnovel.transition.triangle.duration, Visualnovel.transition.triangle.alpha, Visualnovel.transition.triangle.edge);
+        await Visualnovel.ƒS.Sound.play(Visualnovel.sound.dream, 0.3, true);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.dream);
         await Visualnovel.ƒS.update(Visualnovel.transition.triangle.duration, Visualnovel.transition.triangle.alpha, Visualnovel.transition.triangle.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, "...");
