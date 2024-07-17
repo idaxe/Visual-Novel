@@ -20,12 +20,12 @@ namespace Visualnovel {
         edge: 1
       },
       dreamEnter: {
-        duration: 1,
+        duration: 2,
         alpha: "Assets/Images/Transitions/point.png",
         edge: 1
       },
       dreamExit: {
-        duration: 1,
+        duration: 2,
         alpha: "Assets/Images/Transitions/point_inverse.png",
         edge: 1
       },
@@ -35,7 +35,7 @@ namespace Visualnovel {
         edge: 1
       },
       star: {
-        duration: 1,
+        duration: 1.5,
         alpha: "Assets/Images/Transitions/star.png",
         edge: 1
       }
@@ -246,14 +246,14 @@ namespace Visualnovel {
           };
           case animations.smLeft:
           return {
-            start: {translation: customPositions.middleLeft, scaling: new ƒS.Position(0.5, 0.5)},
+            start: {translation: customPositions.farleft, scaling: new ƒS.Position(1, 1)},
             end: {translation: customPositions.middleLeft, scaling: new ƒS.Position(0.5, 0.5)},
             duration: 0,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
           case animations.smRight:
           return {
-            start: {translation: customPositions.middleRight, scaling: new ƒS.Position(0.5, 0.5)},
+            start: {translation: customPositions.farright, scaling: new ƒS.Position(1, 1)},
             end: {translation: customPositions.middleRight, scaling: new ƒS.Position(0.5, 0.5)},
             duration: 0,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
