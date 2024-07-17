@@ -68,6 +68,7 @@ namespace Visualnovel {
           PD004: "Seems like my friends want to distract me from all the hospital shenanigans with a trip to the amusement park, which is coincedently in town again.",
           PD005: "As always our teachers have some unique preferences they want to imprint upon us.",
           PD005A: "Come to think of it, I noticed some strange gazes during the class though.",
+          PD005B: "Nah, I choose to ignore these gazes.",
           PD006: "I was too distracted to notice but all that hospital time made my hair longer than I want to. I should get rid of it soon.",
           PD007: "I couldn't get in touch with " + characters.friend.name + ". I wonder what's going on on his end.",
           PD008: "I can't wait to do fun stuff with my friends again. I missed it a lot."
@@ -261,6 +262,8 @@ namespace Visualnovel {
           if (listen == true){
             await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD005A);
             tempscore = tempscore + 10;
+          } else {
+            await ƒS.Speech.tell(characters.protagonist, text.protagonist.PD005B);
           }
           break;
         case thoughts2.N2:
