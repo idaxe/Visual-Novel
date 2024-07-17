@@ -195,7 +195,9 @@ namespace Visualnovel {
       comeCloser: "comeCloser",
       stepBack: "stepBack",
       scare: "scare",
-      scareBack: "scareBack"
+      scareBack: "scareBack",
+      smLeft: "smLeft",
+      smRight: "smRight"
     }
 
     export function animate(_animation: string): ƒS.AnimationDefinition {
@@ -228,21 +230,34 @@ namespace Visualnovel {
             duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
-        case animations.goInLeft: //placerholder
+        case animations.goInLeft:
           return {
             start: {translation: customPositions.middleLeft, scaling: new ƒS.Position(0.5, 0.5)},
             end: {translation: customPositions.slightleft, scaling: new ƒS.Position(1, 1)},
             duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
-        case animations.goInRight: //placeholder
+        case animations.goInRight:
           return {
             start: {translation: customPositions.middleRight, scaling: new ƒS.Position(0.5, 0.5)},
             end: {translation: customPositions.slightright, scaling: new ƒS.Position(1, 1)},
             duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
-        
+          case animations.smLeft:
+          return {
+            start: {translation: customPositions.middleLeft, scaling: new ƒS.Position(0.5, 0.5)},
+            end: {translation: customPositions.middleLeft, scaling: new ƒS.Position(0.5, 0.5)},
+            duration: 0,
+            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
+          };
+          case animations.smRight:
+          return {
+            start: {translation: customPositions.middleRight, scaling: new ƒS.Position(0.5, 0.5)},
+            end: {translation: customPositions.middleRight, scaling: new ƒS.Position(0.5, 0.5)},
+            duration: 0,
+            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
+          };
         case animations.comeCloser:
           return {
             start: {},

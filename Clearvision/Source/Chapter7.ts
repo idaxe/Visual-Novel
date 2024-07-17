@@ -263,7 +263,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N1006);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1019);
       //if tempscore is maxed ending 4 if not ending 3
-      if (dataForSave.curiosityCounter == 50){
+      if (dataForSave.curiosityCounter == 80){
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2001);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2002);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2003);

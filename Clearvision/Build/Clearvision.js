@@ -1921,7 +1921,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N1006);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1019);
         //if tempscore is maxed ending 4 if not ending 3
-        if (Visualnovel.dataForSave.curiosityCounter == 50) {
+        if (Visualnovel.dataForSave.curiosityCounter == 80) {
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2001);
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2002);
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2003);
@@ -2025,7 +2025,7 @@ var Visualnovel;
             }
         };
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
-        await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
+        await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game001);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game003);
@@ -2033,28 +2033,28 @@ var Visualnovel;
         switch (Visualnovel.dataForSave.Ending) {
             case 1: //ignorance is bliss ending
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.ending1);
-                await Visualnovel.ƒS.update();
+                await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game101);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game102);
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
                 break;
             case 2: //forever searching ending
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.ending2);
-                await Visualnovel.ƒS.update();
+                await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game201);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game202);
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
                 break;
             case 3: //the truth ending (body accepts the soul)
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.ending3);
-                await Visualnovel.ƒS.update();
+                await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game301);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game302);
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
                 break;
             case 4: //the abyss ending (body refuses the soul)
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.ending4);
-                await Visualnovel.ƒS.update();
+                await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game401);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game402);
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this

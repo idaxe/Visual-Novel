@@ -39,7 +39,7 @@ namespace Visualnovel {
         }
       }
       await ƒS.Location.show(locations.void);
-      await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
+      await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
       await ƒS.Speech.tell(characters.game, text.game.game001);
       await ƒS.Speech.tell(characters.game, text.game.game002);
       await ƒS.Speech.tell(characters.game, text.game.game003);
@@ -47,28 +47,28 @@ namespace Visualnovel {
       switch (dataForSave.Ending) {
         case 1:         //ignorance is bliss ending
             await ƒS.Location.show(locations.ending1);
-            await ƒS.update();
+            await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             await ƒS.Speech.tell(characters.game, text.game.game101);
             await ƒS.Speech.tell(characters.game, text.game.game102);
             await ƒS.Location.show(locations.beachNight);           //update this
             break;
         case 2:         //forever searching ending
             await ƒS.Location.show(locations.ending2);
-            await ƒS.update();
+            await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             await ƒS.Speech.tell(characters.game, text.game.game201);
             await ƒS.Speech.tell(characters.game, text.game.game202);
             await ƒS.Location.show(locations.beachNight);           //update this
             break;
         case 3:         //the truth ending (body accepts the soul)
             await ƒS.Location.show(locations.ending3);
-            await ƒS.update();
+            await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             await ƒS.Speech.tell(characters.game, text.game.game301);
             await ƒS.Speech.tell(characters.game, text.game.game302);
             await ƒS.Location.show(locations.beachNight);           //update this
             break;
         case 4:         //the abyss ending (body refuses the soul)
             await ƒS.Location.show(locations.ending4);
-            await ƒS.update();
+            await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             await ƒS.Speech.tell(characters.game, text.game.game401);
             await ƒS.Speech.tell(characters.game, text.game.game402);
             await ƒS.Location.show(locations.beachNight);           //update this
