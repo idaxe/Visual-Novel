@@ -210,6 +210,8 @@ declare namespace Visualnovel {
         stepBack: string;
         scare: string;
         scareBack: string;
+        smLeft: string;
+        smRight: string;
     };
     function animate(_animation: string): ƒS.AnimationDefinition;
     let dataForSave: {

@@ -362,7 +362,7 @@ var Visualnovel;
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.customPositions.farleft);
         await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.animate("inLeft"));
-        await Visualnovel.ƒS.update();
+        //await ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0001);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0002);
@@ -379,21 +379,26 @@ var Visualnovel;
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.school);
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0005);
-        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
         //fade in
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.classroom);
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0006);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0007);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0008);
         //school hallway maybe?
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.hallway);
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
-        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.customPositions.middleLeft);
+        await Visualnovel.ƒS.Speech.tell("anim", "test");
+        //await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farleft);
+        await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.animate("smLeft"));
+        //await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.middleLeft);
         await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0007);
-        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.happy, Visualnovel.customPositions.middleRight);
+        //await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.farright);
+        await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.happy, Visualnovel.animate("smRight"));
+        //await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.middleRight);
         await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2001);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0010);
@@ -593,6 +598,7 @@ var Visualnovel;
                 PD004: "Seems like my friends want to distract me from all the hospital shenanigans with a trip to the amusement park, which is coincedently in town again.",
                 PD005: "As always our teachers have some unique preferences they want to imprint upon us.",
                 PD005A: "Come to think of it, I noticed some strange gazes during the class though.",
+                PD005B: "Nah, I choose to ignore these gazes.",
                 PD006: "I was too distracted to notice but all that hospital time made my hair longer than I want to. I should get rid of it soon.",
                 PD007: "I couldn't get in touch with " + Visualnovel.characters.friend.name + ". I wonder what's going on on his end.",
                 PD008: "I can't wait to do fun stuff with my friends again. I missed it a lot."
@@ -785,6 +791,9 @@ var Visualnovel;
                 if (listen == true) {
                     await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD005A);
                     tempscore = tempscore + 10;
+                }
+                else {
+                    await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.PD005B);
                 }
                 break;
             case thoughts2.N2:
@@ -1216,7 +1225,8 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0002);
         //await ƒS.Speech.tell(characters.girl1, text.girl1);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0001);
-        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.customPositions.slightleft); //happy
+        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.customPositions.farright); //happy
+        await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.animate("inRight"));
         await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0003);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0002);
@@ -2112,12 +2122,12 @@ var Visualnovel;
             edge: 1
         },
         dreamEnter: {
-            duration: 1,
+            duration: 2,
             alpha: "Assets/Images/Transitions/point.png",
             edge: 1
         },
         dreamExit: {
-            duration: 1,
+            duration: 2,
             alpha: "Assets/Images/Transitions/point_inverse.png",
             edge: 1
         },
@@ -2127,7 +2137,7 @@ var Visualnovel;
             edge: 1
         },
         star: {
-            duration: 1,
+            duration: 1.5,
             alpha: "Assets/Images/Transitions/star.png",
             edge: 1
         }
@@ -2282,7 +2292,9 @@ var Visualnovel;
         comeCloser: "comeCloser",
         stepBack: "stepBack",
         scare: "scare",
-        scareBack: "scareBack"
+        scareBack: "scareBack",
+        smLeft: "smLeft",
+        smRight: "smRight"
     };
     function animate(_animation) {
         switch (_animation) {
@@ -2314,17 +2326,31 @@ var Visualnovel;
                     duration: 1,
                     playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
                 };
-            case Visualnovel.animations.goInLeft: //placerholder
+            case Visualnovel.animations.goInLeft:
                 return {
                     start: { translation: Visualnovel.customPositions.middleLeft, scaling: new Visualnovel.ƒS.Position(0.5, 0.5) },
                     end: { translation: Visualnovel.customPositions.slightleft, scaling: new Visualnovel.ƒS.Position(1, 1) },
                     duration: 1,
                     playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
                 };
-            case Visualnovel.animations.goInRight: //placeholder
+            case Visualnovel.animations.goInRight:
                 return {
                     start: { translation: Visualnovel.customPositions.middleRight, scaling: new Visualnovel.ƒS.Position(0.5, 0.5) },
                     end: { translation: Visualnovel.customPositions.slightright, scaling: new Visualnovel.ƒS.Position(1, 1) },
+                    duration: 1,
+                    playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
+                };
+            case Visualnovel.animations.smLeft:
+                return {
+                    start: { translation: Visualnovel.customPositions.farleft },
+                    end: { translation: Visualnovel.customPositions.middleLeft, scaling: new Visualnovel.ƒS.Position(0.5, 0.5) },
+                    duration: 1,
+                    playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
+                };
+            case Visualnovel.animations.smRight:
+                return {
+                    start: { translation: Visualnovel.customPositions.farright },
+                    end: { translation: Visualnovel.customPositions.middleRight, scaling: new Visualnovel.ƒS.Position(0.5, 0.5) },
                     duration: 1,
                     playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
                 };
