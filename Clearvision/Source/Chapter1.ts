@@ -98,7 +98,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.game, text.game.Really);
       ƒS.Speech.clear();
       await ƒS.Location.show(locations.dream);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.star.duration, transition.star.alpha, transition.star.edge);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
@@ -107,7 +107,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.L0001);
       await ƒS.Location.show(locations.hRoomNightAlt);
-      await ƒS.update(transition.gradient.duration, transition.gradient.alpha, transition.gradient.edge);
+      await ƒS.update(transition.star.duration, transition.star.alpha, transition.star.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.L0002);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.L0003);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0005);

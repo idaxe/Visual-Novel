@@ -21,12 +21,22 @@ namespace Visualnovel {
       },
       dreamEnter: {
         duration: 1,
-        alpha: "Assets/Images/Transitions/point.jpg",
+        alpha: "Assets/Images/Transitions/point.png",
         edge: 1
       },
       dreamExit: {
         duration: 1,
-        alpha: "Assets/Images/Transitions/point_inverse.jpg",
+        alpha: "Assets/Images/Transitions/point_inverse.png",
+        edge: 1
+      },
+      clock: {
+        duration: 1,
+        alpha: "Assets/Images/Transitions/clock.png",
+        edge: 1
+      },
+      star: {
+        duration: 1,
+        alpha: "Assets/Images/Transitions/star.png",
         edge: 1
       }
     };

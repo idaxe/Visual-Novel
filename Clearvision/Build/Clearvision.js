@@ -98,7 +98,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.Really);
         Visualnovel.ƒS.Speech.clear();
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.dream);
-        await Visualnovel.ƒS.update(Visualnovel.transition.triangle.duration, Visualnovel.transition.triangle.alpha, Visualnovel.transition.triangle.edge);
+        await Visualnovel.ƒS.update(Visualnovel.transition.star.duration, Visualnovel.transition.star.alpha, Visualnovel.transition.star.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0000);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0000);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0001);
@@ -107,7 +107,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.L0001);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.hRoomNightAlt);
-        await Visualnovel.ƒS.update(Visualnovel.transition.gradient.duration, Visualnovel.transition.gradient.alpha, Visualnovel.transition.gradient.edge);
+        await Visualnovel.ƒS.update(Visualnovel.transition.star.duration, Visualnovel.transition.star.alpha, Visualnovel.transition.star.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.L0002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.L0003);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0005);
@@ -2111,12 +2111,22 @@ var Visualnovel;
         },
         dreamEnter: {
             duration: 1,
-            alpha: "Assets/Images/Transitions/point.jpg",
+            alpha: "Assets/Images/Transitions/point.png",
             edge: 1
         },
         dreamExit: {
             duration: 1,
-            alpha: "Assets/Images/Transitions/point_inverse.jpg",
+            alpha: "Assets/Images/Transitions/point_inverse.png",
+            edge: 1
+        },
+        clock: {
+            duration: 1,
+            alpha: "Assets/Images/Transitions/clock.png",
+            edge: 1
+        },
+        star: {
+            duration: 1,
+            alpha: "Assets/Images/Transitions/star.png",
             edge: 1
         }
     };

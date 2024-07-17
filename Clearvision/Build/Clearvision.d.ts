@@ -51,6 +51,16 @@ declare namespace Visualnovel {
             alpha: string;
             edge: number;
         };
+        clock: {
+            duration: number;
+            alpha: string;
+            edge: number;
+        };
+        star: {
+            duration: number;
+            alpha: string;
+            edge: number;
+        };
     };
     let sound: {
         pizza: string;
