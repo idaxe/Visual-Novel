@@ -248,14 +248,14 @@ namespace Visualnovel {
           return {
             start: {translation: customPositions.farleft, scaling: new ƒS.Position(1, 1)},
             end: {translation: customPositions.middleLeft, scaling: new ƒS.Position(0.5, 0.5)},
-            duration: 0.1,
+            duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
           case animations.smRight:
           return {
             start: {translation: customPositions.farright, scaling: new ƒS.Position(1, 1)},
             end: {translation: customPositions.middleRight, scaling: new ƒS.Position(0.5, 0.5)},
-            duration: 0.1,
+            duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
         case animations.comeCloser:
