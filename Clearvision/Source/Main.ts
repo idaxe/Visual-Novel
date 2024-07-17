@@ -180,7 +180,9 @@ namespace Visualnovel {
       slightright: new FudgeStory.Position(250, -540),
       farright: new FudgeStory.Position(1000, -540),
       backgroundleft: new FudgeStory.Position(-100, -200),
-      slscare: new FudgeStory.Position(-150, -500)
+      slscare: new FudgeStory.Position(-150, -500),
+      middleLeft: new FudgeStory.Position(-100, -300),
+      middleRight: new FudgeStory.Position(100, -300)
     };
 
     export let animations = {
@@ -228,15 +230,15 @@ namespace Visualnovel {
           };
         case animations.goInLeft: //placerholder
           return {
-            start: {translation: customPositions.farleft},
-            end: {translation: customPositions.slightleft},
+            start: {translation: customPositions.middleLeft, scaling: new ƒS.Position(0.5, 0.5)},
+            end: {translation: customPositions.slightleft, scaling: new ƒS.Position(1, 1)},
             duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };
         case animations.goInRight: //placeholder
           return {
-            start: {translation: customPositions.farright},
-            end: {translation: customPositions.slightright},
+            start: {translation: customPositions.middleRight, scaling: new ƒS.Position(0.5, 0.5)},
+            end: {translation: customPositions.slightright, scaling: new ƒS.Position(1, 1)},
             duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };

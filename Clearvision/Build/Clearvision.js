@@ -280,7 +280,7 @@ var Visualnovel;
                 P0007: "Oi, I didn't mean-",
                 P0008: "Ugh whatever, you're on.",
                 P0009: "I could live without it but... eh.",
-                P0010: "Yes, it's nice to see you two too.",
+                P0010: "Yes, it's nice to see you both too.",
                 P0011: "While I got you two here, let me ask.",
                 P0012: "Did either of you see " + Visualnovel.characters.friend.name + " around?",
                 P0013: "I haven't seen him all day, so I thought you two might know something.",
@@ -390,15 +390,15 @@ var Visualnovel;
         //school hallway maybe?
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.hallway);
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
-        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.customPositions.slightleft);
+        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.customPositions.middleLeft);
         await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0007);
-        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.happy, Visualnovel.customPositions.slightright);
+        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.happy, Visualnovel.customPositions.middleRight);
         await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2001);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0010);
-        //await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("goInLeft"));
-        //await ƒS.Character.animate(characters.girl2, characters.girl2.pose.happy, animate("goInRight"));
+        await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.animate("goInLeft"));
+        await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.happy, Visualnovel.animate("goInRight"));
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0009);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0010);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0011);
@@ -1292,7 +1292,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0008);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0024);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0009);
-        if (Visualnovel.dataForSave.curiosityCounter > 30) {
+        if (Visualnovel.dataForSave.curiosityCounter > 40) {
             //knowledge for truth over 3 or something
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0025);
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0026);
@@ -1517,7 +1517,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0003);
-        if (Visualnovel.dataForSave.curiosityCounter >= 40 && Visualnovel.dataForSave.truthseeing == true) { //statcheck
+        if (Visualnovel.dataForSave.curiosityCounter >= 60 && Visualnovel.dataForSave.truthseeing == true) { //statcheck
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0201);
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0202);
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0203);
@@ -2268,7 +2268,9 @@ var Visualnovel;
         slightright: new FudgeStory.Position(250, -540),
         farright: new FudgeStory.Position(1000, -540),
         backgroundleft: new FudgeStory.Position(-100, -200),
-        slscare: new FudgeStory.Position(-150, -500)
+        slscare: new FudgeStory.Position(-150, -500),
+        middleLeft: new FudgeStory.Position(-100, -300),
+        middleRight: new FudgeStory.Position(100, -300)
     };
     Visualnovel.animations = {
         outLeft: "outLeft",
@@ -2314,15 +2316,15 @@ var Visualnovel;
                 };
             case Visualnovel.animations.goInLeft: //placerholder
                 return {
-                    start: { translation: Visualnovel.customPositions.farleft },
-                    end: { translation: Visualnovel.customPositions.slightleft },
+                    start: { translation: Visualnovel.customPositions.middleLeft, scaling: new Visualnovel.ƒS.Position(0.5, 0.5) },
+                    end: { translation: Visualnovel.customPositions.slightleft, scaling: new Visualnovel.ƒS.Position(1, 1) },
                     duration: 1,
                     playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
                 };
             case Visualnovel.animations.goInRight: //placeholder
                 return {
-                    start: { translation: Visualnovel.customPositions.farright },
-                    end: { translation: Visualnovel.customPositions.slightright },
+                    start: { translation: Visualnovel.customPositions.middleRight, scaling: new Visualnovel.ƒS.Position(0.5, 0.5) },
+                    end: { translation: Visualnovel.customPositions.slightright, scaling: new Visualnovel.ƒS.Position(1, 1) },
                     duration: 1,
                     playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
                 };

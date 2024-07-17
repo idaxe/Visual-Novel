@@ -38,7 +38,7 @@ namespace Visualnovel {
           P0007: "Oi, I didn't mean-",
           P0008: "Ugh whatever, you're on.",
           P0009: "I could live without it but... eh.",  //missing
-          P0010: "Yes, it's nice to see you two too.",
+          P0010: "Yes, it's nice to see you both too.",
           P0011: "While I got you two here, let me ask.",
           P0012: "Did either of you see " + characters.friend.name + " around?",
           P0013: "I haven't seen him all day, so I thought you two might know something.",
@@ -149,15 +149,15 @@ namespace Visualnovel {
       //school hallway maybe?
       await ƒS.Location.show(locations.hallway);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
-      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
+      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.middleLeft);
       await ƒS.update();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
-      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightright);
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.middleRight);
       await ƒS.update();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
-      //await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("goInLeft"));
-      //await ƒS.Character.animate(characters.girl2, characters.girl2.pose.happy, animate("goInRight"));
+      await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("goInLeft"));
+      await ƒS.Character.animate(characters.girl2, characters.girl2.pose.happy, animate("goInRight"));
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0011);

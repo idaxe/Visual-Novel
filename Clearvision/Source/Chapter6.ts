@@ -117,7 +117,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0003);
 
-      if(dataForSave.curiosityCounter >= 40 && dataForSave.truthseeing == true){    //statcheck
+      if(dataForSave.curiosityCounter >= 60 && dataForSave.truthseeing == true){    //statcheck
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0201);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0202);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0203);

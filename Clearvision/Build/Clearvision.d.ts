@@ -196,6 +196,8 @@ declare namespace Visualnovel {
         farright: ƒ.Vector2;
         backgroundleft: ƒ.Vector2;
         slscare: ƒ.Vector2;
+        middleLeft: ƒ.Vector2;
+        middleRight: ƒ.Vector2;
     };
     let animations: {
         outLeft: string;

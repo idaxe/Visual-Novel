@@ -183,7 +183,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0024);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0009);
-      if(dataForSave.curiosityCounter > 30){
+      if(dataForSave.curiosityCounter > 40){
         //knowledge for truth over 3 or something
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0025);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0026);
