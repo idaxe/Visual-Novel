@@ -26,12 +26,12 @@ declare namespace Visualnovel {
     export import ƒ = FudgeCore;
     export import ƒS = FudgeStory;
     let transition: {
-        symbol: {
+        side: {
             duration: number;
             alpha: string;
             edge: number;
         };
-        triangle: {
+        slide: {
             duration: number;
             alpha: string;
             edge: number;

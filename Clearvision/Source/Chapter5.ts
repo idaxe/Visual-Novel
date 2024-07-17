@@ -99,7 +99,7 @@ namespace Visualnovel {
         N1: "Regret"
       };
       await ƒS.Location.show(locations.homeDay);
-      await ƒS.update();
+      await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
@@ -122,12 +122,12 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0002);
       await ƒS.Location.show(locations.classroom);
       await ƒS.Character.hide(characters.girl1);
-      await ƒS.update();
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       //fade school
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0005);
       await ƒS.Location.show(locations.hallway);
-      await ƒS.update();
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       // fade hallways
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
       await ƒS.update();
@@ -210,7 +210,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
       //fade
       await ƒS.Location.show(locations.homeNight);
-      await ƒS.update();
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       //muffled rain sfx
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0030);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0031);
@@ -220,9 +220,9 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0034);
       //initiate dream
       await ƒS.Location.show(locations.void);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
       await ƒS.Location.show(locations.dream);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000); 
       await ƒS.Speech.tell("???", "Just as I suspected."); 
       await ƒS.Speech.tell("???", "The ripples seem to make already make waves.");
@@ -280,7 +280,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "The future is the means by which all is reveal.");
       //await ƒS.Speech.tell("???", "");
       await ƒS.Location.show(locations.void);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       dataForSave.curChapter = 6;
       dataForSave.curiosityCounter = dataForSave.curiosityCounter + tempscore;
       return "Chapter6";

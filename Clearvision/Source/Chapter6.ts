@@ -98,7 +98,7 @@ namespace Visualnovel {
       };
       //let tempscore = 0;
       await ƒS.Location.show(locations.homeDay);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0002);
@@ -108,7 +108,7 @@ namespace Visualnovel {
       //fade
       await ƒS.Location.show(locations.hallway);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0002);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
@@ -149,9 +149,9 @@ namespace Visualnovel {
         await ƒS.Character.hide(characters.girl1);
         //initiate dream
         await ƒS.Location.show(locations.void);
-        await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+        await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
         await ƒS.Location.show(locations.dream);
-        await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+        await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
         await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000); 
         await ƒS.Speech.tell("???", "One more day."); 
         await ƒS.Speech.tell("???", "Just one more day.");
@@ -180,13 +180,13 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1004);
             await ƒS.Speech.tell(characters.girl1, text.girl1.G0109);
             await ƒS.Location.show(locations.void);
-            await ƒS.update();
+            await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N1001);
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N1002);
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N1003);
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N1004);
             await ƒS.Location.show(locations.dream);
-            await ƒS.update();
+            await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
             //fade
             await ƒS.Speech.tell("???", "So thats the life you chose.");
             await ƒS.Speech.tell("???", "Just continuing on in blissfull ignorance.");
@@ -222,7 +222,7 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3004);
             await ƒS.Location.show(locations.void);
             await ƒS.Character.hide(characters.girl1);
-            await ƒS.update();
+            await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N3001);
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N3002);
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N3003);
@@ -233,7 +233,7 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N3008);
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N3009);
             await ƒS.Location.show(locations.dream);
-            await ƒS.update();
+            await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
             //fade
             await ƒS.Speech.tell("???", "So thats the life you chose.");
             await ƒS.Speech.tell("???", "...");

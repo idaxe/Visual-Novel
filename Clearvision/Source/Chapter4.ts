@@ -103,7 +103,7 @@ namespace Visualnovel {
         N1: "Own Events"
       };
       await ƒS.Location.show(locations.homeDay);
-      await ƒS.update();
+      await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0002);
@@ -125,17 +125,17 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
       await ƒS.Location.show(locations.town);
-      await ƒS.update();
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Location.show(locations.classroom);
       await ƒS.Character.hide(characters.girl1);
-      await ƒS.update();
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       //fade
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
       //fade to amusemetn park
       await ƒS.Location.show(locations.festival);
-      await ƒS.update();
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightright);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightleft);
       await ƒS.update();
@@ -199,7 +199,7 @@ namespace Visualnovel {
       await ƒS.update();
       //fade
       await ƒS.Location.show(locations.homeNight);
-      await ƒS.update();
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0017);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0018);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0019);
@@ -215,9 +215,9 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0025);
       //start dream
       await ƒS.Location.show(locations.void);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
       await ƒS.Location.show(locations.dream);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000); 
       await ƒS.Speech.tell("???", "Hmm, I can tell even without you telling me things that today was a good day for you."); 
       await ƒS.Speech.tell("???", "Even without contact to everything you experienced some feelings even managed to reach me.");
@@ -275,7 +275,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "Maybe your subconsciousness is already getting affected through me?");
       await ƒS.Speech.tell("???", "Hehe~. Let's see how time plays out.");
       await ƒS.Location.show(locations.void);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       dataForSave.curChapter = 5;
       dataForSave.curiosityCounter = dataForSave.curiosityCounter + tempscore;
       return "Chapter5";

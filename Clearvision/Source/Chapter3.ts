@@ -113,7 +113,7 @@ namespace Visualnovel {
       };
 
       await ƒS.Location.show(locations.homeDay);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
@@ -123,7 +123,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
       await ƒS.Location.show(locations.town); //street bgm
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
-      await ƒS.update(transition.gradient.duration, transition.gradient.alpha, transition.gradient.edge);
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
@@ -140,7 +140,7 @@ namespace Visualnovel {
       //transition
       await ƒS.Location.show(locations.classroom);
       await ƒS.Character.hide(characters.girl1);
-      await ƒS.update(transition.gradient.duration, transition.gradient.alpha, transition.gradient.edge);
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
       await ƒS.Speech.tell("Male Teacher", "...and thats why when Izanagi gazed upon his wife in yomi he...");  //its shorter to just make this one custom text for this one line he says
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
@@ -172,7 +172,7 @@ namespace Visualnovel {
       }
       //fade
       await ƒS.Location.show(locations.hallway);
-      await ƒS.update();
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0019);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0020);
@@ -220,7 +220,7 @@ namespace Visualnovel {
       await ƒS.Character.hide(characters.girl2);
       //fade
       await ƒS.Location.show(locations.homeNight);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0013);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0014);
@@ -229,9 +229,9 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0015);
       //initiate dream
       await ƒS.Location.show(locations.void);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
       await ƒS.Location.show(locations.dream);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000); 
       await ƒS.Speech.tell("???", "Suprise suprise!"); 
       await ƒS.Speech.tell("???", "Your favorite hauting voice is back.");
@@ -291,7 +291,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "Do with these informations as you please.");
       await ƒS.Speech.tell("???", "Hope you can remember these interactions better outside of your subconciousness soon.");
       await ƒS.Location.show(locations.void);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       dataForSave.curChapter = 4;
       dataForSave.curiosityCounter = dataForSave.curiosityCounter + tempscore;
       return "Chapter4";

@@ -38,6 +38,8 @@ namespace Visualnovel {
             game010: "Now get outta here. :)"
         }
       }
+      await ƒS.Location.show(locations.void);
+      await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
       await ƒS.Speech.tell(characters.game, text.game.game001);
       await ƒS.Speech.tell(characters.game, text.game.game002);
       await ƒS.Speech.tell(characters.game, text.game.game003);

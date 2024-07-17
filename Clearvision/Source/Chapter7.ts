@@ -156,7 +156,7 @@ namespace Visualnovel {
       };
 
       await ƒS.Location.show(locations.homeDay);
-      await ƒS.update();
+      await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0002);
@@ -164,7 +164,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0002);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
       await ƒS.Location.show(locations.hallway);
-      await ƒS.update();
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       //fade
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0003);
@@ -198,13 +198,13 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0009);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
       await ƒS.Location.show(locations.void); //fade black
-      await ƒS.update();
+      await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0010);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0011);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
       await ƒS.Location.show(locations.lab); //the lab
-      await ƒS.update();
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N1001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1001);

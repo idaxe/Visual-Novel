@@ -4,14 +4,14 @@ namespace Visualnovel {
     console.log("Clearing the Vision");
   
     export let transition = {
-      symbol: {
+      side: {
         duration: 1,
-        alpha: "Assets/Images/symbol.jpg",
+        alpha: "Assets/Images/Transitions/side2.png",
         edge: 1
       },
-      triangle: {
-        duration: 1,
-        alpha: "Assets/Images/triangle.jpg",
+      slide: {
+        duration: 3,
+        alpha: "Assets/Images/Transitions/slide3.png",
         edge: 1
       },
       gradient: {
