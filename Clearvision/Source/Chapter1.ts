@@ -98,7 +98,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.game, text.game.Really);
       ƒS.Speech.clear();
       await ƒS.Location.show(locations.dream);
-      await ƒS.update(transition.star.duration, transition.star.alpha, transition.star.edge);
+      await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
@@ -124,7 +124,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0009);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.L0005);
       await ƒS.Location.show(locations.hRoomNight);
-      await ƒS.update(transition.gradient.duration, transition.gradient.alpha, transition.gradient.edge);
+      await ƒS.update(transition.star.duration, transition.star.alpha, transition.star.edge);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0004);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0005);
@@ -196,11 +196,11 @@ namespace Visualnovel {
       //start dream sequence
       
       
-      await ƒS.Location.show(locations.test);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.Location.show(locations.void);
+      await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
       await ƒS.Sound.play(sound.dream, 0.3, true);
       await ƒS.Location.show(locations.dream);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
       await ƒS.Speech.tell(characters.protagonist, "...");
       await ƒS.Speech.tell(characters.protagonist, "...?");
       await ƒS.Speech.tell(characters.protagonist, "Where am I?");
@@ -242,7 +242,7 @@ namespace Visualnovel {
           break;
       }
       await ƒS.Location.show(locations.void);
-      await ƒS.update(transition.triangle.duration, transition.triangle.alpha, transition.triangle.edge);
+      await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       dataForSave.curChapter = 2;
       return "Chapter2";
     }
