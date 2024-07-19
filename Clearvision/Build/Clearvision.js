@@ -866,14 +866,14 @@ var Visualnovel;
             },
             protagonist: {
                 P0000: "...",
-                P0001: "*Something definitly happened to my brain when I was unconcious*",
+                P0001: "*Something definitly happened to my brain when I was unconcious.*",
                 P0002: "*But what can even happen to ones brain when it is in a comatose state?*",
                 P0003: "*I should inform myself about this stuff this evening.*",
                 P0004: "*Gotta make myself ready now.*",
                 P0005: "*Alrighty. 3... 2... 1... aaaand.*",
                 P0006: "Aye, good mornin to you too.",
                 P0007: "How about you cling to her arm next time around, yeah?",
-                P0008: "Cotton ca-, wait no a crépe please",
+                P0008: "Cotton ca-, wait no a crépe please.",
                 P0009: "You know I was a little sceptical about this at first but I feel suprisingly refreshed.",
                 P0010: "Plus it was fun. Thank you for organizing it " + Visualnovel.characters.girl2.name + ".",
                 P0011: "*Come to think of it, why was I about to say I want cotton candy?*",
@@ -884,10 +884,10 @@ var Visualnovel;
                 P0016: "...but you were the one getting up.",
                 P0017: "Nothing!",
                 P0018: "Right. Now time to research.",
-                P0019: "Ok I was right on the money when it comes to the repeating dreams.",
+                P0019: "Ok, I was right on the money when it comes to the repeating dreams.",
                 P0020: "These habit changes though...",
                 P0021: "It says these mostly happen this sudden only in cases with brain tumors or severe head trauma.",
-                P0022: "From what I remember the doctor saying though both of these were not mentioned in my case.",
+                P0022: "From what I remember the doctor saying though, both of these were not mentioned in my case.",
                 P0023: "Something definitly happened though.",
                 P0024: "Looks like there is some questioning in order tomorrow.",
                 P0025: "For now I'll go to sleep though.",
@@ -901,7 +901,7 @@ var Visualnovel;
             },
             girl1: {
                 G0001: "Top of the morning to ya lad.",
-                G0002: "Haha, you should've seen your face " + Visualnovel.characters.girl2.name,
+                G0002: "Haha, you should've seen your face " + Visualnovel.characters.girl2.name + ".",
                 G0003: "Alright I'm gonna get stuff for everyone. Any wishes?",
                 G0004: "Okay. I'll be right back.",
                 G0005: "Hey, stay with us today.",
@@ -911,14 +911,14 @@ var Visualnovel;
                 G0009: "You haven't even noticed that " + Visualnovel.characters.girl2.name + " has-"
             },
             girl2: {
-                G2001: "Oh shut it you, you know i'm not good with that stuff.",
+                G2001: "Oh shut it you, you know I'm not good with that stuff.",
                 G2002: "Uuuuu, don't remind me you idiot.",
                 G2003: "Caramelised almonds for me!",
                 G2004: "I told you don't mention it.",
                 G2005: "...but.",
                 G2006: "You're welcome.",
                 G2007: "Oh I really thank you for getting this for us.",
-                G2008: "I was really starving, so lets all sit down and enjoy our stuff.",
+                G2008: "I was really starving, so let's all sit down and enjoy our stuff.",
                 G2009: "What was that?"
             }
         };
@@ -978,10 +978,10 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2001);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0007);
-        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2002);
         await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.upset, Visualnovel.customPositions.slightleft);
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl2);
         await Visualnovel.ƒS.update();
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0011);
         //double blackfade
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0003);
@@ -997,6 +997,9 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2005);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2006);
+        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.happy, Visualnovel.customPositions.slightleft);
+        await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl2);
+        await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0013);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0011);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0012);
@@ -1055,7 +1058,7 @@ var Visualnovel;
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamEnter.duration, Visualnovel.transition.dreamEnter.alpha, Visualnovel.transition.dreamEnter.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
         await Visualnovel.ƒS.Speech.tell("???", "Hmm, I can tell even without you telling me things that today was a good day for you.");
-        await Visualnovel.ƒS.Speech.tell("???", "Even without contact to everything you experienced some feelings even managed to reach me.");
+        await Visualnovel.ƒS.Speech.tell("???", "Even without contact to everything you experienced some feelings that even managed to reach me.");
         await Visualnovel.ƒS.Speech.tell("???", "Or maybe I'm just more and more becoming a part of you. He he he~");
         await Visualnovel.ƒS.Speech.tell("???", "Well regardless, you know what I wanna hear.");
         let choice = await Visualnovel.ƒS.Menu.getInput(thoughts, "Dreamthoughts1");
