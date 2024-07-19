@@ -12,12 +12,12 @@ namespace Visualnovel {
           Hi: "I sense...",
           How: "A new presence...",
           Are: "You must be a new player.",
-          You: "It has been ages since my creator actually showed his face around here, so I thought I was doomed to corrupt in this repository forever..",
+          You: "It has been ages since my creator actually showed his face around here, so I thought I was doomed to corrupt in this repository forever.",
           Doing: "Ah well, since I'm programmed this way and I can't go against it. I might as well fufill my role.",
           Presence: "What do you want to call the protagonist of this story?",
           //Pname: "So " + characters.protagonist.name + " it is.",
           Confirmation: "Interesting. Very Interesting.", //maybe include the protags name in there
-          Start: "Very well.",
+          Start: "Very well, time for me to take a backseat now.",
           Really: "Now then, enjoy the story......I guess."
         },
         Narrator: {
@@ -229,7 +229,7 @@ namespace Visualnovel {
               break;
             case thoughts2.Refuse:
               await ƒS.Speech.tell("???", "Very well.");
-              await ƒS.Speech.tell("???", "However, always remember");
+              await ƒS.Speech.tell("???", "However, always remember.");
               await ƒS.Speech.tell("???", "Time waits for no one.");
               break;
           }

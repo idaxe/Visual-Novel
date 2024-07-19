@@ -46,7 +46,7 @@ namespace Visualnovel {
           P0028: "I looked perfectly normal in the mirror though.",
           P0029: "*I feel like I kinda messed up.*",
           P0030: "Of course it suddenly had to start raining.",
-          P0031: "Ok, tomorrow i might actually get some answers.",
+          P0031: "Ok, tomorrow I might actually get some answers.",
           P0032: "Do I really want to though...",
           P0033: "Ignorance is bliss as they say.",
           P0034: "Argh... I should sleep now.",
@@ -204,7 +204,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0014);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0015);
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("outLeft"));
-      await ƒS.update();
+      //await ƒS.update();
       await ƒS.Character.hide(characters.girl1);
       await ƒS.update();
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0029);
@@ -226,7 +226,7 @@ namespace Visualnovel {
       await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000); 
       await ƒS.Speech.tell("???", "Just as I suspected."); 
-      await ƒS.Speech.tell("???", "The ripples seem to make already make waves.");
+      await ƒS.Speech.tell("???", "The ripples seem to already make waves.");
       await ƒS.Speech.tell("???", "Well then, you know the drill.");
       //await ƒS.Speech.tell("???", "Well regardless, you know what I wanna hear.");
       //let choice = await ƒS.Menu.getInput(thoughts, "Dreamthoughts1");

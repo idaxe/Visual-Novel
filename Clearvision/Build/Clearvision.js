@@ -12,12 +12,12 @@ var Visualnovel;
                 Hi: "I sense...",
                 How: "A new presence...",
                 Are: "You must be a new player.",
-                You: "It has been ages since my creator actually showed his face around here, so I thought I was doomed to corrupt in this repository forever..",
+                You: "It has been ages since my creator actually showed his face around here, so I thought I was doomed to corrupt in this repository forever.",
                 Doing: "Ah well, since I'm programmed this way and I can't go against it. I might as well fufill my role.",
                 Presence: "What do you want to call the protagonist of this story?",
                 //Pname: "So " + characters.protagonist.name + " it is.",
                 Confirmation: "Interesting. Very Interesting.",
-                Start: "Very well.",
+                Start: "Very well, time for me to take a backseat now.",
                 Really: "Now then, enjoy the story......I guess."
             },
             Narrator: {
@@ -221,7 +221,7 @@ var Visualnovel;
                         break;
                     case thoughts2.Refuse:
                         await Visualnovel.ƒS.Speech.tell("???", "Very well.");
-                        await Visualnovel.ƒS.Speech.tell("???", "However, always remember");
+                        await Visualnovel.ƒS.Speech.tell("???", "However, always remember.");
                         await Visualnovel.ƒS.Speech.tell("???", "Time waits for no one.");
                         break;
                 }
@@ -266,7 +266,7 @@ var Visualnovel;
                 N0011: "The three of us enjoyed a lively conversation.",
                 N0012: "...",
                 N0013: "You two walked home together.",
-                N0014: "After arriving home, you wave " + Visualnovel.characters.girl1.name + " goodbye as she walks off.",
+                N0014: "After arriving home with her, you wave " + Visualnovel.characters.girl1.name + " goodbye.",
                 N0015: "Since you returned from the hospital not long ago, you decide to buy groceries and clean for the day.",
                 N0016: "A couple hours have passed, but the place looks like someone lives in it again.",
                 N0017: "With that done, you decide to go to sleep." //start dream dialogue
@@ -276,7 +276,7 @@ var Visualnovel;
                 P0002: "Birds are singing, flowers are blooming.",
                 P0003: "Perfect weather to go back to school... ugh.",
                 P0004: "Ehm, good morning to you too, " + Visualnovel.characters.girl1.name + ".",
-                P0005: "No, i'm fine. It's just that my house is not on your way to school now is it?",
+                P0005: "No, I'm fine. It's just that my house is not on your way to school now is it?",
                 P0006: "I wouldn't say I'm over it but I feel perfectly fine.",
                 P0007: "Oi, I didn't mean-",
                 P0008: "Ugh whatever, you're on.",
@@ -324,7 +324,7 @@ var Visualnovel;
                 G2001: "Look at who decided to finally come back to the living.",
                 G2002: "...",
                 G2003: "H-He's just went home earlier than usual.",
-                G2004: "What an idiot, it's not like he could've given us a heads up.",
+                G2004: "What an narrowmind, it's not like he could've given us a heads up.",
                 G2005: "Then again, that meathead never thought ahead anyways.",
                 G2006: "H-Huh, what are you talking about?!",
                 G2007: "Shut up, we didn't do that all the time."
@@ -440,7 +440,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0014);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeNight);
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
-        await Visualnovel.ƒS.update();
+        //await ƒS.update();
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl2);
         //await ƒS.update();
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
@@ -564,7 +564,7 @@ var Visualnovel;
                 P0003: "*On top of that it's a continuous one as well.*",
                 P0004: "Here again huh?",
                 P0005: "Still, i don't think you need to show up EVERY morning now do you?",
-                P0006: "Geez. with this amount of thoughtfullness you could rival my mother if she was still around.",
+                P0006: "Geez, with this amount of thoughtfullness you could rival my mother if she was still around.",
                 P0007: "Ok, ok sorry.",
                 P0008: "*Ugh, why did he start rambeling about the japanese gods of creation.*",
                 P0009: "*We get it you love mythology but this is an economics class.*",
@@ -846,8 +846,8 @@ var Visualnovel;
                 N0000: "...",
                 N0001: "Another one today.",
                 N0002: "At this point you already got used to the pain.",
-                N0003: "However the consistency with these dreams and the way they leave you thinking combined with how accurately the are to remember really leave you susspicious now.",
-                N0004: "Even with your limited knowledge about dreams you know that something like this is now too rare to be a coincedence.",
+                N0003: "However the consistency with these dreams and the way they leave you thinking combined with how accurately the are to remember really leave you suspicious now.",
+                N0004: "Even with your limited knowledge about dreams you know that something like this is now too rare to be a coincidence.",
                 N0005: "You ready yourself for the day before you.",
                 N0006: "Since you can't stop her anyways you embraced " + Visualnovel.characters.girl1.name + " coming to your place now.",
                 N0007: "You talked about various topics on the way to school.",
@@ -860,20 +860,20 @@ var Visualnovel;
                 N0014: "At that moment " + Visualnovel.characters.girl1.name + " comes back with all our orders in her hands.",
                 N0015: Visualnovel.characters.girl2.name + " suddenly got up and covered " + Visualnovel.characters.girl1.name + "s mouth.",
                 N0016: "You enjoyed a lively break before using the rest of the afternoon to have some more fun.",
-                N0017: "It's Evening now.",
+                N0017: "It's evening now.",
                 N0018: "You bid your friends goodbye before heading home.",
                 N0019: "You feel exhausted, but there still something to do."
             },
             protagonist: {
                 P0000: "...",
-                P0001: "*Something definitly happened to my brain when I was unconcious.*",
+                P0001: "*Something definitly happened to my brain when I was unconscious.*",
                 P0002: "*But what can even happen to ones brain when it is in a comatose state?*",
                 P0003: "*I should inform myself about this stuff this evening.*",
                 P0004: "*Gotta make myself ready now.*",
                 P0005: "*Alrighty. 3... 2... 1... aaaand.*",
                 P0006: "Aye, good mornin to you too.",
                 P0007: "How about you cling to her arm next time around, yeah?",
-                P0008: "Cotton ca-, wait no a crépe please.",
+                P0008: "Cotton ca-, wait no a crêpe please.",
                 P0009: "You know I was a little sceptical about this at first but I feel suprisingly refreshed.",
                 P0010: "Plus it was fun. Thank you for organizing it " + Visualnovel.characters.girl2.name + ".",
                 P0011: "*Come to think of it, why was I about to say I want cotton candy?*",
@@ -970,10 +970,10 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0009);
         //fade to amusemetn park
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.festival);
-        await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.customPositions.slightright);
         await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.happy, Visualnovel.customPositions.slightleft);
-        await Visualnovel.ƒS.update();
+        await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
+        //await ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0010);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2001);
@@ -1169,7 +1169,7 @@ var Visualnovel;
                 P0028: "I looked perfectly normal in the mirror though.",
                 P0029: "*I feel like I kinda messed up.*",
                 P0030: "Of course it suddenly had to start raining.",
-                P0031: "Ok, tomorrow i might actually get some answers.",
+                P0031: "Ok, tomorrow I might actually get some answers.",
                 P0032: "Do I really want to though...",
                 P0033: "Ignorance is bliss as they say.",
                 P0034: "Argh... I should sleep now.",
@@ -1328,7 +1328,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0014);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0015);
         await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.animate("outLeft"));
-        await Visualnovel.ƒS.update();
+        //await ƒS.update();
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
         await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0029);
@@ -1350,7 +1350,7 @@ var Visualnovel;
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamEnter.duration, Visualnovel.transition.dreamEnter.alpha, Visualnovel.transition.dreamEnter.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
         await Visualnovel.ƒS.Speech.tell("???", "Just as I suspected.");
-        await Visualnovel.ƒS.Speech.tell("???", "The ripples seem to make already make waves.");
+        await Visualnovel.ƒS.Speech.tell("???", "The ripples seem to already make waves.");
         await Visualnovel.ƒS.Speech.tell("???", "Well then, you know the drill.");
         //await ƒS.Speech.tell("???", "Well regardless, you know what I wanna hear.");
         //let choice = await ƒS.Menu.getInput(thoughts, "Dreamthoughts1");
@@ -1477,7 +1477,7 @@ var Visualnovel;
                 G0003: "I did promise you the day before after all.",
                 G0101: "Is this really what you want though?",
                 G0102: "I did notice you questioning your current circumstances.",
-                G0103: "However whats so wrong with enjoying your life as it is at the moment.",
+                G0103: "However what's so wrong with enjoying your life as it is at the moment.",
                 G0104: "It hasn't been that different and i'm sure you will get used to it in time.",
                 G0105: "Glad to see you are also seeing it that way.",
                 G0106: "Now come, there is a limited time offer down at the downtown flea market.",
@@ -1603,7 +1603,7 @@ var Visualnovel;
                     await Visualnovel.ƒS.Location.show(Visualnovel.locations.dream);
                     await Visualnovel.ƒS.update(Visualnovel.transition.dreamEnter.duration, Visualnovel.transition.dreamEnter.alpha, Visualnovel.transition.dreamEnter.edge);
                     //fade
-                    await Visualnovel.ƒS.Speech.tell("???", "So thats the life you chose.");
+                    await Visualnovel.ƒS.Speech.tell("???", "So that's the life you chose.");
                     await Visualnovel.ƒS.Speech.tell("???", "Just continuing on in blissfull ignorance.");
                     await Visualnovel.ƒS.Speech.tell("???", "How disappointing.");
                     await Visualnovel.ƒS.Speech.tell("???", "...");
@@ -1652,7 +1652,7 @@ var Visualnovel;
                     //fade
                     await Visualnovel.ƒS.Speech.tell("???", "So thats the life you chose.");
                     await Visualnovel.ƒS.Speech.tell("???", "...");
-                    await Visualnovel.ƒS.Speech.tell("???", "A interesting outcome.");
+                    await Visualnovel.ƒS.Speech.tell("???", "An interesting outcome.");
                     await Visualnovel.ƒS.Speech.tell("???", "Looking so desperately for a truth always just an armslength away.");
                     await Visualnovel.ƒS.Speech.tell("???", "Discarding everything for just that one clue which would reveal it all.");
                     await Visualnovel.ƒS.Speech.tell("???", "Will this path lead you towards joy or ruin I wonder.");
@@ -2052,6 +2052,7 @@ var Visualnovel;
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game101);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game102);
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+                await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 break;
             case 2: //forever searching ending
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.ending2);
@@ -2059,6 +2060,7 @@ var Visualnovel;
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game201);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game202);
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+                await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 break;
             case 3: //the truth ending (body accepts the soul)
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.ending3);
@@ -2066,6 +2068,7 @@ var Visualnovel;
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game301);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game302);
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+                await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 break;
             case 4: //the abyss ending (body refuses the soul)
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.ending4);
@@ -2073,6 +2076,7 @@ var Visualnovel;
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game401);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game402);
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+                await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 break;
             default:
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.ending5);
@@ -2092,7 +2096,8 @@ var Visualnovel;
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game513);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game514);
                 await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
-                await Visualnovel.ƒS.update();
+                await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
+                break;
         }
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game005);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game006);
@@ -2347,14 +2352,14 @@ var Visualnovel;
                 };
             case Visualnovel.animations.smLeft:
                 return {
-                    start: { translation: Visualnovel.customPositions.farleft },
+                    start: { translation: Visualnovel.customPositions.farleft, scaling: new Visualnovel.ƒS.Position(1, 1) },
                     end: { translation: Visualnovel.customPositions.middleLeft, scaling: new Visualnovel.ƒS.Position(0.5, 0.5) },
                     duration: 1,
                     playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
                 };
             case Visualnovel.animations.smRight:
                 return {
-                    start: { translation: Visualnovel.customPositions.farright },
+                    start: { translation: Visualnovel.customPositions.farright, scaling: new Visualnovel.ƒS.Position(1, 1) },
                     end: { translation: Visualnovel.customPositions.middleRight, scaling: new Visualnovel.ƒS.Position(0.5, 0.5) },
                     duration: 1,
                     playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE

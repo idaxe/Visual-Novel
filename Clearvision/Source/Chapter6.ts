@@ -61,7 +61,7 @@ namespace Visualnovel {
           G0003: "I did promise you the day before after all.",
           G0101: "Is this really what you want though?",
           G0102: "I did notice you questioning your current circumstances.",
-          G0103: "However whats so wrong with enjoying your life as it is at the moment.",
+          G0103: "However what's so wrong with enjoying your life as it is at the moment.",
           G0104: "It hasn't been that different and i'm sure you will get used to it in time.",
           G0105: "Glad to see you are also seeing it that way.",
           G0106: "Now come, there is a limited time offer down at the downtown flea market.",
@@ -188,7 +188,7 @@ namespace Visualnovel {
             await ƒS.Location.show(locations.dream);
             await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
             //fade
-            await ƒS.Speech.tell("???", "So thats the life you chose.");
+            await ƒS.Speech.tell("???", "So that's the life you chose.");
             await ƒS.Speech.tell("???", "Just continuing on in blissfull ignorance.");
             await ƒS.Speech.tell("???", "How disappointing.");
             await ƒS.Speech.tell("???", "...");
@@ -237,7 +237,7 @@ namespace Visualnovel {
             //fade
             await ƒS.Speech.tell("???", "So thats the life you chose.");
             await ƒS.Speech.tell("???", "...");
-            await ƒS.Speech.tell("???", "A interesting outcome.");
+            await ƒS.Speech.tell("???", "An interesting outcome.");
             await ƒS.Speech.tell("???", "Looking so desperately for a truth always just an armslength away.");
             await ƒS.Speech.tell("???", "Discarding everything for just that one clue which would reveal it all.");
             await ƒS.Speech.tell("???", "Will this path lead you towards joy or ruin I wonder.");

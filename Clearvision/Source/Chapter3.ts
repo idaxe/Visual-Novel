@@ -32,7 +32,7 @@ namespace Visualnovel {
           P0003: "*On top of that it's a continuous one as well.*",
           P0004: "Here again huh?",
           P0005: "Still, i don't think you need to show up EVERY morning now do you?",
-          P0006: "Geez. with this amount of thoughtfullness you could rival my mother if she was still around.",
+          P0006: "Geez, with this amount of thoughtfullness you could rival my mother if she was still around.",
           P0007: "Ok, ok sorry.",
           P0008: "*Ugh, why did he start rambeling about the japanese gods of creation.*",
           P0009: "*We get it you love mythology but this is an economics class.*",

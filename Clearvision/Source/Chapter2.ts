@@ -24,7 +24,7 @@ namespace Visualnovel {
           N0011: "The three of us enjoyed a lively conversation.",
           N0012: "...",
           N0013: "You two walked home together.",
-          N0014: "After arriving home, you wave " + characters.girl1.name + " goodbye as she walks off.",
+          N0014: "After arriving home with her, you wave " + characters.girl1.name + " goodbye.",
           N0015: "Since you returned from the hospital not long ago, you decide to buy groceries and clean for the day.",
           N0016: "A couple hours have passed, but the place looks like someone lives in it again.",
           N0017: "With that done, you decide to go to sleep." //start dream dialogue
@@ -34,7 +34,7 @@ namespace Visualnovel {
           P0002: "Birds are singing, flowers are blooming.",
           P0003: "Perfect weather to go back to school... ugh.",
           P0004: "Ehm, good morning to you too, " + characters.girl1.name + ".",
-          P0005: "No, i'm fine. It's just that my house is not on your way to school now is it?",
+          P0005: "No, I'm fine. It's just that my house is not on your way to school now is it?",
           P0006: "I wouldn't say I'm over it but I feel perfectly fine.",
           P0007: "Oi, I didn't mean-",
           P0008: "Ugh whatever, you're on.",
@@ -82,7 +82,7 @@ namespace Visualnovel {
           G2001: "Look at who decided to finally come back to the living.",
           G2002: "...",
           G2003: "H-He's just went home earlier than usual.",
-          G2004: "What an idiot, it's not like he could've given us a heads up.",
+          G2004: "What an narrowmind, it's not like he could've given us a heads up.",
           G2005: "Then again, that meathead never thought ahead anyways.",
           G2006: "H-Huh, what are you talking about?!",
           G2007: "Shut up, we didn't do that all the time."
@@ -200,7 +200,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0014);
       await ƒS.Location.show(locations.homeNight);
       await ƒS.Character.hide(characters.girl1);
-      await ƒS.update();
+      //await ƒS.update();
       await ƒS.Character.hide(characters.girl2);
       //await ƒS.update();
       

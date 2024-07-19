@@ -11,8 +11,8 @@ namespace Visualnovel {
           N0000: "...",
           N0001: "Another one today.",
           N0002: "At this point you already got used to the pain.",
-          N0003: "However the consistency with these dreams and the way they leave you thinking combined with how accurately the are to remember really leave you susspicious now.",
-          N0004: "Even with your limited knowledge about dreams you know that something like this is now too rare to be a coincedence.",
+          N0003: "However the consistency with these dreams and the way they leave you thinking combined with how accurately the are to remember really leave you suspicious now.",
+          N0004: "Even with your limited knowledge about dreams you know that something like this is now too rare to be a coincidence.",
           N0005: "You ready yourself for the day before you.",
           N0006: "Since you can't stop her anyways you embraced "+ characters.girl1.name +" coming to your place now.",
           N0007: "You talked about various topics on the way to school.",
@@ -25,20 +25,20 @@ namespace Visualnovel {
           N0014: "At that moment " + characters.girl1.name + " comes back with all our orders in her hands.",
           N0015: characters.girl2.name + " suddenly got up and covered " + characters.girl1.name + "s mouth.",
           N0016: "You enjoyed a lively break before using the rest of the afternoon to have some more fun.",
-          N0017: "It's Evening now.",
+          N0017: "It's evening now.",
           N0018: "You bid your friends goodbye before heading home.",
           N0019: "You feel exhausted, but there still something to do."
         },
         protagonist: {
           P0000: "...",
-          P0001: "*Something definitly happened to my brain when I was unconcious.*",
+          P0001: "*Something definitly happened to my brain when I was unconscious.*",
           P0002: "*But what can even happen to ones brain when it is in a comatose state?*",
           P0003: "*I should inform myself about this stuff this evening.*",
           P0004: "*Gotta make myself ready now.*",
           P0005: "*Alrighty. 3... 2... 1... aaaand.*",
           P0006: "Aye, good mornin to you too.",
           P0007: "How about you cling to her arm next time around, yeah?",
-          P0008: "Cotton ca-, wait no a crépe please.",
+          P0008: "Cotton ca-, wait no a crêpe please.",
           P0009: "You know I was a little sceptical about this at first but I feel suprisingly refreshed.",
           P0010: "Plus it was fun. Thank you for organizing it " + characters.girl2.name + ".",
           P0011: "*Come to think of it, why was I about to say I want cotton candy?*",
@@ -135,10 +135,10 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
       //fade to amusemetn park
       await ƒS.Location.show(locations.festival);
-      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightright);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightleft);
-      await ƒS.update();
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
+      //await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);

@@ -51,6 +51,7 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.game, text.game.game101);
             await ƒS.Speech.tell(characters.game, text.game.game102);
             await ƒS.Location.show(locations.beachNight);           //update this
+            await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             break;
         case 2:         //forever searching ending
             await ƒS.Location.show(locations.ending2);
@@ -58,6 +59,7 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.game, text.game.game201);
             await ƒS.Speech.tell(characters.game, text.game.game202);
             await ƒS.Location.show(locations.beachNight);           //update this
+            await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             break;
         case 3:         //the truth ending (body accepts the soul)
             await ƒS.Location.show(locations.ending3);
@@ -65,6 +67,7 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.game, text.game.game301);
             await ƒS.Speech.tell(characters.game, text.game.game302);
             await ƒS.Location.show(locations.beachNight);           //update this
+            await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             break;
         case 4:         //the abyss ending (body refuses the soul)
             await ƒS.Location.show(locations.ending4);
@@ -72,6 +75,7 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.game, text.game.game401);
             await ƒS.Speech.tell(characters.game, text.game.game402);
             await ƒS.Location.show(locations.beachNight);           //update this
+            await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             break;
         default:   
             await ƒS.Location.show(locations.ending5);
@@ -91,7 +95,8 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.game, text.game.game513);
             await ƒS.Speech.tell(characters.game, text.game.game514);
             await ƒS.Location.show(locations.beachNight);           //update this
-            await ƒS.update();
+            await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
+            break;
       }
       await ƒS.Speech.tell(characters.game, text.game.game005);
       await ƒS.Speech.tell(characters.game, text.game.game006);
