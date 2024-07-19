@@ -1146,9 +1146,9 @@ var Visualnovel;
                 P0005: "Ok, time to look for them.",
                 P0006: "Like hell I'll do that.",
                 P0007: "Ok, for real though I've noticed some strange things lately.",
-                P0008: "Ok first off there are the facts that i suddenly don't feel much fatigue anymore.",
-                P0009: "I wasn't particulary fit or athletic beforehand so,",
-                P0010: "I shouldn't be able to feel this fit especially after a one month comatose state.",
+                P0008: "Ok first off there are the facts that I suddenly don't feel much fatigue anymore.",
+                P0009: "I wasn't particulary fit or athletic beforehand, ",
+                P0010: "so I shouldn't be able to feel this fit especially after a one month comatose state.",
                 P0011: "Also, from the things I do remember, " + Visualnovel.characters.girl2.name + " was never this much around me.",
                 P0012: "Not quite.",
                 P0013: "We were always a bit more distant. Especially after you and " + Visualnovel.characters.friend.name + " started going out.",
@@ -1185,7 +1185,7 @@ var Visualnovel;
             girl1: {
                 G0001: "Gooood morniiing.",
                 G0002: "Hmmm? You seem down. Everything alright?",
-                G0003: "Huh, ok then. Lets go.",
+                G0003: "Huh, ok then. Let's go.",
                 G0004: "So, why did you need to get the both of us for?",
                 G0005: "Strange how?",
                 G0006: "...",
@@ -1235,14 +1235,14 @@ var Visualnovel;
         await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0003);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0002);
-        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.upset, Visualnovel.customPositions.slightleft); //sad
+        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.upset, Visualnovel.customPositions.slightright); //sad
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
         await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0003);
-        await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.angry, Visualnovel.customPositions.slightleft); //upset
-        await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
-        await Visualnovel.ƒS.update();
+        //await ƒS.Character.show(characters.girl1, characters.girl1.pose.angry, customPositions.slightright); //upset
+        //await ƒS.Character.hide(characters.girl1);
+        //await ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0002);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.classroom);
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
