@@ -152,12 +152,12 @@ namespace Visualnovel {
       await ƒS.Location.show(locations.hallway);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell("anim", "test");
-      //await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farleft);
+      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farleft);
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("smLeft"));
       //await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.middleLeft);
       await ƒS.update();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
-      //await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.farright);
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.farright);
       await ƒS.Character.animate(characters.girl2, characters.girl2.pose.happy, animate("smRight"));
       //await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.middleRight);
       await ƒS.update();
