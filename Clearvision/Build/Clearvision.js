@@ -252,6 +252,7 @@ var Visualnovel;
         let text = {
             Narrator: {
                 N0000: "...",
+                N0001A: "Another day after the examination you were sent home just as the doctor said.",
                 N0001: "After a bizzare dream, you notice the weather.",
                 N0002: "After eating breakfast, you decide to go to school.",
                 N0003: "Only to be greeted by your friend the second you leave the house.",
@@ -351,6 +352,7 @@ var Visualnovel;
         //await ƒS.Location.show(locations.dream);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeDay);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001A);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0001);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0002);
@@ -2157,8 +2159,8 @@ var Visualnovel;
             background: "Assets/Images/Backgrounds/beachDay.png"
         },
         beachNight: {
-            name: "",
-            background: ""
+            name: "beachNight",
+            background: "Assets/Images/Backgrounds/beachNight.png"
         },
         test: {
             name: "test",

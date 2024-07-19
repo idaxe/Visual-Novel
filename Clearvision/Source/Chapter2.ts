@@ -10,6 +10,7 @@ namespace Visualnovel {
       let text = {
         Narrator: {
           N0000: "...",
+          N0001A: "Another day after the examination you were sent home just as the doctor said.",
           N0001: "After a bizzare dream, you notice the weather.",
           N0002: "After eating breakfast, you decide to go to school.",
           N0003: "Only to be greeted by your friend the second you leave the house.",
@@ -110,6 +111,7 @@ namespace Visualnovel {
       //await ƒS.Location.show(locations.dream);
       await ƒS.Location.show(locations.homeDay);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001A);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0002);
