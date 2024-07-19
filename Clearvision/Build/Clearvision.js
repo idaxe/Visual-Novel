@@ -561,7 +561,7 @@ var Visualnovel;
                 P0000: "...",
                 P0001: "*Why is it repeating itself?*",
                 P0002: "*Aren't dreams pretty rare in the first place?*",
-                P0003: "*On top of that its a continuous one as well.*",
+                P0003: "*On top of that it's a continuous one as well.*",
                 P0004: "Here again huh?",
                 P0005: "Still, i don't think you need to show up EVERY morning now do you?",
                 P0006: "Geez. with this amount of thoughtfullness you could rival my mother if she was still around.",
@@ -570,27 +570,27 @@ var Visualnovel;
                 P0009: "*We get it you love mythology but this is an economics class.*",
                 P0010: "...?",
                 P0011: "*Are some of my classmates gazing at me funny?*",
-                P0012: "Nah, i probably should just listen to the 'lecture'.",
+                P0012: "Nah, I probably should just listen to the 'lecture'.",
                 P0013: "Ok, now hold on.",
-                P0014: "I know i've been abscent for some time but there is something else.",
+                P0014: "I know I've been abscent for some time but there is something else.",
                 P0015: "Their gazes feel off.",
                 P0016: "Like I'm... not supposed to be here.",
                 P0017: "Very strange. Could it be that I look that different from before?",
                 P0018: "I should get a haircut.",
                 P0019: "Man that teacher really needs to keep his hobbies private.",
                 P0020: "Ok. Time to look for my friends.",
-                P0021: "Hey " + Visualnovel.characters.girl2.name + " whats up?",
+                P0021: "Hey " + Visualnovel.characters.girl2.name + " what's up?",
                 P0022: "Is " + Visualnovel.characters.girl1.name + " not with you today?",
                 P0023: "Please don't tell me you're gonna make these nicknames commonplace.",
-                P0024: "Yeah yeah, i got it.",
+                P0024: "Yeah yeah, I got it.",
                 P0025: "People always place such high expectations on her.",
-                P0026: "She should really get herself a break sometime. She even started coming to my house to walk to school each morning since i got out.",
+                P0026: "She should really get herself a break sometime. She even started coming to my house to walk to school each morning since I got out.",
                 P0027: "What was that?",
                 P0028: "Oh wow. Thank you very much.",
                 P0029: "I gotta ask though, was this your idea?",
-                P0030: "You didn't seem the type to host these type of events before. Unless it was for him that is.",
+                P0030: "You didn't seem the type to host these kind of events before. Unless it was for him that is.",
                 P0031: "*Maybe I'm just thinking about all of this too much.*",
-                P0032: "*Unusual or not, a surprise is suprise.*",
+                P0032: "*Unusual or not, a surprise is a suprise.*",
                 P0033: "*And it was definitly a positive one.*",
                 P0034: "Strange, even when he was ill before he always had time to answer.",
                 P0035: "Damn, if only I had a number of some relative.",
@@ -607,9 +607,9 @@ var Visualnovel;
             },
             girl1: {
                 G0001: "Good morning " + Visualnovel.characters.protagonist.name,
-                G0002: "Aww come ooooon, don't make it sound like its a bad thing.",
-                G0003: "Maybe not, however im still concerned about your health.",
-                G0004: "The doctors may told you you're fine but i'm still not convinced.",
+                G0002: "Aww come ooooon, don't make it sound like it's a bad thing.",
+                G0003: "Maybe not, however I'm still concerned about your health.",
+                G0004: "The doctors may told you you're fine but I'm still not convinced.",
                 G0005: "C'moon, don't make jokes about that. I'm serious here!",
                 G0006: "Ok now that you're with me again we can go to school now can we?"
             },
@@ -715,8 +715,8 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0021);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0022);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2001);
-        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0023);
+        await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0024);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2003);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0025);
@@ -767,7 +767,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
         await Visualnovel.ƒS.Speech.tell("???", "Suprise suprise!");
         await Visualnovel.ƒS.Speech.tell("???", "Your favorite hauting voice is back.");
-        await Visualnovel.ƒS.Speech.tell("???", "Just like the last times im gonna need some insights.");
+        await Visualnovel.ƒS.Speech.tell("???", "Just like the last times I'm gonna need some insights.");
         await Visualnovel.ƒS.Speech.tell("???", "Let me into your life.");
         let choice2 = await Visualnovel.ƒS.Menu.getInput(thoughts, "Dreamthoughts1");
         switch (choice2) {
