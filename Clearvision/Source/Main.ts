@@ -58,7 +58,7 @@ namespace Visualnovel {
       },
       beachNight: {
         name: "beachNight",
-        background: "Assets/Images/Backgrounds/beachNight.png"
+        background: "Assets/Images/Backgrounds/Beach_evening.png"
       },
       test: {
         name: "test",
