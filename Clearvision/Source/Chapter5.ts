@@ -268,17 +268,17 @@ namespace Visualnovel {
       }
       await ƒS.Speech.tell("???", "Once again I appreciate your input.");
       if (tempscore > 12){
-        await ƒS.Speech.tell("???", "Well well well.");
-        await ƒS.Speech.tell("???", "Even though you have the options of ignorance you stray from it and move further towards the knowledge hidden in the dark.");
+        await ƒS.Speech.tell("???", "It's not far now.");
+        await ƒS.Speech.tell("???", "You are doing very well.");
         //increase global truth score
       } else {
-        await ƒS.Speech.tell("???", "Very well then.");
-        await ƒS.Speech.tell("???", "I'll let you off with just this today.");
+        await ƒS.Speech.tell("???", "Huh.");
+        await ƒS.Speech.tell("???", "Oh well.");
       }
       await ƒS.Speech.tell("???", "It's getting close now.");
       await ƒS.Speech.tell("???", "Soon you will be ready for a real eye opener.");
       await ƒS.Speech.tell("???", "Can your- or rather our fragile mind take it?");
-      await ƒS.Speech.tell("???", "The future is the means by which all is reveal.");
+      await ƒS.Speech.tell("???", "The future is the means by which all is revealed.");
       //await ƒS.Speech.tell("???", "");
       await ƒS.Location.show(locations.void);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);

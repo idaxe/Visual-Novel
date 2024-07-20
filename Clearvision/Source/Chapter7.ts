@@ -52,7 +52,7 @@ namespace Visualnovel {
           P1014: "My dreams!",
           P1015: "Come to think of it, who am I now physically speaking?",
           P1016: "This is quite something to take in...",
-          P1017: "*My head begins to hurt*",
+          P1017: "*My head begins to hurt.*",
           P1018: "Compatibility?",
           P1019: characters.friend.name + "'s file?!?",
           P2001: "Wha-What is this?",
@@ -73,7 +73,7 @@ namespace Visualnovel {
           P3005: "In a way I'm now responsible for living two lives now.",
           P3006: "This will be hard in many ways, but I think that's what made me compatible with him.",
           P3007: "Even so I believe this is the right choice.",
-          P3008: "I'd apprechiate than...",
+          P3008: "I'd apprechiate that...",
           P3009: "Does this mean she was only so nice cause I have his body now?"
         },
         girl1: {
@@ -96,7 +96,7 @@ namespace Visualnovel {
           G1006: "The other victims besides you all had fewer injuries than you, all except one.",
           G1007: "He received an injury to his head which was so severe ... that his brain clinically died.",
           G1008: "With his body recieving minor injuries and you on the brink of death, it was decided to implant you into his body.",
-          G1009: "The compatibility was good.",
+          G1009: "The compatibility was good, so they went ahead with the operation immeteatly.",
           G1010: "It was that or death...",
           G1011: "Doctor, could you now pull up the file?",
           G2001: "H-Hey what going on?",
@@ -178,21 +178,23 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0005);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0006);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0007);
+      //fade to black
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
+      //fade to hospital
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0008);
 
       //safetychoice to ending 1 or 2 depending on score
-      let schoice = await ƒS.Menu.getInput(safetychoice, "safetyChoice");
+      /*let schoice = await ƒS.Menu.getInput(safetychoice, "safetyChoice");
       if (schoice == safetychoice.Divert) {
         if (dataForSave.curiosityCounter > 35) {
           return "Ending";
         }
           return "Ending";
-      }
+      }*/
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0009);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0009);

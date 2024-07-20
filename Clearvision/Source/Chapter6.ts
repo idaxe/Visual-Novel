@@ -19,6 +19,7 @@ namespace Visualnovel {
           N1002: "The earie feeling of those dreams still lingered in your mind.",
           N1003: "But over time those too faded away.",
           N1004: "You and your friends together walk towards a happy future.",
+          N2001: "You decide to go home and immedeatly go to sleep",
           N3001: "And so you wandered off that day.",
           N3002: "With clear feelings in your mind you decided to dedicate more time to finding answers.",
           N3003: "But at what cost?",
@@ -33,11 +34,11 @@ namespace Visualnovel {
           P0000: "...",
           P0001: "It's cloudy today.",
           P0001a: "Gonna make myself some meatballs later",
-          P0002: "Ok before all that do you know why " + characters.girl2.name + " wasn't at school today?",
+          P0002: "Ok before everything, do you know why " + characters.girl2.name + " wasn't at school today?",
           P0003: "I didn't think it'd be that bad but I'll apologize later.",
           P0004: "Now then for the topic at hand.",
           P1000: "I think I see what you mean now.",
-          P1001: "Uhm, alright then.",
+          P1001: "Uhm... alright. I'll give it a rest.",
           P1002: "You never change do you?",
           P1003: "Well, let's see who will get the best deal.",
           P1004: "The loser has to pay for dinner.",
@@ -69,7 +70,7 @@ namespace Visualnovel {
           G0108: "Come on, it's the ideal moment so hurry up!",
           G0109: "Hmmmhm, you're on!",
           G0201: "Okay, let's get this over with then.",
-          G0202: "That said",
+          G0202: "That said.",
           G0203: "Give me a minute.",
           G0204: "Alright, you with me?",
           G0205: "Ok then.",
@@ -147,6 +148,7 @@ namespace Visualnovel {
         //animate char away
         await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("outLeft"));
         await ƒS.Character.hide(characters.girl1);
+        await ƒS.Speech.tell(characters.narrator, text.Narrator.N2001);
         //initiate dream
         await ƒS.Location.show(locations.void);
         await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
