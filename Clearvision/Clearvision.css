@@ -32,7 +32,7 @@
     color: rgb(18, 177, 240);
     user-select: none;
   }
-  
+
   scene {
     width: 1920px;
     height: 1080px;
@@ -54,12 +54,19 @@
   
   speech {
     position: absolute;
+    display: block;
     bottom: 0px;
     left: 0px;
+    right: 0px;
+    background-size: cover;
     color: beige;
     background-color: rgba(16, 32, 57, 0.9);
     width: 100%;
     height: 13%;
+    -webkit-user-select: none;     
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   
   speech content {
@@ -77,12 +84,6 @@
     margin-bottom: 10px;
   }
   
-  scene {
-    width: 1280px;
-    height: 720px;
-    display: inline-block;
-    position: absolute;
-  }
   
   dialog[type="splash"] {
     background-image: url("Assets/Images/Backgrounds/space.jpg");
