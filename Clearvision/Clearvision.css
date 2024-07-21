@@ -139,7 +139,7 @@
   }
   
   dialog[type="inventory"] > ul > li > description{
-    color: white;
+    display: none;
   }
 
   meter::-webkit-meter-bar {
