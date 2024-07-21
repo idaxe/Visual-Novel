@@ -36,11 +36,6 @@ declare namespace Visualnovel {
             alpha: string;
             edge: number;
         };
-        gradient: {
-            duration: number;
-            alpha: string;
-            edge: number;
-        };
         dreamEnter: {
             duration: number;
             alpha: string;

@@ -2174,11 +2174,6 @@ var Visualnovel;
             alpha: "Assets/Images/Transitions/slide3.png",
             edge: 1
         },
-        gradient: {
-            duration: 2,
-            alpha: "Assets/Images/Transitions/middle.jpg",
-            edge: 1
-        },
         dreamEnter: {
             duration: 2,
             alpha: "Assets/Images/Transitions/point.png",
