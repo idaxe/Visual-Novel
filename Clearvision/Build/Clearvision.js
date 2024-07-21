@@ -2150,8 +2150,7 @@ var Visualnovel;
         dream: "Assets/Sounds/relaxing.mp3",
         end: "Assets/Sounds/please-calm-my-mind.mp3",
         //SFX
-        drop: "Assets/Sounds/Drop.mp3",
-        clue: ""
+        drop: "Assets/Sounds/Drop.mp3"
     };
     Visualnovel.locations = {
         beachDay: {
@@ -2290,8 +2289,6 @@ var Visualnovel;
         inRight: "inRight",
         goInLeft: "goInLeft",
         goInRight: "goInRight",
-        comeCloser: "comeCloser",
-        stepBack: "stepBack",
         scare: "scare",
         scareBack: "scareBack",
         smLeft: "smLeft",
@@ -2352,20 +2349,6 @@ var Visualnovel;
                 return {
                     start: { translation: Visualnovel.customPositions.farright, scaling: new Visualnovel.ƒS.Position(1, 1) },
                     end: { translation: Visualnovel.customPositions.middleRight, scaling: new Visualnovel.ƒS.Position(0.5, 0.5) },
-                    duration: 1,
-                    playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
-                };
-            case Visualnovel.animations.comeCloser:
-                return {
-                    start: {},
-                    end: {},
-                    duration: 1,
-                    playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
-                };
-            case Visualnovel.animations.stepBack:
-                return {
-                    start: {},
-                    end: {},
                     duration: 1,
                     playmode: Visualnovel.ƒS.ANIMATION_PLAYMODE.PLAYONCE
                 };

@@ -43,8 +43,7 @@ namespace Visualnovel {
       dream: "Assets/Sounds/relaxing.mp3",
       end: "Assets/Sounds/please-calm-my-mind.mp3",
       //SFX
-      drop: "Assets/Sounds/Drop.mp3",
-      clue: ""
+      drop: "Assets/Sounds/Drop.mp3"
     };
 
     export let locations = {
@@ -187,8 +186,6 @@ namespace Visualnovel {
       inRight: "inRight",
       goInLeft: "goInLeft",
       goInRight: "goInRight",
-      comeCloser: "comeCloser",
-      stepBack: "stepBack",
       scare: "scare",
       scareBack: "scareBack",
       smLeft: "smLeft",
@@ -250,20 +247,6 @@ namespace Visualnovel {
           return {
             start: {translation: customPositions.farright, scaling: new ƒS.Position(1, 1)},
             end: {translation: customPositions.middleRight, scaling: new ƒS.Position(0.5, 0.5)},
-            duration: 1,
-            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
-          };
-        case animations.comeCloser:
-          return {
-            start: {},
-            end: {},
-            duration: 1,
-            playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
-          };
-        case animations.stepBack:
-          return {
-            start: {},
-            end: {},
             duration: 1,
             playmode: ƒS.ANIMATION_PLAYMODE.PLAYONCE
           };

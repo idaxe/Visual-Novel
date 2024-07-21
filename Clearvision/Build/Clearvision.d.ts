@@ -63,7 +63,6 @@ declare namespace Visualnovel {
         dream: string;
         end: string;
         drop: string;
-        clue: string;
     };
     let locations: {
         beachDay: {
@@ -202,8 +201,6 @@ declare namespace Visualnovel {
         inRight: string;
         goInLeft: string;
         goInRight: string;
-        comeCloser: string;
-        stepBack: string;
         scare: string;
         scareBack: string;
         smLeft: string;
