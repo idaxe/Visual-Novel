@@ -150,10 +150,6 @@ namespace Visualnovel {
           D2002: "If we don't move quickly his live will be in danger!"
         }
       }
-      /*let safetychoice = {
-        Proceed: "I want to know the truth.",
-        Divert: "On second thought."
-      };*/
 
       await ƒS.Location.show(locations.homeDay);
       await ƒS.Sound.play(sound.day, 0.3, true);
@@ -183,23 +179,16 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Sound.fade(sound.day, 0, 0, true);
       await ƒS.Location.show(locations.hospital);
+      await ƒS.Sound.fade(sound.rain,  0.5, 2, false);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0008);
-
-      //safetychoice to ending 1 or 2 depending on score
-      /*let schoice = await ƒS.Menu.getInput(safetychoice, "safetyChoice");
-      if (schoice == safetychoice.Divert) {
-        if (dataForSave.curiosityCounter > 35) {
-          return "Ending";
-        }
-          return "Ending";
-      }*/
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0009);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0009);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
+      await ƒS.Sound.fade(sound.rain, 0, 0, true);
       await ƒS.Location.show(locations.void); //fade black
       await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);

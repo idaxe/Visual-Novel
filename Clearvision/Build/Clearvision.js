@@ -1812,10 +1812,6 @@ var Visualnovel;
                 D2002: "If we don't move quickly his live will be in danger!"
             }
         };
-        /*let safetychoice = {
-          Proceed: "I want to know the truth.",
-          Divert: "On second thought."
-        };*/
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeDay);
         await Visualnovel.ƒS.Sound.play(Visualnovel.sound.day, 0.3, true);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
@@ -1844,22 +1840,16 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0007);
         await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.day, 0, 0, true);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.hospital);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.rain, 0.5, 2, false);
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0006);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0007);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0008);
-        //safetychoice to ending 1 or 2 depending on score
-        /*let schoice = await ƒS.Menu.getInput(safetychoice, "safetyChoice");
-        if (schoice == safetychoice.Divert) {
-          if (dataForSave.curiosityCounter > 35) {
-            return "Ending";
-          }
-            return "Ending";
-        }*/
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0008);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0009);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0009);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0008);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.rain, 0, 0, true);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void); //fade black
         await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0010);
@@ -2153,7 +2143,7 @@ var Visualnovel;
         end: "Assets/Sounds/please-calm-my-mind.mp3",
         //SFX
         slap: "Assets/Sounds/Slap.mp3",
-        rain: "Assets/Sounds/Rain.mp3"
+        rain: "Assets/Sounds/light-rain.mp3"
     };
     Visualnovel.locations = {
         beachDay: {

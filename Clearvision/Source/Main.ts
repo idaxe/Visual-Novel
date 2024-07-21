@@ -44,7 +44,7 @@ namespace Visualnovel {
       end: "Assets/Sounds/please-calm-my-mind.mp3",
       //SFX
       slap: "Assets/Sounds/Slap.mp3",
-      rain: "Assets/Sounds/Rain.mp3"
+      rain: "Assets/Sounds/light-rain.mp3"
     };
 
     export let locations = {
