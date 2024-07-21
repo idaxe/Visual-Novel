@@ -276,6 +276,15 @@ namespace Visualnovel {
     let menu: ƒS.Menu;
     let mActive: boolean = false;
 
+    export let item = {
+      ticket: {
+        name: "Ticket",
+        description: "A entry ticket for an amusement park Amai gave you.",
+        image: "Assets/Items/Ticket.png",
+        static: true
+      }
+    };
+
     // Savedate for Gameprogress
     export let dataForSave = {
       nameProtagonist: "",
@@ -314,14 +323,23 @@ namespace Visualnovel {
           break;
         case ƒ.KEYBOARD_CODE.Q:
           if (mActive == false){
-            console.log("Opening Inventory");
+            console.log("Opening Menu");
             menu.open();
             mActive = true;
           } else {
-            console.log("Closing Inventory");
+            console.log("Closing Menu");
             menu.close();
             mActive = false;
           }
+          break;
+        case ƒ.KEYBOARD_CODE.E:
+          console.log("Opening Inventory");
+          await ƒS.Inventory.open();
+          break;
+        case ƒ.KEYBOARD_CODE.ESC:
+          console.log("Close Inventory");
+          await ƒS.Inventory.open();
+          ƒS.Inventory.close();
           break;
       }
     }

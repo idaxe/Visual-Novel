@@ -102,6 +102,34 @@
     color: rgb(69, 213, 218);
   }
 
+  dialog[type="inventory"] {
+    background-color: rgba(16, 32, 57, 0.7);
+    border: 2px solid rgb(69, 213, 218);
+    border-radius: 5px;
+    top: -200px;
+  }
+
+  dialog[type="inventory"] > button{
+    border: 2px solid darkblue;
+    border-radius: 5px;
+    background: none;
+    color: rgb(69, 213, 218);
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  dialog[type="inventory"] img {
+    position: absolute;
+    left: 20px;
+    height: 80px;
+    width: 80px;
+    -ms-user-select: None;
+    -moz-user-select: None;
+    -webkit-user-select: None;
+    user-select: None;
+  }
+
   meter::-webkit-meter-bar {
     background-color: #ececec;
   }

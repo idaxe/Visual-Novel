@@ -197,6 +197,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       //maybe ticket into a inventory slot which skips chapter 4 if discarded
+      ƒS.Inventory.add(item.ticket);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0028);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0029);

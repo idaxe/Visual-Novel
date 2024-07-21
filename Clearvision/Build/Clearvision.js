@@ -719,6 +719,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2006);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0010);
         //maybe ticket into a inventory slot which skips chapter 4 if discarded
+        Visualnovel.ƒS.Inventory.add(Visualnovel.item.ticket);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2007);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0028);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0029);
@@ -2376,6 +2377,14 @@ var Visualnovel;
     };
     let menu;
     let mActive = false;
+    Visualnovel.item = {
+        ticket: {
+            name: "Ticket",
+            description: "A entry ticket for an amusement park Amai gave you.",
+            image: "Assets/Items/Ticket.png",
+            static: true
+        }
+    };
     // Savedate for Gameprogress
     Visualnovel.dataForSave = {
         nameProtagonist: "",
@@ -2411,15 +2420,24 @@ var Visualnovel;
                 break;
             case Visualnovel.ƒ.KEYBOARD_CODE.Q:
                 if (mActive == false) {
-                    console.log("Opening Inventory");
+                    console.log("Opening Menu");
                     menu.open();
                     mActive = true;
                 }
                 else {
-                    console.log("Closing Inventory");
+                    console.log("Closing Menu");
                     menu.close();
                     mActive = false;
                 }
+                break;
+            case Visualnovel.ƒ.KEYBOARD_CODE.E:
+                console.log("Opening Inventory");
+                await Visualnovel.ƒS.Inventory.open();
+                break;
+            case Visualnovel.ƒ.KEYBOARD_CODE.ESC:
+                console.log("Close Inventory");
+                await Visualnovel.ƒS.Inventory.open();
+                Visualnovel.ƒS.Inventory.close();
                 break;
         }
     }

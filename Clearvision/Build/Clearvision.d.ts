@@ -207,6 +207,14 @@ declare namespace Visualnovel {
         smRight: string;
     };
     function animate(_animation: string): ƒS.AnimationDefinition;
+    let item: {
+        ticket: {
+            name: string;
+            description: string;
+            image: string;
+            static: boolean;
+        };
+    };
     let dataForSave: {
         nameProtagonist: string;
         curiosityCounter: number;
