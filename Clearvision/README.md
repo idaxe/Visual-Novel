@@ -1,4 +1,4 @@
-# VisualNovel
+# Visual-Novel
 Denny Lang
 Visual Novel
 Sommersemester 2024
