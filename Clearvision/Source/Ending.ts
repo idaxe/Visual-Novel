@@ -104,7 +104,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.game, text.game.game008);
       await ƒS.Speech.tell(characters.game, text.game.game009);
       await ƒS.Speech.tell(characters.game, text.game.game010);
-      await ƒS.Location.show(locations.ending4);
-      await ƒS.update();
+      //await ƒS.Location.show(locations.ending4);
+      //await ƒS.update();
+      await ƒS.Speech.hide();
     }
   }

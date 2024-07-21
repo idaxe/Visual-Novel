@@ -191,6 +191,7 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.girl1, text.girl1.G0109);
             await ƒS.Sound.fade(sound.chill, 0, 0, true);
             await ƒS.Location.show(locations.void);
+            await ƒS.Character.hide(characters.girl1);
             await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N1001);
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N1002);

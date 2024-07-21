@@ -115,7 +115,7 @@ namespace Visualnovel {
       },
       ending1: {
         name: "ending1",
-        background: "Assets/Images/Backgrounds/Ending1.png"
+        background: "Assets/Images/Backgrounds/Ending1.jpg"
       },
       ending2: {
         name: "ending2",

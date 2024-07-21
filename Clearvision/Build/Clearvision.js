@@ -1624,6 +1624,7 @@ var Visualnovel;
                     await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0109);
                     await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.chill, 0, 0, true);
                     await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
+                    await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
                     await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
                     await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N1001);
                     await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N1002);
@@ -2151,8 +2152,9 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game008);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game009);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game010);
-        await Visualnovel.ƒS.Location.show(Visualnovel.locations.ending4);
-        await Visualnovel.ƒS.update();
+        //await ƒS.Location.show(locations.ending4);
+        //await ƒS.update();
+        await Visualnovel.ƒS.Speech.hide();
     }
     Visualnovel.Endings = Endings;
 })(Visualnovel || (Visualnovel = {}));
@@ -2271,7 +2273,7 @@ var Visualnovel;
         },
         ending1: {
             name: "ending1",
-            background: "Assets/Images/Backgrounds/Ending1.png"
+            background: "Assets/Images/Backgrounds/Ending1.jpg"
         },
         ending2: {
             name: "ending2",
