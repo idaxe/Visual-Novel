@@ -33,6 +33,13 @@
     user-select: none;
   }
   
+  scene {
+    width: 1920px;
+    height: 1080px;
+    display: inline-block;
+    position: absolute;
+  }
+  
   canvas {
     width: 100%;
     height: 100%;
@@ -95,7 +102,25 @@
   }
 
   .decisionHospital[open] {
-    background-color: blue;
+    background-color: rgba(103, 103, 182, 0.521);
+  }
+
+  .decisionDream [open] {
+    background-color: rgba(24, 24, 41, 0.521);
+  }
+
+  .decisionDream2 [open] {
+    background-color: rgba(24, 24, 41, 0.521);
+  }
+
+  .Dreamthoughts1 [open] {
+    background-color: rgba(15, 36, 22, 0.521);
+  }
+  .Dreamthoughts1 [open] {
+    background-color: rgba(24, 40, 41, 0.521);
+  }
+  .Dreamthoughts1 [open] {
+    background-color: rgba(41, 24, 24, 0.521);
   }
 
   .menu[open] {
