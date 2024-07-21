@@ -129,6 +129,18 @@
     -webkit-user-select: None;
     user-select: None;
   }
+  dialog[type="inventory"] > ul > li > name{
+    width: 200px;
+    color: white;
+  }
+  
+  dialog[type="inventory"] > ul > li > amount{
+    display: none;
+  }
+  
+  dialog[type="inventory"] > ul > li > description{
+    color: white;
+  }
 
   meter::-webkit-meter-bar {
     background-color: #ececec;
