@@ -187,9 +187,9 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0013);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0018);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0014);
+      await ƒS.Location.show(locations.homeNight);
       await ƒS.Character.hide(characters.girl1);
       await ƒS.Character.hide(characters.girl2);
-      await ƒS.Location.show(locations.homeNight);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0014);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0015);
