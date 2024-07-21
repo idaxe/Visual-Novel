@@ -87,7 +87,7 @@
   
   dialog[type="splash"] > p {
     font-size: 2vmin;
-    color: white;
+    color: rgba(255, 255, 255, 0.5);
     text-align: center;
   }
   dialog[type=splash]>img#FudgeStoryLogo {
@@ -109,18 +109,19 @@
   .Dreamthoughts1 [open] {
     background-color: rgba(15, 36, 22, 0.521);
   }
-  .Dreamthoughts1 [open] {
+  .Dreamthoughts2 [open] {
     background-color: rgba(24, 40, 41, 0.521);
   }
-  .Dreamthoughts1 [open] {
+  .Dreamthoughts3 [open] {
     background-color: rgba(41, 24, 24, 0.521);
   }
 
   .menu[open] {
-    background-color: rgb(97, 98, 143);
+    background-color: rgb(16, 32, 57, 0.9);
   }
   .menu button{
-    color: rgb(151, 107, 192);
+    background-color: darkblue;
+    color: rgb(69, 213, 218);
   }
 
   meter::-webkit-meter-bar {
