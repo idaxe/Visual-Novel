@@ -62,7 +62,8 @@ declare namespace Visualnovel {
         chill: string;
         dream: string;
         end: string;
-        drop: string;
+        slap: string;
+        rain: string;
     };
     let locations: {
         beachDay: {

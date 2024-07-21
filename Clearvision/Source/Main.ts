@@ -43,7 +43,8 @@ namespace Visualnovel {
       dream: "Assets/Sounds/relaxing.mp3",
       end: "Assets/Sounds/please-calm-my-mind.mp3",
       //SFX
-      drop: "Assets/Sounds/Drop.mp3"
+      slap: "Assets/Sounds/Slap.mp3",
+      rain: "Assets/Sounds/Rain.mp3"
     };
 
     export let locations = {
@@ -109,7 +110,7 @@ namespace Visualnovel {
       },
       ending1: {
         name: "ending1",
-        background: "Assets/Images/Backgrounds/Ending1.jpg"
+        background: "Assets/Images/Backgrounds/Ending1.png"
       },
       ending2: {
         name: "ending2",

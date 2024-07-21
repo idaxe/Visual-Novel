@@ -107,9 +107,10 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0002);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
+      await ƒS.Location.show(locations.town);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farright); //happy
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("inRight"));
-      await ƒS.update();
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0003);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.upset, customPositions.slightright); //sad
@@ -159,6 +160,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0021);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0022);
       //maybe small blackscreen for effect here
+      ƒS.Sound.fade(sound.slap, 0.5, 2, false);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2004);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2005);

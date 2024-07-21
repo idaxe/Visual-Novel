@@ -428,9 +428,9 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0013);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0018);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0014);
-        await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeNight);
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl2);
+        await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeNight);
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0014);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0015);
@@ -956,14 +956,14 @@ var Visualnovel;
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.town);
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0007);
-        await Visualnovel.ƒS.Location.show(Visualnovel.locations.classroom);
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
+        await Visualnovel.ƒS.Location.show(Visualnovel.locations.classroom);
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0008);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0009);
-        await Visualnovel.ƒS.Location.show(Visualnovel.locations.festival);
         await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.customPositions.slightright);
         await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl2, Visualnovel.characters.girl2.pose.happy, Visualnovel.customPositions.slightleft);
+        await Visualnovel.ƒS.Location.show(Visualnovel.locations.festival);
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0010);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0002);
@@ -1219,9 +1219,10 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0001);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0001);
+        await Visualnovel.ƒS.Location.show(Visualnovel.locations.town);
         await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.customPositions.farright); //happy
+        await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.animate("inRight"));
-        await Visualnovel.ƒS.update();
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0003);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0002);
         await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.upset, Visualnovel.customPositions.slightright); //sad
@@ -1271,6 +1272,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0021);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0022);
         //maybe small blackscreen for effect here
+        Visualnovel.ƒS.Sound.fade(Visualnovel.sound.slap, 0.5, 2, false);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0006);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl2, text.girl2.G2005);
@@ -2151,7 +2153,8 @@ var Visualnovel;
         dream: "Assets/Sounds/relaxing.mp3",
         end: "Assets/Sounds/please-calm-my-mind.mp3",
         //SFX
-        drop: "Assets/Sounds/Drop.mp3"
+        slap: "Assets/Sounds/Slap.mp3",
+        rain: "Assets/Sounds/Rain.mp3"
     };
     Visualnovel.locations = {
         beachDay: {
@@ -2216,7 +2219,7 @@ var Visualnovel;
         },
         ending1: {
             name: "ending1",
-            background: "Assets/Images/Backgrounds/Ending1.jpg"
+            background: "Assets/Images/Backgrounds/Ending1.png"
         },
         ending2: {
             name: "ending2",
