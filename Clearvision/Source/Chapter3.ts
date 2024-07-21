@@ -174,13 +174,13 @@ namespace Visualnovel {
       }
       //fade
       await ƒS.Location.show(locations.hallway);
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightleft);
+      //await ƒS.Animation.();
+      //await ƒS.update();
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0019);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0020);
-      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightleft);
-      //await ƒS.Animation.();
-      await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0021);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0022);
