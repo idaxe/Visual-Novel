@@ -218,6 +218,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0024);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0025);
       await ƒS.Sound.fade(sound.day, 0, 0, true);
+      ƒS.Speech.hide();
       //start dream
       await ƒS.Location.show(locations.void);
       await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
@@ -280,6 +281,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "Will you accidentally cause actions with recoil strong enough that it might destroy what you have left?");
       await ƒS.Speech.tell("???", "Maybe your subconsciousness is already getting affected through me?");
       await ƒS.Speech.tell("???", "Hehe~. Let's see how time plays out.");
+      ƒS.Speech.hide();
       await ƒS.Location.show(locations.void);
       await ƒS.Sound.fade(sound.dream, 0, 0,  true);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);

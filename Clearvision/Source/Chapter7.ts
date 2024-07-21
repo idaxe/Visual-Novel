@@ -311,6 +311,7 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2011);
         dataForSave.Ending = 4;
         await ƒS.Character.hide(characters.girl1);
+        ƒS.Speech.hide();
         await ƒS.Location.show(locations.void);
         await ƒS.Sound.play(sound.end, 0.3, false);
         await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
@@ -333,6 +334,7 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.girl1, text.girl1.G3006);
         await ƒS.Speech.tell(characters.narrator, text.Narrator.N3001);
         dataForSave.Ending = 3;
+        ƒS.Speech.hide();
         await ƒS.Character.hide(characters.girl1);
         await ƒS.Location.show(locations.void);
         await ƒS.Sound.play(sound.end, 0.3, false);

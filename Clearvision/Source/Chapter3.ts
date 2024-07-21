@@ -230,6 +230,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0035);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0015);
       await ƒS.Sound.fade(sound.day, 0, 0, true);
+      ƒS.Speech.hide();
       //initiate dream
       await ƒS.Location.show(locations.void);
       await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
@@ -296,6 +297,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "That may give too much away though.");
       await ƒS.Speech.tell("???", "Do with these informations as you please.");
       await ƒS.Speech.tell("???", "Hope you can remember these interactions better outside of your subconciousness soon.");
+      ƒS.Speech.hide();
       await ƒS.Location.show(locations.void);
       await ƒS.Sound.fade(sound.dream, 0, 0,  true);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);

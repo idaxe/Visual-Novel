@@ -242,6 +242,7 @@ namespace Visualnovel {
           await ƒS.Speech.tell("???", "I'll see you tomorrow.");
           break;
       }
+      ƒS.Speech.hide();
       await ƒS.Location.show(locations.void);
       await ƒS.Sound.fade(sound.dream, 0, 0,  true);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);

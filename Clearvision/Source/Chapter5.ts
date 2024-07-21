@@ -129,12 +129,14 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0005);
       await ƒS.Location.show(locations.hallway);
+      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
+      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightright);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       // fade hallways
-      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
-      await ƒS.update();
-      await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightright);
-      await ƒS.update();
+      //await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
+      //await ƒS.update();
+      //await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightright);
+      //await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0004);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);
@@ -204,7 +206,7 @@ namespace Visualnovel {
       }
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0014);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0015);
-      await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("outLeft"));
+      await ƒS.Character.animate(characters.girl1, characters.girl1.pose.upset, animate("outLeft"));
       //await ƒS.update();
       await ƒS.Character.hide(characters.girl1);
       await ƒS.update();
@@ -221,6 +223,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0034);
       await ƒS.Sound.fade(sound.day, 0, 0, true);
+      ƒS.Speech.hide();
       //initiate dream
       await ƒS.Location.show(locations.void);
       await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
@@ -283,6 +286,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "Can your- or rather our fragile mind take it?");
       await ƒS.Speech.tell("???", "The future is the means by which all is revealed.");
       //await ƒS.Speech.tell("???", "");
+      ƒS.Speech.hide();
       await ƒS.Location.show(locations.void);
       await ƒS.Sound.fade(sound.dream, 0, 0,  true);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);

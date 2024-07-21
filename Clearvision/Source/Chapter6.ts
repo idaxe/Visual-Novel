@@ -151,6 +151,7 @@ namespace Visualnovel {
         await ƒS.Character.hide(characters.girl1);
         await ƒS.Speech.tell(characters.narrator, text.Narrator.N2001);
         await ƒS.Sound.fade(sound.day, 0, 0, true);
+        ƒS.Speech.hide();
         //initiate dream
         await ƒS.Location.show(locations.void);
         await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
@@ -164,6 +165,7 @@ namespace Visualnovel {
         await ƒS.Speech.tell("???", "I'll let you go question free this time.");
         await ƒS.Speech.tell("???", "Enjoy your rest for today.");
         await ƒS.Sound.fade(sound.dream, 0, 0,  true);
+        ƒS.Speech.hide();
         await ƒS.Location.show(locations.void);
         await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
         return "Chapter7";
@@ -211,6 +213,7 @@ namespace Visualnovel {
             await ƒS.Speech.tell("???", "As long as you will continue walking on this path.");
             await ƒS.Speech.tell("???", "Because I will always be here. Lurking, waiting.");
             dataForSave.Ending = 1;
+            ƒS.Speech.hide();
             //break;
             return "Ending";
           case thoughts.C2:
@@ -233,6 +236,7 @@ namespace Visualnovel {
             await ƒS.Character.hide(characters.girl1);
             await ƒS.Speech.tell(characters.girl1, text.girl1.G0306);
             await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3004);
+            await ƒS.Sound.fade(sound.day, 0, 0, true);
             await ƒS.Location.show(locations.void);
             await ƒS.Character.hide(characters.girl1);
             await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
@@ -259,12 +263,14 @@ namespace Visualnovel {
             await ƒS.Speech.tell("???", "After all, I'm already a part of you now.");
             await ƒS.Speech.tell(characters.narrator, "You hear a gentle laugh before everything fades away.");
             dataForSave.Ending = 2;
+            ƒS.Speech.hide();
             //break;
             return "Ending";
           default:
             await ƒS.Speech.tell("???", "...");
             await ƒS.Speech.tell("???", "You are not supposed to be here.");
             dataForSave.Ending = 5;
+            ƒS.Speech.hide();
             return "Ending";  
         }
       }
