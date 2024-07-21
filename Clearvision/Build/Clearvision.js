@@ -380,7 +380,6 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0006);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0007);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0008);
-        //fade in school maybe
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.school);
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0005);
@@ -395,7 +394,6 @@ var Visualnovel;
         //school hallway maybe?
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.hallway);
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
-        await Visualnovel.ƒS.Speech.tell("anim", "test");
         await Visualnovel.ƒS.Character.show(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.customPositions.farleft);
         await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.animate("smLeft"));
         //await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.middleLeft);
@@ -443,9 +441,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0014);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeNight);
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
-        //await ƒS.update();
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl2);
-        //await ƒS.update();
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0014);
         //fade to black and then back
@@ -2327,9 +2323,9 @@ var Visualnovel;
     };
     Visualnovel.customPositions = {
         slightleft: new FudgeStory.Position(-150, -540),
-        farleft: new FudgeStory.Position(-1000, -540),
+        farleft: new FudgeStory.Position(-1300, -540),
         slightright: new FudgeStory.Position(250, -540),
-        farright: new FudgeStory.Position(1000, -540),
+        farright: new FudgeStory.Position(1300, -540),
         backgroundleft: new FudgeStory.Position(-100, -200),
         slscare: new FudgeStory.Position(-150, -500),
         middleLeft: new FudgeStory.Position(-100, -300),

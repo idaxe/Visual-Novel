@@ -137,8 +137,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0008);
-      //fade in school maybe
-      await ƒS.Location.show(locations.school);
+      await ƒS.Location.show(locations.school); 
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
       //fade in
@@ -152,7 +151,6 @@ namespace Visualnovel {
       //school hallway maybe?
       await ƒS.Location.show(locations.hallway);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
-      await ƒS.Speech.tell("anim", "test");
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farleft);
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("smLeft"));
       //await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.middleLeft);
@@ -201,10 +199,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0014);
       await ƒS.Location.show(locations.homeNight);
       await ƒS.Character.hide(characters.girl1);
-      //await ƒS.update();
       await ƒS.Character.hide(characters.girl2);
-      //await ƒS.update();
-      
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0014);
       //fade to black and then back

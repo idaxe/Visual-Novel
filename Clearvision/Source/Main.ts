@@ -171,9 +171,9 @@ namespace Visualnovel {
 
     export let customPositions = {
       slightleft: new FudgeStory.Position(-150, -540),
-      farleft: new FudgeStory.Position(-1000, -540),
+      farleft: new FudgeStory.Position(-1300, -540),
       slightright: new FudgeStory.Position(250, -540),
-      farright: new FudgeStory.Position(1000, -540),
+      farright: new FudgeStory.Position(1300, -540),
       backgroundleft: new FudgeStory.Position(-100, -200),
       slscare: new FudgeStory.Position(-150, -500),
       middleLeft: new FudgeStory.Position(-100, -300),
