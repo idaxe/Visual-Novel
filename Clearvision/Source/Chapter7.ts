@@ -160,6 +160,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0002);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
+      await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft)
       await ƒS.Location.show(locations.hallway);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
@@ -178,6 +179,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Sound.fade(sound.day, 0, 0, true);
+      await ƒS.Character.hide(characters.girl1);
       await ƒS.Location.show(locations.hospital);
       await ƒS.Sound.fade(sound.rain,  0.5, 2, false);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);

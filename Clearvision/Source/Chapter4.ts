@@ -131,9 +131,9 @@ namespace Visualnovel {
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
+      await ƒS.Location.show(locations.festival);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightright);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightleft);
-      await ƒS.Location.show(locations.festival);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
@@ -190,7 +190,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0016);
       await ƒS.Character.hide(characters.girl1);
       await ƒS.Character.hide(characters.girl2);
-      //await ƒS.update();
       await ƒS.Location.show(locations.homeNight);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0017);
