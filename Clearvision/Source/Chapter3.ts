@@ -215,11 +215,11 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0031);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0032);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0033);
-      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0012);
-      await ƒS.Character.hide(characters.girl1);
-      await ƒS.Character.hide(characters.girl2);
+      await ƒS.Speech.tell(characters.narrator, text.Narrator.N0012); 
       //fade
       await ƒS.Location.show(locations.homeNight);
+      await ƒS.Character.hide(characters.girl1);
+      await ƒS.Character.hide(characters.girl2);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0013);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);

@@ -738,10 +738,10 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0032);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0033);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0012);
-        await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
-        await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl2);
         //fade
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeNight);
+        await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
+        await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl2);
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0013);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
