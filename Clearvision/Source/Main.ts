@@ -54,7 +54,7 @@ namespace Visualnovel {
       },
       credits: {
         name: "credits",
-        background: "Assets/Images/Backgrounds/credits.png"
+        background: "Assets/Images/Backgrounds/Credits.png"
       },
       hospital: {
         name: "hospital",
