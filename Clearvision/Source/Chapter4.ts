@@ -87,7 +87,6 @@ namespace Visualnovel {
           G2009: "What was that?"
         }
       }
-      //let listen = false;
       let tempscore = 0;
       let thoughts = {
         C1: "Consistency",
@@ -116,7 +115,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0003);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
-      //fade black & back
+      //fade black & back maybe
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0005);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farright);
       await ƒS.update();
@@ -131,15 +130,12 @@ namespace Visualnovel {
       await ƒS.Location.show(locations.classroom);
       await ƒS.Character.hide(characters.girl1);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
-      //fade
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
-      //fade to amusemetn park
       await ƒS.Location.show(locations.festival);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightright);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightleft);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
-      //await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);
@@ -149,14 +145,12 @@ namespace Visualnovel {
       await ƒS.update();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2002);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0011);
-      //double blackfade
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0003);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0008);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2003);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0004);
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("outRight"));
       await ƒS.update();
-      //await ƒS.Animation();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0012);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0009);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
@@ -175,7 +169,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0005);
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("inRight"));
       await ƒS.update();
-      //await ƒS.Animation();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0015);
@@ -187,13 +180,11 @@ namespace Visualnovel {
       await ƒS.update();
       await ƒS.Character.animate(characters.girl2, characters.girl2.pose.happy, animate("scareBack"));
       await ƒS.update();
-      //await ƒS.Animation();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0015);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2007);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0016);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightleft);
-      //await ƒS.Character.hide(characters.girl2);
       await ƒS.update();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2009);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0017);
@@ -201,7 +192,6 @@ namespace Visualnovel {
       await ƒS.Character.hide(characters.girl1);
       await ƒS.Character.hide(characters.girl2);
       await ƒS.update();
-      //fade
       await ƒS.Location.show(locations.homeNight);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0017);
@@ -271,7 +261,6 @@ namespace Visualnovel {
       if (tempscore > 12){
         await ƒS.Speech.tell("???", "Well well well.");
         await ƒS.Speech.tell("???", "Even though you have the options of ignorance you stray from it and move further towards the knowledge hidden in the dark.");
-        //increase global truth score
       } else {
         await ƒS.Speech.tell("???", "Very well then.");
         await ƒS.Speech.tell("???", "I'll let you off with just this today.");

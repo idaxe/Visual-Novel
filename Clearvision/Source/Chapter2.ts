@@ -2,7 +2,6 @@ namespace Visualnovel {
     export async function Chapter2(): ƒS.SceneReturn {
       console.log("Chapter 2 - Daily life");
       characters.protagonist.name = dataForSave.nameProtagonist;
-      //await ƒS.Speech.tell("Pringles", "Chips");
       if (dataForSave.curChapter != 2) {
         return "Chapter3";
       }
@@ -27,7 +26,7 @@ namespace Visualnovel {
           N0014: "After arriving home with her, you wave " + characters.girl1.name + " goodbye.",
           N0015: "Since you returned from the hospital not long ago, you decide to buy groceries and clean for the day.",
           N0016: "A couple hours have passed, but the place looks like someone lives in it again.",
-          N0017: "With that done, you decide to go to sleep." //start dream dialogue
+          N0017: "With that done, you decide to go to sleep."
         },
         protagonist: {
           P0001: "It's a nice day outside.",
@@ -108,7 +107,6 @@ namespace Visualnovel {
         N2: "Worry"
       };
 
-      //await ƒS.Location.show(locations.dream);
       await ƒS.Location.show(locations.homeDay);
       await ƒS.Sound.play(sound.day, 0.3, true);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
@@ -119,12 +117,10 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0003);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0002);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
-      //maybe an environmental update here?
       await ƒS.Location.show(locations.town);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farleft);
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("inLeft"));
-      //await ƒS.update();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0002);
@@ -140,7 +136,6 @@ namespace Visualnovel {
       await ƒS.Location.show(locations.school); 
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
-      //fade in
       await ƒS.Character.hide(characters.girl1);
       await ƒS.Location.show(locations.classroom);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
@@ -148,17 +143,14 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
-      //school hallway maybe?
       await ƒS.Location.show(locations.hallway);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farleft);
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("smLeft"));
-      //await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.middleLeft);
       await ƒS.update();
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.farright);
       await ƒS.Character.animate(characters.girl2, characters.girl2.pose.happy, animate("smRight"));
-      //await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.middleRight);
       await ƒS.update();
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
@@ -169,8 +161,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0011);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0012);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0013);
-      //Characters pose change
-      
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.upset, customPositions.slightleft);
       await ƒS.Character.hide(characters.girl1);
       await ƒS.update();
@@ -202,11 +192,7 @@ namespace Visualnovel {
       await ƒS.Character.hide(characters.girl2);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0014);
-      //fade to black and then back
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0015);
-
-
-
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0016);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0017);
       await ƒS.Sound.fade(sound.day, 0, 0, true);
@@ -277,7 +263,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "So thats how it is.");
       if (tempscore >= 20){
         await ƒS.Speech.tell("???", "Quite pleasing.");
-        //increase global truth score
       } else {
         await ƒS.Speech.tell("???", "Quite... unremarkable...");
       }

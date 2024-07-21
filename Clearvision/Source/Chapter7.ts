@@ -166,7 +166,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
       await ƒS.Location.show(locations.hallway);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
-      //fade
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0003);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
@@ -179,12 +178,10 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0005);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0006);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0007);
-      //fade to black
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
       await ƒS.Sound.fade(sound.day, 0, 0, true);
-      //fade to hospital
       await ƒS.Location.show(locations.hospital);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
@@ -216,7 +213,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N1001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1002);
-      //await ƒS.Speech.tell(characters.girl1, text.girl1.G1001);
       await ƒS.Speech.tell(characters.doctor, text.doctor.D0001);
       await ƒS.Speech.tell(characters.doctor, text.doctor.D0002);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1003);
@@ -284,7 +280,6 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.friend, text.friend.F0005);
         await ƒS.Speech.tell(characters.friend, text.friend.F0006);
         await ƒS.Speech.tell(characters.friend, text.friend.F0007);
-        
         await ƒS.Speech.tell(characters.friend, text.friend.F0008);
         await ƒS.Speech.tell(characters.friend, text.friend.F0009);
         await ƒS.Speech.tell(characters.friend, text.friend.F0010);
@@ -293,7 +288,6 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.friend, text.friend.F0013);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2005);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2006);
-        //sad face
         await ƒS.Character.show(characters.girl1, characters.girl1.pose.upset, customPositions.slightleft);
         await ƒS.update();
         await ƒS.Speech.tell(characters.girl1, text.girl1.G2001);
@@ -301,7 +295,6 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.friend, text.friend.F0014);
         await ƒS.Speech.tell(characters.friend, text.friend.F0015);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2007);
-
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2008);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2009);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2010);

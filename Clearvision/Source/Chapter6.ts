@@ -97,7 +97,6 @@ namespace Visualnovel {
         C1: "You have a point.",
         C2: "How could I accept this!"
       };
-      //let tempscore = 0;
       await ƒS.Location.show(locations.homeDay);
       await ƒS.Sound.play(sound.day, 0.3, true);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
@@ -107,7 +106,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001a);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
-      //fade
       await ƒS.Location.show(locations.hallway);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
@@ -146,7 +144,6 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0214);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0215);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0216);
-        //animate char away
         await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("outLeft"));
         await ƒS.Character.hide(characters.girl1);
         await ƒS.Speech.tell(characters.narrator, text.Narrator.N2001);
@@ -201,7 +198,6 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N1004);
             await ƒS.Location.show(locations.dream);
             await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
-            //fade
             await ƒS.Sound.play(sound.end, 0.3, false);
             await ƒS.Speech.tell("???", "So that's the life you chose.");
             await ƒS.Speech.tell("???", "Just continuing on in blissfull ignorance.");
@@ -214,12 +210,10 @@ namespace Visualnovel {
             await ƒS.Speech.tell("???", "Because I will always be here. Lurking, waiting.");
             dataForSave.Ending = 1;
             ƒS.Speech.hide();
-            //break;
             return "Ending";
           case thoughts.C2:
             await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3000);
             await ƒS.Speech.tell(characters.girl1, text.girl1.G0000);
-            //angry char here
             await ƒS.Character.show(characters.girl1, characters.girl1.pose.angry, customPositions.slightleft);
             await ƒS.Character.hide(characters.girl1);
             await ƒS.Speech.tell(characters.girl1, text.girl1.G0301);
@@ -231,7 +225,6 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
             await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3002);
             await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3003);
-            //sad char here
             await ƒS.Character.show(characters.girl1, characters.girl1.pose.upset, customPositions.slightleft);
             await ƒS.Character.hide(characters.girl1);
             await ƒS.Speech.tell(characters.girl1, text.girl1.G0306);
@@ -251,7 +244,6 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N3009);
             await ƒS.Location.show(locations.dream);
             await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
-            //fade
             await ƒS.Sound.play(sound.end, 0.3, false);
             await ƒS.Speech.tell("???", "So thats the life you chose.");
             await ƒS.Speech.tell("???", "...");
@@ -264,7 +256,6 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.narrator, "You hear a gentle laugh before everything fades away.");
             dataForSave.Ending = 2;
             ƒS.Speech.hide();
-            //break;
             return "Ending";
           default:
             await ƒS.Speech.tell("???", "...");

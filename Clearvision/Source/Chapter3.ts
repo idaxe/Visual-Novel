@@ -123,7 +123,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0002);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0003);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
-      await ƒS.Location.show(locations.town); //street bgm
+      await ƒS.Location.show(locations.town);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
@@ -166,7 +166,6 @@ namespace Visualnovel {
           await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
           await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0018);
           listen = true;
-          //add some clue points here
           break;
         case classThoughts.Ignore:
           await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0012);
@@ -196,10 +195,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2005);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2006);
-      //await ƒS.Animation(); //maybe a short foreward step animation
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
       //maybe ticket into a inventory slot which skips chapter 4 if discarded
-      //await ƒS.Animation();//maybe a short back step animation
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2007);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0028);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0029);
@@ -289,7 +286,6 @@ namespace Visualnovel {
       if (tempscore > 7){
         await ƒS.Speech.tell("???", "I am most impressed.");
         await ƒS.Speech.tell("???", "Your finding shall lead you to the origin.");
-        //increase global truth score
       } else {
         await ƒS.Speech.tell("???", "You seem to be making progress.");
         await ƒS.Speech.tell("???", "But a word of advice. You should pay a bit more attention on the things happening around you.");

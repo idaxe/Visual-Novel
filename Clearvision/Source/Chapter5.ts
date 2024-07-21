@@ -106,7 +106,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0001);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0002);
-      //await ƒS.Speech.tell(characters.girl1, text.girl1);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0001);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.farright); //happy
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("inRight"));
@@ -118,25 +117,16 @@ namespace Visualnovel {
       await ƒS.update();
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0003);
-      //await ƒS.Character.show(characters.girl1, characters.girl1.pose.angry, customPositions.slightright); //upset
-      //await ƒS.Character.hide(characters.girl1);
-      //await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0002);
       await ƒS.Location.show(locations.classroom);
       await ƒS.Character.hide(characters.girl1);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
-      //fade school
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0003);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0005);
       await ƒS.Location.show(locations.hallway);
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightright);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
-      // fade hallways
-      //await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
-      //await ƒS.update();
-      //await ƒS.Character.show(characters.girl2, characters.girl2.pose.happy, customPositions.slightright);
-      //await ƒS.update();
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0004);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0004);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2001);
@@ -146,7 +136,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0008);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0009);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0010);
-      //await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0011);
       await ƒS.Character.show(characters.girl2, characters.girl2.pose.angry, customPositions.slightright); //sad
       await ƒS.Character.hide(characters.girl2);
@@ -165,17 +154,14 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0018);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0019);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
-      //maybe g1 upset here as well
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0020);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0021);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0022);
-      //maybe sall backscreen for effect here
+      //maybe small blackscreen for effect here
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
-      //deffo both mad here
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2004);
       await ƒS.Speech.tell(characters.girl2, text.girl2.G2005);
-      //g2 animates away
       await ƒS.Character.animate(characters.girl2, characters.girl2.pose.angry, animate("outRight"));
       await ƒS.update();
       await ƒS.Character.hide(characters.girl2);
@@ -188,7 +174,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0024);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0009);
       if(dataForSave.curiosityCounter > 40){
-        //knowledge for truth over 3 or something
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0025);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0026);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0027);
@@ -201,18 +186,15 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0000);
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0035);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0010);
-        //await ƒS.Speech.tell(characters.girl1, text.girl1.G0011);
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0013);
       }
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0014);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0015);
       await ƒS.Character.animate(characters.girl1, characters.girl1.pose.upset, animate("outLeft"));
-      //await ƒS.update();
       await ƒS.Character.hide(characters.girl1);
       await ƒS.update();
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0029);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0008);
-      //fade
       await ƒS.Location.show(locations.homeNight);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       //muffled rain sfx
@@ -234,8 +216,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "Just as I suspected."); 
       await ƒS.Speech.tell("???", "The ripples seem to already make waves.");
       await ƒS.Speech.tell("???", "Well then, you know the drill.");
-      //await ƒS.Speech.tell("???", "Well regardless, you know what I wanna hear.");
-      //let choice = await ƒS.Menu.getInput(thoughts, "Dreamthoughts1");
       let choice = await ƒS.Menu.getInput(thoughts, "Dreamthoughts1");
       switch (choice){
         case thoughts.C1:
@@ -276,7 +256,6 @@ namespace Visualnovel {
       if (tempscore > 12){
         await ƒS.Speech.tell("???", "It's not far now.");
         await ƒS.Speech.tell("???", "You are doing very well.");
-        //increase global truth score
       } else {
         await ƒS.Speech.tell("???", "Huh.");
         await ƒS.Speech.tell("???", "Oh well.");
@@ -285,7 +264,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "Soon you will be ready for a real eye opener.");
       await ƒS.Speech.tell("???", "Can your- or rather our fragile mind take it?");
       await ƒS.Speech.tell("???", "The future is the means by which all is revealed.");
-      //await ƒS.Speech.tell("???", "");
       ƒS.Speech.hide();
       await ƒS.Location.show(locations.void);
       await ƒS.Sound.fade(sound.dream, 0, 0,  true);

@@ -50,7 +50,7 @@ namespace Visualnovel {
             await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             await ƒS.Speech.tell(characters.game, text.game.game101);
             await ƒS.Speech.tell(characters.game, text.game.game102);
-            await ƒS.Location.show(locations.credits);           //update this
+            await ƒS.Location.show(locations.credits);           
             await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             break;
         case 2:         //forever searching ending
@@ -58,7 +58,7 @@ namespace Visualnovel {
             await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             await ƒS.Speech.tell(characters.game, text.game.game201);
             await ƒS.Speech.tell(characters.game, text.game.game202);
-            await ƒS.Location.show(locations.credits);           //update this
+            await ƒS.Location.show(locations.credits);           
             await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             break;
         case 3:         //the truth ending (body accepts the soul)
@@ -66,7 +66,7 @@ namespace Visualnovel {
             await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             await ƒS.Speech.tell(characters.game, text.game.game301);
             await ƒS.Speech.tell(characters.game, text.game.game302);
-            await ƒS.Location.show(locations.credits);           //update this
+            await ƒS.Location.show(locations.credits);           
             await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             break;
         case 4:         //the abyss ending (body refuses the soul)
@@ -74,7 +74,7 @@ namespace Visualnovel {
             await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             await ƒS.Speech.tell(characters.game, text.game.game401);
             await ƒS.Speech.tell(characters.game, text.game.game402);
-            await ƒS.Location.show(locations.credits);           //update this
+            await ƒS.Location.show(locations.credits);          
             await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             break;
         default:   
@@ -94,7 +94,7 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.game, text.game.game512);
             await ƒS.Speech.tell(characters.game, text.game.game513);
             await ƒS.Speech.tell(characters.game, text.game.game514);
-            await ƒS.Location.show(locations.credits);           //update this
+            await ƒS.Location.show(locations.credits);           
             await ƒS.update(transition.slide.duration, transition.slide.alpha, transition.slide.edge);
             break;
       }
@@ -104,8 +104,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.game, text.game.game008);
       await ƒS.Speech.tell(characters.game, text.game.game009);
       await ƒS.Speech.tell(characters.game, text.game.game010);
-      //await ƒS.Location.show(locations.ending4);
-      //await ƒS.update();
       await ƒS.Speech.hide();
     }
   }

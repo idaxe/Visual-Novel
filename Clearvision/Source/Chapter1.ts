@@ -117,7 +117,6 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", text.girl1.G0002);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.L0004);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.L0009);
-
       await ƒS.Character.show(characters.girl1, characters.girl1.pose.happy, customPositions.slightleft);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0008);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0003);
@@ -158,8 +157,7 @@ namespace Visualnovel {
           await ƒS.Speech.tell(characters.girl1, text.girl1.G0008);
           await ƒS.Speech.tell(characters.girl1, text.girl1.G0011);
           await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0014);
-          await ƒS.Speech.tell(characters.girl1, text.girl1.G0012);
-          
+          await ƒS.Speech.tell(characters.girl1, text.girl1.G0012);  
           break;
         case inquire.Self:
           await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0013);
@@ -190,13 +188,8 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.L0008);
       await ƒS.Character.hide(characters.girl1);
       await ƒS.Sound.fade(sound.chill, 0, 0, true);
-      //await ƒS.Sound.fade
-      //ƒS.Sound.fade();
       ƒS.Speech.hide();
-      //await ƒS.Character.show(characters.girl2, characters.girl2.pose.angry, customPositions.slightleft);
-      //start dream sequence
-      
-      
+      //start dream sequence      
       await ƒS.Location.show(locations.void);
       await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
       await ƒS.Sound.play(sound.dream, 0.3, true);
