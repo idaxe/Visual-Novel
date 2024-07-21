@@ -152,6 +152,7 @@ namespace Visualnovel {
         //initiate dream
         await ƒS.Location.show(locations.void);
         await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
+        await ƒS.Sound.play(sound.dream, 0.3, true);
         await ƒS.Location.show(locations.dream);
         await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
         await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000); 
@@ -160,6 +161,9 @@ namespace Visualnovel {
         await ƒS.Speech.tell("???", "Then this will all find it's end.");
         await ƒS.Speech.tell("???", "I'll let you go question free this time.");
         await ƒS.Speech.tell("???", "Enjoy your rest for today.");
+        await ƒS.Sound.fade(sound.dream, 0, 0,  true);
+        await ƒS.Location.show(locations.void);
+        await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
         return "Chapter7";
       } else {
         await ƒS.Speech.tell(characters.girl1, text.girl1.G0000);
@@ -190,6 +194,7 @@ namespace Visualnovel {
             await ƒS.Location.show(locations.dream);
             await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
             //fade
+            await ƒS.Sound.play(sound.end, 0.3, false);
             await ƒS.Speech.tell("???", "So that's the life you chose.");
             await ƒS.Speech.tell("???", "Just continuing on in blissfull ignorance.");
             await ƒS.Speech.tell("???", "How disappointing.");
@@ -237,6 +242,7 @@ namespace Visualnovel {
             await ƒS.Location.show(locations.dream);
             await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
             //fade
+            await ƒS.Sound.play(sound.end, 0.3, false);
             await ƒS.Speech.tell("???", "So thats the life you chose.");
             await ƒS.Speech.tell("???", "...");
             await ƒS.Speech.tell("???", "An interesting outcome.");

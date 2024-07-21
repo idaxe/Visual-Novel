@@ -66,6 +66,7 @@ declare namespace Visualnovel {
         pizza: string;
         chill: string;
         dream: string;
+        end: string;
         drop: string;
         clue: string;
     };

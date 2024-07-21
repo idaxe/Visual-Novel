@@ -454,6 +454,7 @@ var Visualnovel;
         //initiate dream
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
         await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
+        await Visualnovel.ƒS.Sound.play(Visualnovel.sound.dream, 0.3, true);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.dream);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamEnter.duration, Visualnovel.transition.dreamEnter.alpha, Visualnovel.transition.dreamEnter.edge);
         await Visualnovel.ƒS.Speech.tell("???", "So, we meet again already.");
@@ -525,6 +526,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell("???", "Now then.");
         await Visualnovel.ƒS.Speech.tell("???", "Sleep well.");
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.dream, 0, 0, true);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
         Visualnovel.dataForSave.curChapter = 3;
         Visualnovel.dataForSave.curiosityCounter = Visualnovel.dataForSave.curiosityCounter + tempscore;
@@ -764,6 +766,7 @@ var Visualnovel;
         //initiate dream
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
         await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
+        await Visualnovel.ƒS.Sound.play(Visualnovel.sound.dream, 0.3, true);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.dream);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamEnter.duration, Visualnovel.transition.dreamEnter.alpha, Visualnovel.transition.dreamEnter.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
@@ -828,6 +831,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell("???", "Do with these informations as you please.");
         await Visualnovel.ƒS.Speech.tell("???", "Hope you can remember these interactions better outside of your subconciousness soon.");
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.dream, 0, 0, true);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
         Visualnovel.dataForSave.curChapter = 4;
         Visualnovel.dataForSave.curiosityCounter = Visualnovel.dataForSave.curiosityCounter + tempscore;
@@ -1056,6 +1060,7 @@ var Visualnovel;
         //start dream
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
         await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
+        await Visualnovel.ƒS.Sound.play(Visualnovel.sound.dream, 0.3, true);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.dream);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamEnter.duration, Visualnovel.transition.dreamEnter.alpha, Visualnovel.transition.dreamEnter.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
@@ -1115,6 +1120,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell("???", "Maybe your subconsciousness is already getting affected through me?");
         await Visualnovel.ƒS.Speech.tell("???", "Hehe~. Let's see how time plays out.");
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.dream, 0, 0, true);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
         Visualnovel.dataForSave.curChapter = 5;
         Visualnovel.dataForSave.curiosityCounter = Visualnovel.dataForSave.curiosityCounter + tempscore;
@@ -1348,6 +1354,7 @@ var Visualnovel;
         //initiate dream
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
         await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
+        await Visualnovel.ƒS.Sound.play(Visualnovel.sound.dream, 0.3, true);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.dream);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamEnter.duration, Visualnovel.transition.dreamEnter.alpha, Visualnovel.transition.dreamEnter.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
@@ -1408,6 +1415,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell("???", "The future is the means by which all is revealed.");
         //await ƒS.Speech.tell("???", "");
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.dream, 0, 0, true);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
         Visualnovel.dataForSave.curChapter = 6;
         Visualnovel.dataForSave.curiosityCounter = Visualnovel.dataForSave.curiosityCounter + tempscore;
@@ -1569,6 +1577,7 @@ var Visualnovel;
             //initiate dream
             await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
             await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
+            await Visualnovel.ƒS.Sound.play(Visualnovel.sound.dream, 0.3, true);
             await Visualnovel.ƒS.Location.show(Visualnovel.locations.dream);
             await Visualnovel.ƒS.update(Visualnovel.transition.dreamEnter.duration, Visualnovel.transition.dreamEnter.alpha, Visualnovel.transition.dreamEnter.edge);
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
@@ -1577,6 +1586,9 @@ var Visualnovel;
             await Visualnovel.ƒS.Speech.tell("???", "Then this will all find it's end.");
             await Visualnovel.ƒS.Speech.tell("???", "I'll let you go question free this time.");
             await Visualnovel.ƒS.Speech.tell("???", "Enjoy your rest for today.");
+            await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.dream, 0, 0, true);
+            await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
+            await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
             return "Chapter7";
         }
         else {
@@ -1607,6 +1619,7 @@ var Visualnovel;
                     await Visualnovel.ƒS.Location.show(Visualnovel.locations.dream);
                     await Visualnovel.ƒS.update(Visualnovel.transition.dreamEnter.duration, Visualnovel.transition.dreamEnter.alpha, Visualnovel.transition.dreamEnter.edge);
                     //fade
+                    await Visualnovel.ƒS.Sound.play(Visualnovel.sound.end, 0.3, false);
                     await Visualnovel.ƒS.Speech.tell("???", "So that's the life you chose.");
                     await Visualnovel.ƒS.Speech.tell("???", "Just continuing on in blissfull ignorance.");
                     await Visualnovel.ƒS.Speech.tell("???", "How disappointing.");
@@ -1654,6 +1667,7 @@ var Visualnovel;
                     await Visualnovel.ƒS.Location.show(Visualnovel.locations.dream);
                     await Visualnovel.ƒS.update(Visualnovel.transition.dreamEnter.duration, Visualnovel.transition.dreamEnter.alpha, Visualnovel.transition.dreamEnter.edge);
                     //fade
+                    await Visualnovel.ƒS.Sound.play(Visualnovel.sound.end, 0.3, false);
                     await Visualnovel.ƒS.Speech.tell("???", "So thats the life you chose.");
                     await Visualnovel.ƒS.Speech.tell("???", "...");
                     await Visualnovel.ƒS.Speech.tell("???", "An interesting outcome.");
@@ -1829,10 +1843,10 @@ var Visualnovel;
                 D2002: "If we don't move quickly his live will be in danger!"
             }
         };
-        let safetychoice = {
-            Proceed: "I want to know the truth.",
-            Divert: "On second thought."
-        };
+        /*let safetychoice = {
+          Proceed: "I want to know the truth.",
+          Divert: "On second thought."
+        };*/
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeDay);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
@@ -1979,6 +1993,9 @@ var Visualnovel;
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2011);
             Visualnovel.dataForSave.Ending = 4;
             await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
+            await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
+            await Visualnovel.ƒS.Sound.play(Visualnovel.sound.end, 0.3, false);
+            await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
             return "Ending";
         }
         else {
@@ -2000,6 +2017,9 @@ var Visualnovel;
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N3001);
             Visualnovel.dataForSave.Ending = 3;
             await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
+            await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
+            await Visualnovel.ƒS.Sound.play(Visualnovel.sound.end, 0.3, false);
+            await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
             return "Ending";
         }
     }
@@ -2163,6 +2183,7 @@ var Visualnovel;
         pizza: "Assets/Sounds/Pizza.mp3",
         chill: "Assets/Sounds/perfect-beauty.mp3",
         dream: "Assets/Sounds/relaxing.mp3",
+        end: "Assets/Sounds/please-calm-my-mind.mp3",
         //SFX
         drop: "Assets/Sounds/Drop.mp3",
         clue: ""

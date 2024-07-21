@@ -231,6 +231,7 @@ namespace Visualnovel {
       //initiate dream
       await ƒS.Location.show(locations.void);
       await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
+      await ƒS.Sound.play(sound.dream, 0.3, true);
       await ƒS.Location.show(locations.dream);
       await ƒS.update(transition.dreamEnter.duration, transition.dreamEnter.alpha, transition.dreamEnter.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000); 
@@ -294,6 +295,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell("???", "Do with these informations as you please.");
       await ƒS.Speech.tell("???", "Hope you can remember these interactions better outside of your subconciousness soon.");
       await ƒS.Location.show(locations.void);
+      await ƒS.Sound.fade(sound.dream, 0, 0,  true);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       dataForSave.curChapter = 4;
       dataForSave.curiosityCounter = dataForSave.curiosityCounter + tempscore;

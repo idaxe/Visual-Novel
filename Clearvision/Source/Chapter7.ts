@@ -150,10 +150,10 @@ namespace Visualnovel {
           D2002: "If we don't move quickly his live will be in danger!"
         }
       }
-      let safetychoice = {
+      /*let safetychoice = {
         Proceed: "I want to know the truth.",
         Divert: "On second thought."
-      };
+      };*/
 
       await ƒS.Location.show(locations.homeDay);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
@@ -304,6 +304,9 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2011);
         dataForSave.Ending = 4;
         await ƒS.Character.hide(characters.girl1);
+        await ƒS.Location.show(locations.void);
+        await ƒS.Sound.play(sound.end, 0.3, false);
+        await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
         return "Ending";
       } else {
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P3001);
@@ -324,6 +327,9 @@ namespace Visualnovel {
         await ƒS.Speech.tell(characters.narrator, text.Narrator.N3001);
         dataForSave.Ending = 3;
         await ƒS.Character.hide(characters.girl1);
+        await ƒS.Location.show(locations.void);
+        await ƒS.Sound.play(sound.end, 0.3, false);
+        await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
         return "Ending";
       }
     }

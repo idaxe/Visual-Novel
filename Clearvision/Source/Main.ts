@@ -46,6 +46,7 @@ namespace Visualnovel {
       pizza: "Assets/Sounds/Pizza.mp3",
       chill: "Assets/Sounds/perfect-beauty.mp3",
       dream: "Assets/Sounds/relaxing.mp3",
+      end: "Assets/Sounds/please-calm-my-mind.mp3",
       //SFX
       drop: "Assets/Sounds/Drop.mp3",
       clue: ""
