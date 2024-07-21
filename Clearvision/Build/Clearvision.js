@@ -2098,7 +2098,7 @@ var Visualnovel;
                 await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game101);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game102);
-                await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+                await Visualnovel.ƒS.Location.show(Visualnovel.locations.credits); //update this
                 await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 break;
             case 2: //forever searching ending
@@ -2106,7 +2106,7 @@ var Visualnovel;
                 await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game201);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game202);
-                await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+                await Visualnovel.ƒS.Location.show(Visualnovel.locations.credits); //update this
                 await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 break;
             case 3: //the truth ending (body accepts the soul)
@@ -2114,7 +2114,7 @@ var Visualnovel;
                 await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game301);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game302);
-                await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+                await Visualnovel.ƒS.Location.show(Visualnovel.locations.credits); //update this
                 await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 break;
             case 4: //the abyss ending (body refuses the soul)
@@ -2122,7 +2122,7 @@ var Visualnovel;
                 await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game401);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game402);
-                await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+                await Visualnovel.ƒS.Location.show(Visualnovel.locations.credits); //update this
                 await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 break;
             default:
@@ -2142,7 +2142,7 @@ var Visualnovel;
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game512);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game513);
                 await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.game, text.game.game514);
-                await Visualnovel.ƒS.Location.show(Visualnovel.locations.beachNight); //update this
+                await Visualnovel.ƒS.Location.show(Visualnovel.locations.credits); //update this
                 await Visualnovel.ƒS.update(Visualnovel.transition.slide.duration, Visualnovel.transition.slide.alpha, Visualnovel.transition.slide.edge);
                 break;
         }
@@ -2215,9 +2215,9 @@ var Visualnovel;
             name: "beachDay",
             background: "Assets/Images/Backgrounds/beachDay.png"
         },
-        beachNight: {
-            name: "beachNight",
-            background: "Assets/Images/Backgrounds/Beach_evening.png"
+        credits: {
+            name: "credits",
+            background: "Assets/Images/Backgrounds/credits.png"
         },
         hospital: {
             name: "hospital",

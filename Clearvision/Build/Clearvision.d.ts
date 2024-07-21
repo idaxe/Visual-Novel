@@ -75,7 +75,7 @@ declare namespace Visualnovel {
             name: string;
             background: string;
         };
-        beachNight: {
+        credits: {
             name: string;
             background: string;
         };
