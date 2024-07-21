@@ -136,8 +136,8 @@ namespace Visualnovel {
       await ƒS.Location.show(locations.school); 
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
-      await ƒS.Character.hide(characters.girl1);
       await ƒS.Location.show(locations.classroom);
+      await ƒS.Character.hide(characters.girl1);
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
