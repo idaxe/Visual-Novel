@@ -43,7 +43,7 @@ namespace Visualnovel {
 
     export let sound = {
       //themes
-      pizza: "Assets/Sounds/Pizza.mp3",
+      day: "Assets/Sounds/summernight-lofi-vibes.mp3",
       chill: "Assets/Sounds/perfect-beauty.mp3",
       dream: "Assets/Sounds/relaxing.mp3",
       end: "Assets/Sounds/please-calm-my-mind.mp3",
@@ -61,9 +61,9 @@ namespace Visualnovel {
         name: "beachNight",
         background: "Assets/Images/Backgrounds/Beach_evening.png"
       },
-      test: {
-        name: "test",
-        background: "Assets/test.jpg"
+      hospital: {
+        name: "hospital",
+        background: "Assets/Images/Backgrounds/hospital_outside.jpg"
       },
       dream: {
         name: "dream",
@@ -89,7 +89,6 @@ namespace Visualnovel {
         name: "Underground lab",
         background: "Assets/Images/Backgrounds/Lab.jpg"
       },
-      //lab2: {},
       school: {
         name: "school",
         background: "Assets/Images/Backgrounds/school.jpg"

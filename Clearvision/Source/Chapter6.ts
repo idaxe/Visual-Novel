@@ -99,6 +99,7 @@ namespace Visualnovel {
       };
       //let tempscore = 0;
       await ƒS.Location.show(locations.homeDay);
+      await ƒS.Sound.play(sound.day, 0.3, true);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
@@ -149,6 +150,7 @@ namespace Visualnovel {
         await ƒS.Character.animate(characters.girl1, characters.girl1.pose.happy, animate("outLeft"));
         await ƒS.Character.hide(characters.girl1);
         await ƒS.Speech.tell(characters.narrator, text.Narrator.N2001);
+        await ƒS.Sound.fade(sound.day, 0, 0, true);
         //initiate dream
         await ƒS.Location.show(locations.void);
         await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
@@ -174,6 +176,8 @@ namespace Visualnovel {
 
         switch (impchoice) {          //choose your good or bad ending, stats wont matter here... maybe truthseeing does
           case thoughts.C1:
+            await ƒS.Sound.fade(sound.day, 0, 0, true);
+            await ƒS.Sound.play(sound.chill, 0.3, true);
             await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1000);
             await ƒS.Speech.tell(characters.girl1, text.girl1.G0104);
             await ƒS.Speech.tell(characters.girl1, text.girl1.G0105);
@@ -185,6 +189,7 @@ namespace Visualnovel {
             await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1003);
             await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1004);
             await ƒS.Speech.tell(characters.girl1, text.girl1.G0109);
+            await ƒS.Sound.fade(sound.chill, 0, 0, true);
             await ƒS.Location.show(locations.void);
             await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
             await ƒS.Speech.tell(characters.narrator, text.Narrator.N1001);

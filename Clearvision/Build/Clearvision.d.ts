@@ -63,7 +63,7 @@ declare namespace Visualnovel {
         };
     };
     let sound: {
-        pizza: string;
+        day: string;
         chill: string;
         dream: string;
         end: string;
@@ -79,7 +79,7 @@ declare namespace Visualnovel {
             name: string;
             background: string;
         };
-        test: {
+        hospital: {
             name: string;
             background: string;
         };

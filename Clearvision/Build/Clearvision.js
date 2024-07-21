@@ -353,6 +353,7 @@ var Visualnovel;
         };
         //await ƒS.Location.show(locations.dream);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeDay);
+        await Visualnovel.ƒS.Sound.play(Visualnovel.sound.day, 0.3, true);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001A);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001);
@@ -451,6 +452,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0015);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0016);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0017);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.day, 0, 0, true);
         //initiate dream
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
         await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
@@ -649,6 +651,7 @@ var Visualnovel;
             N1: "Anticipation"
         };
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeDay);
+        await Visualnovel.ƒS.Sound.play(Visualnovel.sound.day, 0.3, true);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0000);
@@ -763,6 +766,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0034);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0035);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0015);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.day, 0, 0, true);
         //initiate dream
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
         await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
@@ -944,6 +948,7 @@ var Visualnovel;
             N1: "Own Events"
         };
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeDay);
+        await Visualnovel.ƒS.Sound.play(Visualnovel.sound.day, 0.3, true);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001);
@@ -1057,6 +1062,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0000);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0024);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0025);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.day, 0, 0, true);
         //start dream
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
         await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
@@ -1230,6 +1236,7 @@ var Visualnovel;
             N1: "Regret"
         };
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeDay);
+        await Visualnovel.ƒS.Sound.play(Visualnovel.sound.day, 0.3, true);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001);
@@ -1351,6 +1358,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0033);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0000);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0034);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.day, 0, 0, true);
         //initiate dream
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
         await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
@@ -1525,6 +1533,7 @@ var Visualnovel;
         };
         //let tempscore = 0;
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeDay);
+        await Visualnovel.ƒS.Sound.play(Visualnovel.sound.day, 0.3, true);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001);
@@ -1574,6 +1583,7 @@ var Visualnovel;
             await Visualnovel.ƒS.Character.animate(Visualnovel.characters.girl1, Visualnovel.characters.girl1.pose.happy, Visualnovel.animate("outLeft"));
             await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N2001);
+            await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.day, 0, 0, true);
             //initiate dream
             await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
             await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
@@ -1599,6 +1609,8 @@ var Visualnovel;
             let impchoice = await Visualnovel.ƒS.Menu.getInput(thoughts, "Confrontation");
             switch (impchoice) { //choose your good or bad ending, stats wont matter here... maybe truthseeing does
                 case thoughts.C1:
+                    await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.day, 0, 0, true);
+                    await Visualnovel.ƒS.Sound.play(Visualnovel.sound.chill, 0.3, true);
                     await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1000);
                     await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0104);
                     await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0105);
@@ -1610,6 +1622,7 @@ var Visualnovel;
                     await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1003);
                     await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1004);
                     await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0109);
+                    await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.chill, 0, 0, true);
                     await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
                     await Visualnovel.ƒS.update(Visualnovel.transition.clock.duration, Visualnovel.transition.clock.alpha, Visualnovel.transition.clock.edge);
                     await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N1001);
@@ -1848,6 +1861,7 @@ var Visualnovel;
           Divert: "On second thought."
         };*/
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.homeDay);
+        await Visualnovel.ƒS.Sound.play(Visualnovel.sound.day, 0.3, true);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0000);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0001);
@@ -1874,7 +1888,10 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0005);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0006);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0007);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.day, 0, 0, true);
         //fade to hospital
+        await Visualnovel.ƒS.Location.show(Visualnovel.locations.hospital);
+        await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0006);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0007);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0008);
@@ -1896,6 +1913,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.girl1, text.girl1.G0010);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P0011);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0009);
+        await Visualnovel.ƒS.Sound.play(Visualnovel.sound.chill, 0.3, true);
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.lab); //the lab
         await Visualnovel.ƒS.update(Visualnovel.transition.side.duration, Visualnovel.transition.side.alpha, Visualnovel.transition.side.edge);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N0010);
@@ -1912,6 +1930,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1004);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N1002);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.doctor, text.doctor.D0006);
+        //lab 2 maybe
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N1003);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.doctor, text.doctor.D0007);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.doctor, text.doctor.D0008);
@@ -1955,6 +1974,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N1005);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.N1006);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P1019);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.chill, 0, 0, true);
         //if tempscore is maxed ending 4 if not ending 3
         if (Visualnovel.dataForSave.curiosityCounter == 80) {
             await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.protagonist, text.protagonist.P2001);
@@ -2180,7 +2200,7 @@ var Visualnovel;
     };
     Visualnovel.sound = {
         //themes
-        pizza: "Assets/Sounds/Pizza.mp3",
+        day: "Assets/Sounds/summernight-lofi-vibes.mp3",
         chill: "Assets/Sounds/perfect-beauty.mp3",
         dream: "Assets/Sounds/relaxing.mp3",
         end: "Assets/Sounds/please-calm-my-mind.mp3",
@@ -2197,9 +2217,9 @@ var Visualnovel;
             name: "beachNight",
             background: "Assets/Images/Backgrounds/Beach_evening.png"
         },
-        test: {
-            name: "test",
-            background: "Assets/test.jpg"
+        hospital: {
+            name: "hospital",
+            background: "Assets/Images/Backgrounds/hospital_outside.jpg"
         },
         dream: {
             name: "dream",
@@ -2225,7 +2245,6 @@ var Visualnovel;
             name: "Underground lab",
             background: "Assets/Images/Backgrounds/Lab.jpg"
         },
-        //lab2: {},
         school: {
             name: "school",
             background: "Assets/Images/Backgrounds/school.jpg"

@@ -156,6 +156,7 @@ namespace Visualnovel {
       };*/
 
       await ƒS.Location.show(locations.homeDay);
+      await ƒS.Sound.play(sound.day, 0.3, true);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0000);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
@@ -182,7 +183,10 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0005);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0006);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0007);
+      await ƒS.Sound.fade(sound.day, 0, 0, true);
       //fade to hospital
+      await ƒS.Location.show(locations.hospital);
+      await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0006);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0007);
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0008);
@@ -205,6 +209,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.girl1, text.girl1.G0010);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P0011);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0009);
+      await ƒS.Sound.play(sound.chill, 0.3, true);
       await ƒS.Location.show(locations.lab); //the lab
       await ƒS.update(transition.side.duration, transition.side.alpha, transition.side.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0010);
@@ -221,6 +226,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1004);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N1002);
       await ƒS.Speech.tell(characters.doctor, text.doctor.D0006);
+      //lab 2 maybe
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N1003);
       await ƒS.Speech.tell(characters.doctor, text.doctor.D0007);
       await ƒS.Speech.tell(characters.doctor, text.doctor.D0008);
@@ -264,6 +270,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N1005);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N1006);
       await ƒS.Speech.tell(characters.protagonist, text.protagonist.P1019);
+      await ƒS.Sound.fade(sound.chill, 0, 0, true);
       //if tempscore is maxed ending 4 if not ending 3
       if (dataForSave.curiosityCounter == 80){
         await ƒS.Speech.tell(characters.protagonist, text.protagonist.P2001);

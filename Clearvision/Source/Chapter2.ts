@@ -110,6 +110,7 @@ namespace Visualnovel {
 
       //await ƒS.Location.show(locations.dream);
       await ƒS.Location.show(locations.homeDay);
+      await ƒS.Sound.play(sound.day, 0.3, true);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001A);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0001);
@@ -213,6 +214,7 @@ namespace Visualnovel {
 
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0016);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.N0017);
+      await ƒS.Sound.fade(sound.day, 0, 0, true);
       //initiate dream
       await ƒS.Location.show(locations.void);
       await ƒS.update(transition.clock.duration, transition.clock.alpha, transition.clock.edge);
