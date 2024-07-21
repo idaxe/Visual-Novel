@@ -281,7 +281,7 @@ namespace Visualnovel {
       ticket: {
         name: "Ticket",
         description: "A entry ticket for an amusement park Amai gave you.",
-        image: "Assets/Items/Ticket.png",
+        image: "Assets/Images/Items/Ticket.png",
         static: true
       }
     };
