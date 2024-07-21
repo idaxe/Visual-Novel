@@ -121,7 +121,7 @@
 
   dialog[type="inventory"] img {
     position: absolute;
-    left: 20px;
+    left: 2px;
     height: 80px;
     width: 80px;
     -ms-user-select: None;
