@@ -189,7 +189,7 @@ namespace Visualnovel {
       await ƒS.Speech.tell(characters.doctor, text.doctor.D0003);
       await ƒS.Speech.tell(characters.narrator, text.Narrator.L0008);
       await ƒS.Character.hide(characters.girl1);
-      await ƒS.Sound.fade(sound.chill, 0, 0, false);
+      await ƒS.Sound.fade(sound.chill, 0, 0, true);
       //await ƒS.Sound.fade
       //ƒS.Sound.fade();
       ƒS.Speech.hide();
@@ -243,7 +243,7 @@ namespace Visualnovel {
           break;
       }
       await ƒS.Location.show(locations.void);
-      await ƒS.Sound.fade(sound.dream, 0, 0,  false);
+      await ƒS.Sound.fade(sound.dream, 0, 0,  true);
       await ƒS.update(transition.dreamExit.duration, transition.dreamExit.alpha, transition.dreamExit.edge);
       dataForSave.curChapter = 2;
       return "Chapter2";

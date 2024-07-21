@@ -184,7 +184,7 @@ var Visualnovel;
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.doctor, text.doctor.D0003);
         await Visualnovel.ƒS.Speech.tell(Visualnovel.characters.narrator, text.Narrator.L0008);
         await Visualnovel.ƒS.Character.hide(Visualnovel.characters.girl1);
-        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.chill, 0, 0, false);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.chill, 0, 0, true);
         //await ƒS.Sound.fade
         //ƒS.Sound.fade();
         Visualnovel.ƒS.Speech.hide();
@@ -235,7 +235,7 @@ var Visualnovel;
                 break;
         }
         await Visualnovel.ƒS.Location.show(Visualnovel.locations.void);
-        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.dream, 0, 0, false);
+        await Visualnovel.ƒS.Sound.fade(Visualnovel.sound.dream, 0, 0, true);
         await Visualnovel.ƒS.update(Visualnovel.transition.dreamExit.duration, Visualnovel.transition.dreamExit.alpha, Visualnovel.transition.dreamExit.edge);
         Visualnovel.dataForSave.curChapter = 2;
         return "Chapter2";
